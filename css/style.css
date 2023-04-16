@@ -1,0 +1,67 @@
+*{font-family: 'Noto Sans KR', sans-serif;box-sizing:border-box;}
+html,body{position:relative;width:100%;height:100%;margin:0;padding:0;}
+.clearfix:before,.clearfix:after{content:"";display:block}.clearfix:after{clear:both;visibility:hidden;line-height:0;height:0}.clearfix{*zoom:1}
+img{max-width:100%;line-height:0;}
+ul,ol,li{list-style:none;margin:0;padding:0;}
+a{text-decoration:none;color:inherit;}
+.fleft{float:left;}
+.fright{float:right;}
+
+.container{position:realtive;width:1080px;margin:30px auto;}
+h1{position:relative;font-size:24px;margin:0 auto 20px;}
+	h1 .git{position:absolute;top:0;right:0;}
+	h1 .git a{display:inline-block;padding:5px 13px;background:#333;color:#fff;font-weight:400;font-size:13px;border-radius:8px;}
+.tbl_list{width:100%;border-collapse:collapse;}
+	.tbl_list th, .tbl_list td{padding:8px 5px;}
+.tbl_list thead th{border-top: 1px solid #333;border-bottom: 1px solid #333;font-size: 16px;font-weight: 400;padding: 10px 0}
+	.tbl_list th, .tbl_list td{border-bottom: 1px solid #eee;}
+.tbl_list td{font-size: 14px;color: #777;font-weight: 400}
+	.tbl_list tbody tr:nth-child(even){background:#f9f9f9;}
+	.tbl_list td:nth-child(1){text-align:center;width:50px;}
+	.tbl_list td:nth-child(2){text-align:center;width:100px;}
+	.tbl_list td:nth-child(3){padding:8px 13px;}
+	.tbl_list select{padding:3px 8px;}
+
+
+.board-incruit .item{display: block;position: relative;overflow: hidden;width: 98%;margin: 10px auto 0;padding: 40px 50px;border: 1px solid #ddd;}
+.board-incruit .item .sort {font-size: 14px;}
+.board-incruit .item .title{padding-right: 200px;font-size: 22px;font-weight: 500;}
+.text-primary {color: #0082ff !important;}
+.board-incruit .item .title .badge-point {margin-top: 2px;padding: 0 13px 0 14px;}
+[class^="badge-"] {display: inline-block;vertical-align: top;padding: 0 20px;margin-right: 2px;height: 26px;border: 1px solid transparent;
+    font-size: 14px;text-align: center;line-height: 1.6;border-radius: 15px;}
+.badge-point {border: 1px solid #e44d4d;color: #e44d4d;}
+.board-incruit .item .title + .text {margin-top: 10px;}
+.board-incruit .item .text li {display: inline-block;position: relative;font-size: 14px;}
+.board-incruit .item .text li + li {margin-left: 7px;padding-left: 11px;}
+.board-incruit .item .text li + li:before {content: '';position: absolute;left: 0;top: 50%;width: 1px;height: 10px;margin-top: -5px;background-color: #555;}
+.text-grey {color: #555 !important;}
+.board-incruit .item .text + .tag {margin-top: 40px;}
+.board-incruit .item .tag {position: relative;}
+.board-incruit .item .tag li {display: inline-block;margin-bottom: 5px;vertical-align: top;}
+[class*="tag-"], button[class*="tag-"] {display: inline-block;vertical-align: top;margin-right: 2px;padding: 0 10px;height: 28px;font-size: 12px;
+    text-align: center;line-height: 28px;color: #fff;font-weight: 500;}
+button, [type="button"], [type="reset"], [type="submit"] {-webkit-appearance: none;appearance: none;cursor: pointer;border: 0;padding: 0;background-image: none;}
+.tag-mint { background-color: #63ccd1;}
+.tag-primary {background-color: #66bde9;}
+.tag-point {background-color: #ff9370;}
+.board-incruit .box-btn-area {position: absolute;top: 40px;right: 50px;}
+.btn-default {background: #fff;color: #000;border: 1px solid #999;font-weight: 400;}
+.btn-md {padding: 12px 25px;min-width: 120px;}
+.btn {display: inline-block;text-align: center;border: 1px solid transparent;box-sizing: border-box;color: #6f6f75;border-radius: 36px;}
+.btn-md > span {font-size: 16px;}
+.btn > span {display: inline-block;line-height: 1.3;}
+.board-incruit .box-btn-area .btn + .custom-checkbox {margin-left: 6px;}
+.custom-checkbox {position: relative;display: inline-block;vertical-align: top;}
+.custom-checkbox input[type="checkbox"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;vertical-align: top;}
+input[type="checkbox"], input[type="radio"] {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; padding: 0;}
+.custom-checkbox input[type="checkbox"] + label {display: inline-block;position: relative;cursor: pointer;}
+.custom-checkbox .checkbox-star + label {height: 48px;padding: 0 20px 0 45px;color: #000;font-size: 16px;line-height: 46px;background: #fff;
+	border: 1px solid #999;border-radius: 24px;}
+.custom-checkbox .checkbox-star + label:before {display: block;content: '';position: absolute;left: 20px;top: 50%;margin-top: -7px;width: 15px;height: 15px;
+		text-align: center;background: url(https://gsmb.mss.go.kr/images/icon/ico_check_like.png) no-repeat 0 -29px;	}
+
+
+@media screen and (max-width : 510px){
+
+}
