@@ -47,6 +47,7 @@ select { padding: 0.5rem 3rem 0.5rem 1rem;border: 1px solid #dddddd;
 font-family: inherit;  background: url(../images/select_arrow.png) no-repeat right 10px center #fff; border-radius: 5px; -webkit-appearance: none; -moz-appearance: none;appearance: none;color: #888;font-size: 1.4rem}
 select[disabled]{background-color: #f8f8f8}
 .chosen-container{font-size: 1.4rem !important;min-width: 250px}
+.chosen-container-single .chosen-search input[type=text]{background: url(../images/search_ico.png) no-repeat  right 5px center !important}
 .chosen-container-single .chosen-single{border: 1px solid #ddd !important;box-shadow: none !important;background: #fff !important;height: 30px !important;line-height: 29px !important;padding: 0 0 0 1rem !important}
 .chosen-container-single .chosen-single div{width: 22px !important}
 .chosen-container-single .chosen-single div b{background: url(../images/select_arrow.png) no-repeat right 10px center !important}
