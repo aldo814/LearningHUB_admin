@@ -11,6 +11,7 @@ body{font-size: 1.6rem}
 .fr{float: right}
 .textUnder{text-decoration: underline}
 .mt30{margin-top: 3rem}
+.miw250{min-width: 250px}
 .inner{width: 1260px;margin: auto;}
 
 /* header */

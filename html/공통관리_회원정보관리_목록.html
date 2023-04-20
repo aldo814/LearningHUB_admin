@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
     <script src="js/run.js"></script>
 </head>
 
@@ -187,13 +189,16 @@
                 <tr>
                     <th scope="row">소속 기관</th>
                     <td>
-                        <select>
+                        <select class="chosen-select">
                             <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
                         </select>
                     </td>
                     <th scope="row">계열사</th>
                     <td>
-                        <select disabled>
+                        <select disabled class="miw250">
                             <option></option>
                         </select>
                     </td>

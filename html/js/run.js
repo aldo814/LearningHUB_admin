@@ -43,5 +43,11 @@ $(document).ready(function () {
         if($('.bt_fixed').length){ 
             $('.content_wrapper').addClass('in_bt')
         }
-    })
+    });
+    
+    // select 검색
+    $('.chosen-select').chosen({
+  no_results_text: "검색 결과가 없습니다"
+
+});
 });
