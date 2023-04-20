@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,user-scalable=no"/>
-	<title>러닝허브 관리자 퍼블리싱</title>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:@300;400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>러닝허브 관리자 퍼블리싱</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
 <body>
-<div class="container">
-	<h1>
-		러닝허브 관리자 목록
-		<div class="git"><a href="https://github.com/aldo814/LearningHUB_admin" target="_blank">GitHub 페이지 바로가기</a></div>
-	</h1>
-	<table class="tbl_list">
-	<thead>
-	<tr>
-		<th>NO</th>
-		<th>구분</th>
-		<th>페이지명</th>
-	</tr>
-	</thead>
-	<tbody>
-	
-	</tbody>
-	</table>
-</div>
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" ></script>
-<script>
-	$(document).ready(function(){
-		$('.tbl_list tbody tr').each(function(){
-			var idx = $(this).index();
-			$(this).find('td:first-child').append(idx + 1);
-		});
-	});
-</script>
+    <div class="container">
+        <h1>
+            러닝허브 관리자 목록
+            <div class="git"><a href="https://github.com/aldo814/LearningHUB_admin" target="_blank">GitHub 페이지 바로가기</a></div>
+        </h1>
+        <table class="tbl_list">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>구분</th>
+                    <th>페이지명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>페이지</td>
+                    <td><a href="html/template.html">template</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>페이지</td>
+                    <td><a href="html/%EB%A1%9C%EA%B7%B8%EC%9D%B8.html">로그인</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>페이지</td>
+                    <td><a href="html/%EA%B3%B5%ED%86%B5%EA%B4%80%EB%A6%AC_%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EA%B4%80%EB%A6%AC_%EB%AA%A9%EB%A1%9D.html">공통관리 > 회원정보관리 > 목록</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tbl_list tbody tr').each(function() {
+                var idx = $(this).index();
+                $(this).find('td:first-child').append(idx + 1);
+            });
+        });
+
+    </script>
 </body>
+
 </html>

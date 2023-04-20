@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="inner">
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">select</h3>
+        <select>
+            <option>선택</option>
+        </select>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">input </h3>
+        <input type="text">
+        <br><br>
+        <ul class="check_list">
+            <li><input type="checkbox" id="chx"><label for="chx">check</label></li>
+            <li><input type="checkbox" id="chx2"><label for="chx2">check</label></li>
+            <li><input type="checkbox" id="chx3"><label for="chx3">check</label></li>
+        </ul>
+
+        <br>
+        <ul class="check_list">
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">radio</label>
+                </div>
+            </li>
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rd2" name="ex_rd"><label for="ex_rd2">radio</label>
+                </div>
+            </li>
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rd3" name="ex_rd"><label for="ex_rd3">radio</label>
+                </div>
+            </li>
+        </ul>
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">검색</h3>
+
+
+        <table class="table_style01">
+            <caption>회원정보관리</caption>
+            <colgroup>
+                <col style="width:180px">
+                <col>
+                <col style="width:180px">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">소속 기관</th>
+                    <td>
+                        <select>
+                            <option></option>
+                        </select>
+                    </td>
+                    <th scope="row">계열사</th>
+                    <td>
+                        <select disabled>
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">재직 여부</th>
+                    <td colspan="3">
+                        <ul class="check_list">
+                            <li>
+                                <input type="checkbox" id="opt1">
+                                <label for="opt1">전체</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt2">
+                                <label for="opt2">재직</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt3">
+                                <label for="opt3">휴직</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt4">
+                                <label for="opt4">퇴직</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">승인 여부</th>
+                    <td>
+                        <ul class="check_list">
+                            <li>
+                                <input type="checkbox" id="opt5">
+                                <label for="opt5">전체</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt6">
+                                <label for="opt6">대기</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt7">
+                                <label for="opt7">승인</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt8">
+                                <label for="opt8">취소</label>
+                            </li>
+                        </ul>
+                    </td>
+                    <th scope="row">탈퇴 여부</th>
+                    <td>
+                        <ul class="check_list">
+                            <li>
+                                <input type="checkbox" id="opt9">
+                                <label for="opt9">전체</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt10">
+                                <label for="opt10">탈퇴신청</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="opt11">
+                                <label for="opt11">탈퇴승인</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">검색</th>
+                    <td colspan="3">
+                        <div class="scr_area">
+                            <select>
+                                <option>성명</option>
+                                <option>아이디</option>
+                                <option>이메일</option>
+                                <option>휴대전화번호</option>
+                            </select>
+                            <input type="text">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn_wrap tct">
+            <button type="submit" class="btn_style01 btn_black">검색</button>
+            <button type="button" class="btn_style01 btn_white">초기화</button>
+        </div>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">테이블 스타일</h3>
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem">테이블 스타일1</p>
+        <table class="table_style01">
+            <colgroup>
+                <col style="width:180px">
+                <col>
+                <col style="width:180px">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        2
+                    </td>
+                    <th scope="row">1</th>
+                    <td>
+                        2
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">테이블 스타일2</p>
+        <table class="table_style02">
+            <colgroup>
+                <col style="width:180px">
+                <col>
+                <col style="width:180px">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">버튼 스타일 </h3>
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;">버튼 스타일1</p>
+        <a href="#" class="btn_style01 btn_black">확인</a>
+        <a href="#" class="btn_style01 btn_gray01">확인</a>
+        <a href="#" class="btn_style01 btn_gray02">확인</a>
+        <a href="#" class="btn_style01 btn_white">확인</a>
+        <a href="#" class="btn_style01 btn_orange">확인</a>
+
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">버튼 스타일2</p>
+        <a href="#" class="btn_style02 btn_black">확인</a>
+        <a href="#" class="btn_style02 btn_gray01">확인</a>
+        <a href="#" class="btn_style02 btn_gray02">확인</a>
+        <a href="#" class="btn_style02 btn_white">확인</a>
+        <a href="#" class="btn_style02 btn_orange">확인</a>
+        <a href="#" class="btn_style02 btn_gray01 email_btn">메일 발송</a>
+        <a href="#" class="btn_style02 btn_gray01 sms_btn">SMS 발송</a>
+        <a href="#" class="btn_style02 btn_gray01 xls_btn">엑셀 저장</a>
+
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">버튼 스타일3</p>
+        <a href="#" class="btn_style03 btn_black">확인</a>
+        <a href="#" class="btn_style03 btn_gray01">확인</a>
+        <a href="#" class="btn_style03 btn_gray02">확인</a>
+        <a href="#" class="btn_style03 btn_white">확인</a>
+        <a href="#" class="btn_style03 btn_orange">확인</a>
+
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">버튼 배치1</p>
+        <div class="tct">
+            <a href="#" class="btn_style03 btn_black">확인</a>
+            <a href="#" class="btn_style03 btn_gray01">확인</a>
+        </div>
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">버튼 배치2</p>
+        <div class="clear">
+            <div class="fl">
+                <a href="#" class="btn_style03 btn_black">확인</a>
+                <a href="#" class="btn_style03 btn_white">확인</a>
+            </div>
+            <div class="fr">
+                <a href="#" class="btn_style03 btn_gray01 fr">확인</a>
+            </div>
+        </div>
+        <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">버튼 배치3</p>
+        <div class="clear">
+            <div class="fr">
+                <a href="#" class="btn_style03 btn_gray01 fr">확인</a>
+            </div>
+        </div>
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">paging </h3>
+        <!--paging-->
+        <ul class="paging">
+            <li class="button"><a href="#">처음</a></li>
+            <li class="button"><a href="#">이전</a></li>
+            <li class="num active"><a href="#">1</a></li>
+            <li class="num"><a href="#">2</a></li>
+            <li class="num"><a href="#">3</a></li>
+            <li class="num"><a href="#">4</a></li>
+            <li class="num"><a href="#">5</a></li>
+            <li class="button"><a href="#">다음</a></li>
+            <li class="button"><a href="#">맨끝</a></li>
+        </ul>
+        <!--//paging-->
+    </div>
+
+
+</body>
+
+</html>
