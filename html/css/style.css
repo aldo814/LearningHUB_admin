@@ -110,7 +110,7 @@ a.btn_style02{line-height: 30px;}
 .paging li.num.active a{background: #f49038;color: #fff}
 
 .in_bt{padding-bottom: 80px}
-.bt_fixed{position: fixed;left: 320px;bottom: 0;background: #fff;padding: 10px;border-radius: 10px 10px 0 0;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);width:calc(100% - 380px);box-sizing: border-box;transition: all 0.3ss}
+.bt_fixed{position: fixed;left: 320px;bottom: 0;background: #fff;padding: 10px;border-radius: 10px 10px 0 0;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);width:calc(100% - 380px);box-sizing: border-box;transition: all 0.3s}
 .bt_fixed a + a{margin-left: 5px}
 .bt_fixed .right{margin-left: auto}
 .content_wrapper.full .bt_fixed{width: calc(100% - 120px);left: 60px}
