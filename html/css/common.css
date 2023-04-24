@@ -10,9 +10,17 @@ body{font-size: 1.6rem}
 .fl{float: left}
 .fr{float: right}
 .textUnder{text-decoration: underline}
-.mt30{margin-top: 3rem}
+.mt5{margin-top: .5rem !important}
+.mt10{margin-top: 1rem !important}
+.mt20{margin-top: 2rem !important}
+.mt30{margin-top: 3rem !important}
+.ml20{margin-left:2rem}
 .miw250{min-width: 250px}
 .inner{width: 1260px;margin: auto;}
+.bold{font-weight: bold}
+.f14{font-size: 1.4rem}
+.f12{font-size: 1.2rem}
+.gray{color: #888}
 
 /* header */
 #header .header_nav{background: #323437;padding:  0 40px;display: flex;align-items: center;position: fixed;top: 0;left: 0;width: 100%;z-index: 999}
