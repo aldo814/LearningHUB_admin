@@ -94,10 +94,12 @@ $(document).ready(function () {
                     top: $(window).height() - 50
                 }, 200);
                 dlg.find(".ui-dialog-content").hide();
+                $('body').find(".ui-widget-overlay").hide();
             } else {
                 console.log("Restore Window");
                 $min.data("isMin", false);
                 dlg.find(".ui-dialog-content").show();
+                $('body').find(".ui-widget-overlay").show();
                 dlg.animate({
                     height: $min.data("original-size").height + "px",
                     top: $min.data("original-pos").top + "px"
@@ -119,6 +121,7 @@ $(document).ready(function () {
                     top: 0,
                     left: 0
                 }, 200);
+                $('body').find(".ui-widget-overlay").show();
             } else {
                 console.log("Restore Window");
                 $max.data("isMax", false);
@@ -132,24 +135,29 @@ $(document).ready(function () {
         });
     }
 
-    setTimeout(function(){
-    $('.popUp').dialog({
-        draggable: false,
-        autoOpen: false,
-        classes: {
-            "ui-dialog": "ui-window-options",
-            "ui-dialog-titlebar": "ui-window-bar"
-        },
-        modal: true,
-        responsive: true,
-        resizable: false,
-       
-    });
-    addButtons($(".ui-window-options"));
-        
-}, 50); 
+    setTimeout(function () {
+        $('.popUp').dialog({
+            draggable: false,
+            autoOpen: false,
+            classes: {
+                "ui-dialog": "ui-window-options",
+                "ui-dialog-titlebar": "ui-window-bar"
+            },
+           
+            modal: true,
+            responsive: true,
+            resizable: false,
+
+        });
+        addButtons($(".ui-window-options"));
+
+    }, 50);
     
-  
+    $(".close_pop").click(function () {
+        $(".popUp").dialog("close");
+     });
+
+    
 
     // 탭메뉴
     // 탭 컨텐츠 숨기기
@@ -180,18 +188,12 @@ $(document).ready(function () {
             $fileText.attr('disabled', 'disabled').val(fileName);
         })
     });
-    
+
 });
 
 
 // 팝업 열기
-  function openModal(modalname) {
-            document.get
-            $("." + modalname).dialog("open");
-        }
-
-// 팝업 닫기
-	function closePopup(flag) {
-		$('.ui-dialog').hide(); //팝업을 닫기다.
-		$('.ui-widget-overlay').hide(); // 배경 어둡게 삭제
-	};
+function openModal(modalname) {
+    document.get
+    $("." + modalname).dialog("open");
+}
