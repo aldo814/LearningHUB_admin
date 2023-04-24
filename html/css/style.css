@@ -115,6 +115,12 @@ a.btn_style02{line-height: 30px;}
 .ui-dialog .ui-dialog-content{padding: 2rem;display: block !important}
 .popTit {font-weight: 500;font-size: 1.6rem;border-bottom: 1px solid #000;padding-bottom: 1rem;margin-bottom: 2rem;}
 
+/* 윈도우팝업 */
+.windwoPopUp_head{background: #505050;padding: 1rem 1.5rem;overflow: hidden}
+.windwoPopUp_head p{font-size: 1.6rem !important;font-family: 'Noto Sans KR';color: #fff;font-weight: 400;float: left}
+.windwoPopUp_head .top_close{background: url(../images/close.png) no-repeat center;float: right;display: block;width: 14px;height: 14px;text-indent: -9999px;}
+.pop_contents{padding: 2rem}
+
 /* file */
 .filetype {position: relative;display: inline-block;vertical-align: top}
 .filetype * {vertical-align: middle;}

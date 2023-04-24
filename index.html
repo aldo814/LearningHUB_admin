@@ -27,22 +27,46 @@
                 <tr>
                     <td></td>
                     <td>페이지</td>
-                    <td><a href="html/template.html">template</a></td>
+                    <td><a href="html/template.html" target="_blank">template</a></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>페이지</td>
-                    <td><a href="html/%EB%A1%9C%EA%B7%B8%EC%9D%B8.html">로그인</a></td>
+                    <td><a href="html/%EB%A1%9C%EA%B7%B8%EC%9D%B8.html" target="_blank">로그인</a></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>페이지</td>
-                    <td><a href="html/%EA%B3%B5%ED%86%B5%EA%B4%80%EB%A6%AC_%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EA%B4%80%EB%A6%AC_%EB%AA%A9%EB%A1%9D.html">공통관리 > 회원정보관리 > 목록</a></td>
+                    <td><a href="html/%EA%B3%B5%ED%86%B5%EA%B4%80%EB%A6%AC_%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EA%B4%80%EB%A6%AC_%EB%AA%A9%EB%A1%9D.html" target="_blank">공통관리 > 회원정보관리 > 목록</a></td>
                 </tr>
-                 <tr>
+                <tr>
                     <td></td>
                     <td>팝업</td>
-                    <td><a href="html/%EA%B4%80%EB%A6%AC%EC%9E%90_%ED%8C%9D%EC%97%85.html">일괄등록 팝업</a></td>
+                    <td><a href="html/%EA%B4%80%EB%A6%AC%EC%9E%90_%ED%8C%9D%EC%97%85.html" target="_blank">일괄등록 팝업</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>팝업</td>
+                    <td><a href="#" target="_blank" onclick="popOpen01()">윈도우 팝업</a></td>
+                    <script>
+                        //팝업
+                        function popOpen01()
+
+                        {
+                            var nWidth = "650";
+
+                            var nHeight = "670";
+
+                            var xPos = (document.body.clientWidth / 2) - (nWidth / 2);
+
+                            xPos += window.screenLeft; //듀얼 모니터
+
+                            var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+                            window.open("/html/관리자_윈도우팝업.html", "popOpen", "width=" + nWidth + ",height=" + nHeight + ", left=" + xPos + ", top=" + yPos + ", toolbars=no, resizable=no, scrollbars=no");
+                        }
+
+                    </script>
                 </tr>
             </tbody>
         </table>
