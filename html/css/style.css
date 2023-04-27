@@ -115,6 +115,9 @@ a.btn_style02{line-height: 30px;}
 .ui-dialog .ui-dialog-content{padding: 2rem;display: block !important}
 .popTit {font-weight: 500;font-size: 1.6rem;border-bottom: 1px solid #000;padding-bottom: 1rem;margin-bottom: 2rem;}
 
+.shadow{background: rgba(0, 0, 0, 0.3);width: 100%;height: 100vh;position: fixed;left: 0;top: 0;display: none}
+.modal_popUp{width: 500px;background: #fff;position: fixed;top: 50%;left:50%;transform: translate(-50%,-50%);padding: 3rem;display: none}
+
 /* 윈도우팝업 */
 .windwoPopUp_head{background: #505050;padding: 1rem 1.5rem;overflow: hidden}
 .windwoPopUp_head p{font-size: 1.6rem !important;font-family: 'Noto Sans KR';color: #fff;font-weight: 400;float: left}

@@ -6,10 +6,12 @@
     <title>러닝허브 관리자</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chosen.min.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/chosen.jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/run.js"></script>
 </head>
 
@@ -19,16 +21,16 @@
         <select>
             <option>선택</option>
         </select>
-         <select class="miw250">
+        <select class="miw250">
             <option>선택</option>
         </select>
         <br><br>
         <select class="chosen-select">
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
 
         <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">input </h3>
         <input type="text">
@@ -219,7 +221,7 @@
                 </tr>
             </tbody>
         </table>
-        
+
         <p style="font-size: 1.8rem;font-weight: 500;margin-bottom: 2rem;margin-top: 3rem">테이블 스타일3</p>
         <table class="table_style03">
             <tbody>
@@ -290,6 +292,43 @@
             <li class="button"><a href="#">맨끝</a></li>
         </ul>
         <!--//paging-->
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">팝업 </h3>
+        <a href="javascript:openModalPop('modal1');" class="btn_style03 btn_gray02">팝업 style1</a>
+        <a href="javascript:openModal('modal2');" class="btn_style03 btn_gray02">팝업 style2</a>
+        <!--팝업-->
+        <div class="shadow"></div>
+        <div class="modal_popUp modal1">
+            <p class="tct f18">개인정보 조회사유가<br> 무엇인가요?
+            </p>
+            <div class="tct mt20">
+                <select class="miw250">
+                    <option> VOC 처리
+                    </option>
+                </select>
+            </div>
+
+            <div class="mt20 tct btn_wrap">
+                <div class="btn_wrap mt20">
+                    <a href="javascript:void(0)" class="btn_style01 btn_black f14">확인</a>
+                    <a href="javascript:void(0)" class="btn_style01 btn_white close_modalpop f14">닫기</a>
+                </div>
+            </div>
+        </div>
+        <!--//팝업-->
+
+        <!--팝업-->
+        <div class="popUp modal2" title="회원정보 일괄등록">
+            <h3 class="popTit">회원정보 일괄등록</h3>
+            내용
+            <div class="mt20 tct btn_wrap">
+                <a href="javascript:void(0)" class="btn_style01 btn_black f14">업데이트</a>
+                <a href="javascript:void(0)" class="btn_style01 btn_white f14 close_pop">닫기</a>
+            </div>
+        </div>
+        <!--//팝업-->
+
+
     </div>
 
 

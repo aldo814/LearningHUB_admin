@@ -156,6 +156,11 @@ $(document).ready(function () {
     $(".close_pop").click(function () {
         $(".popUp").dialog("close");
      });
+    
+    $(".close_modalpop").click(function () {
+        $(".modal_popUp").hide();
+        $(".shadow").hide();
+     });
 
     
 
@@ -196,5 +201,11 @@ $(document).ready(function () {
 function openModal(modalname) {
     document.get
     $("." + modalname).dialog("open");
+}
+
+function openModalPop(modalname) {
+    document.get
+    $("." + modalname).show();
+    $('.shadow').show();
 }
 
