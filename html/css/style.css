@@ -230,8 +230,9 @@ a.btn_style02{line-height: 30px;}
 .treeview li > div .right .menu,
 #s-l-base li > div .right .menu{background: url(../images/menu.png) no-repeat center;width: 13px;height: 13px;text-indent: -9999px;}
 .treeview .menu_open{border: 1px solid #dddddd;border-radius: 5px;background: #fff;width: 112px;position: absolute;top: 90%;right: -1px;z-index: 5;display: none}
+.treeview .menu_open:before{display: none}
 #s-l-base .menu_open{display: none !important}
-.treeview .menu_open li{text-align: center;border-bottom: 1px solid #ddd;padding-left: 0}
+.treeview .menu_open li{text-align: center;border-bottom: 1px solid #ddd;padding-left: 0;margin-left: 0}
 .treeview .menu_open li a{display: block;padding: 1rem;}
 .treeview .menu_open li a:hover,
 .treeview .menu_open li a:active,
