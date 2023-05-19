@@ -103,7 +103,7 @@ a.btn_style02{line-height: 30px;}
 .ui-widget-overlay{background: #000}
 .ui-dialog{padding: 0 !important;border: 0 !important;min-width: 650px ;position: fixed !important;z-index: 99999999999999 !important; left: 50% !important;transform: translateX(-50%);font-family: 'Noto Sans KR' !important;}
 .ui-widget-header{border: 0 !important}
-.ui-dialog .ui-dialog-titlebar{background: #505050;padding: 1rem 1.5rem}
+.ui-dialog .ui-dialog-titlebar{background: #505050 !important;padding: 1rem 1.5rem}
 .ui-dialog .ui-dialog-title{font-size: 1.6rem !important;font-family: 'Noto Sans KR';color: #fff;font-weight: 400}
 .ui-widget .ui-widget{background: none;border: 0;}
 .ui-button .ui-icon.ui-icon-minusthick{background: url(../images/mini.png) no-repeat center;position: absolute;}
@@ -180,3 +180,88 @@ a.btn_style02{line-height: 30px;}
 .bt_fixed a + a{margin-left: 5px}
 .bt_fixed .right{margin-left: auto}
 .content_wrapper.full .bt_fixed{width: calc(100% - 120px);left: 60px}
+
+
+/* tree 메뉴 */
+.treeview ul li,
+#s-l-base ul li{margin-left:  30px;position: relative;}
+.treeview  ul,
+#s-l-base ul{position: relative}
+.treeview > ul  li > div{position: relative;}
+.treeview > ul > li:before,
+#s-l-base > ul > li:before{content: '';display: block;width: 3px;height: calc(100% - 26px) !important;background: #c5c5c5;position: absolute;left: 15px;top: 0}
+.treeview  li ul:before,
+#s-l-base  li ul:before{content: '';display: block;width: 1px;height: calc(100% - 16px);background: #c5c5c5; position: absolute;left: 15px;top: -10px}
+.treeview > ul  li:last-child:before,
+#s-l-base  ul  li:last-child:before{height: calc(50% + 10px)}
+.treeview > ul  li > div:before,
+#s-l-base > ul  li > div:before{content: '';display: block;width: 18px;height: 1px;background: #c5c5c5;position: absolute;left: -18px}
+.treeview > ul > li > div:before,
+#s-l-base > ul > li > div:before{display: none}
+
+.s-l-open > div  .arrow{transform: rotate(90deg)}
+.treeview .s-l-open > ul:not(.menu_open) {display: block;}
+.treeview ul li ul{display: none}
+.treeview  li div:only-child .arrow,
+#s-l-base  li div:only-child .arrow{display: none}
+.treeview  li > div.disabled,
+#s-l-base li > div.disabled, {background: #eee;}
+.unused{background: #afafaf;color: #fff;font-size: 12px;padding: 2px 5px;border-radius: 3px;margin-left: 15px}
+.treeview > ul > li:before,
+#s-l-base > ul > li:before{width: 3px;height: calc(100% - 27px);top: 0}
+.treeview > ul > li,
+#s-l-base > ul > li{margin-left: 0;}
+.treeview li > div,
+#s-l-base li > div{ padding:15px 10px ; background-color:#fff; border:1px solid #dddddd; border-left: 4px solid #dddddd;position: relative;font-size: 14px;display: flex;align-items: center;margin-bottom: 10px}
+.treeview li .drag,
+#s-l-base li .drag{display: inline-block;background: url(../images/drag.png) no-repeat;width: 8px;height: 15px;text-indent: -9999px;vertical-align: middle;margin-right: 10px;cursor: default}
+.treeview li > div .ico,
+#s-l-base li > div .ico{margin: 0 10px}
+.treeview li > div .group,
+#s-l-base li > div .group{background: url(../images/g_ico.png) no-repeat;width: 16px;height: 16px;text-indent: -9999px;display: inline-block;vertical-align: middle;}
+.treeview li > div .program,
+#s-l-base li > div .program{background: url(../images/p_ico.png) no-repeat;width: 16px;height: 16px;text-indent: -9999px;display: inline-block;vertical-align: middle;}
+.treeview li > div .right,
+#s-l-base li > div .right{display: flex;align-items: center;margin-left: auto}
+.treeview li > div .right a + a,
+#s-l-base li > div .right a + a{margin-left: 20px}
+.treeview li > div .right .arrow,
+#s-l-base li > div .right .arrow{background: url(../images/arrow.png) no-repeat center;width: 10px;height: 10px;text-indent: -9999px;}
+.treeview li > div .right .menu,
+#s-l-base li > div .right .menu{background: url(../images/menu.png) no-repeat center;width: 13px;height: 13px;text-indent: -9999px;}
+.treeview .menu_open{border: 1px solid #dddddd;border-radius: 5px;background: #fff;width: 112px;position: absolute;top: 90%;right: -1px;z-index: 5;display: none}
+#s-l-base .menu_open{display: none !important}
+.treeview .menu_open li{text-align: center;border-bottom: 1px solid #ddd;padding-left: 0}
+.treeview .menu_open li a{display: block;padding: 1rem;}
+.treeview .menu_open li a:hover,
+.treeview .menu_open li a:active,
+.treeview .menu_open li a:focus{background: #f5f5f5}
+.treeview .menu_open li:last-child{border-bottom: 0}
+.treeview .menu_open li:before{display: none}
+
+/* 캘린더 */
+.datep_wrap{border: 1px solid #ddd;font-size: 1.4rem;padding: 0.1rem 0;display: flex;justify-content: space-between;border-radius: 5px;box-sizing: border-box;}
+.datep_wrap input{outline: none}
+.datep_wrap .ui-datepicker-trigger{background: none;border: 0}
+.datep_wrap input{border: 0;width: calc(100% - 30px);color: #72787f}
+.date_wrap{display: flex;align-items: center;}
+.date_wrap p {margin: 0 1rem}
+.ui-widget{font-family: 'Noto Sans KR' !important;box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);}
+.ui-widget-header{background: none !important;border: 0 !important}
+.ui-datepicker th{color: #9ea4aa;font-weight: 500 !important}
+.ui-widget-content{border: 1px solid #c9cdd2 !important;}
+.ui-datepicker .ui-datepicker-buttonpane{border: none !important}
+.ui-datepicker .ui-datepicker-prev span{background: url(../images/c_arrow.svg) no-repeat center;transform: rotate(180deg)}
+.ui-datepicker .ui-datepicker-next span{background: url(../images/c_arrow.svg) no-repeat center;}
+.ui-datepicker-title select{color: #1b1d1f;background: url('../images/select_arrow06.png') no-repeat right 1rem center #fff; -webkit-appearance: none; -moz-appearance: none;appearance: none;font-family: inherit;padding: 0.3rem 40px 0.3rem 1rem;border-radius: 0;border: 1px solid #c9cdd2;box-sizing: border-box;font-size: 1.5rem !important;font-family: 'Noto Sans KR' !important}
+.ui-datepicker-title select + select{margin-left: 5px !important}
+.ui-state-default,.ui-widget-header .ui-state-default{border: 0 !important;background: none !important;text-align: center !important}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family: 'Noto Sans KR' !important;font-size: 1.5rem !important}
+.ui-datepicker-close{background: #1b1d1f !important;color: #fff !important}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background: #f7f8fa !important;border-radius: 5px !important;font-weight: 500 !important}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearance: none;}
+
+
+
+

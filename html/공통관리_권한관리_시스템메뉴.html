@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="javascript:;" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="javascript:;">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">공통관리</a>
+                            <ul>
+                                <li><a href="javascript:;">회원 관리</a></li>
+                                <li><a href="javascript:;">튜터 관리</a></li>
+                                <li><a href="javascript:;">권한 관리</a></li>
+                                <li><a href="javascript:;">코드 관리</a></li>
+                                <li><a href="javascript:;">기관 관리</a></li>
+                                <li><a href="javascript:;">환급 신고 관리</a></li>
+                                <li><a href="javascript:;">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">과정 관리</a></li>
+                                <li><a href="javascript:;">콘텐츠 관리</a></li>
+                                <li><a href="javascript:;">교육자료 관리</a></li>
+                                <li><a href="javascript:;">시험 관리</a></li>
+                                <li><a href="javascript:;">과제 관리</a></li>
+                                <li><a href="javascript:;">토론 관리</a></li>
+                                <li><a href="javascript:;">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">교육 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">기수 관리</a></li>
+                                <li><a href="javascript:;">수강 관리</a></li>
+                                <li><a href="javascript:;">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">사이트 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">게시판 관리</a></li>
+                                <li><a href="javascript:;">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">통계 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">접속 통계</a></li>
+                                <li><a href="javascript:;">메일발송 관리</a></li>
+                                <li><a href="javascript:;">SMS발송 관리</a></li>
+                                <li><a href="javascript:;">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">부가기능 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="javascript:;" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="javascript:;" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="javascript:;" class="logout">로그아웃</a>
+                        <a href="javascript:;" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="javascript:;">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="javascript:;">회원정보 관리</a></li>
+                            <li><a href="javascript:;">개인 수강이력</a></li>
+                            <li><a href="javascript:;">조회</a></li>
+                            <li><a href="javascript:;">개인정보</a></li>
+                            <li><a href="javascript:;">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">튜터 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">튜터 정보관리</a></li>
+                            <li><a href="javascript:;">튜터 활동현황</a></li>
+                            <li><a href="javascript:;">튜터 등급관리</a></li>
+                            <li><a href="javascript:;">강사료</a></li>
+                            <li><a href="javascript:;">지급현황</a></li>
+                            <li><a href="javascript:;">튜터 공지사항</a></li>
+                            <li><a href="javascript:;">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">권한 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">프로그램 등록</a></li>
+                            <li><a href="javascript:;">시스템 권한</a></li>
+                            <li><a href="javascript:;">시스템 메뉴</a></li>
+                            <li><a href="javascript:;">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">코드 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">공통코드 관리</a></li>
+                            <li><a href="javascript:;">메일 유형코드 관리</a></li>
+                            <li><a href="javascript:;">SMS 유형코드 관리</a></li>
+                            <li><a href="javascript:;">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">기관 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">테마 관리</a></li>
+                            <li><a href="javascript:;">기관 관리</a></li>
+                            <li><a href="javascript:;">기관별 메뉴 관리</a></li>
+                            <li><a href="javascript:;">기관별 과정 관리</a></li>
+                            <li><a href="javascript:;">수강제약 관리</a></li>
+                            <li><a href="javascript:;">교육일정 관리</a></li>
+                            <li><a href="javascript:;">역량진단 관리</a></li>
+                            <li><a href="javascript:;">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>시스템 메뉴</h3>
+                <ul class="breadcrumb">
+                    <li>공통관리</li>
+                    <li>권한관리</li>
+                    <li>시스템 메뉴</li>
+                </ul>
+            </div>
+            <div class="clear">
+                <ul class="tabs fl">
+                    <li class="active"> <a href="javascript:;" onclick="#">관리자</a>
+                    </li>
+                    <li><a href="javascript:;">사용자</a></li>
+                </ul>
+
+                <div class="fr flex flex_center">
+                    <div class="mr20"><input type="checkbox" id="chx"><label for="chx" class="gray">미사용 메뉴 숨기기</label></div>
+                    <a href="javascript:;" class="btn_style03 btn_gray01 mr5 allview">전체 펼치기</a><a href="javascript:;" class="btn_style03 btn_gray01 allfold">전체 접기</a>
+                </div>
+            </div>
+            <hr class="line">
+
+            <!--tree-->
+
+            <div class="treeview mt20">
+                <ul class="sTree bgC4" id="sTree2">
+                    <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>공통</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="">
+                            <li class="bgC4 s-l-open">
+                                <div>
+                                    <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>회원 관리</div>
+
+                                    <div class="right">
+                                        <a href="javascript:;" class="arrow clickable">펼침</a>
+                                        <a href="javascript:;" class="menu clickable">메뉴</a>
+                                        <ul class="menu_open">
+                                            <li>
+                                                <a href="javascript:;">하위메뉴 추가</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">상세 보기(수정)</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">삭제</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <ul>
+
+                                    <li class="bgC4">
+                                        <div>
+                                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="program ico">프로그램</span>회원 정보 관리</div>
+
+                                            <div class="right">
+                                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                                <ul class="menu_open">
+                                                    <li>
+                                                        <a href="javascript:;">하위메뉴 추가</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">상세 보기(수정)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">삭제</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                     <li class="bgC4">
+                                        <div>
+                                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="program ico">프로그램</span>개인 수강 이력</div>
+
+                                            <div class="right">
+                                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                                <ul class="menu_open">
+                                                    <li>
+                                                        <a href="javascript:;">하위메뉴 추가</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">상세 보기(수정)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">삭제</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                  <li class="bgC4">
+                                        <div class="disabled">
+                                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="program ico">프로그램</span>회원 정보 업데이트
+                                            <span class="unused">미사용</span>
+                                            </div>
+
+                                            <div class="right">
+                                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                                <ul class="menu_open">
+                                                    <li>
+                                                        <a href="javascript:;">하위메뉴 추가</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">상세 보기(수정)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">삭제</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                  <li class="bgC4">
+                                        <div>
+                                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="program ico">프로그램</span>개인정보 접근 관리</div>
+
+                                            <div class="right">
+                                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                                <ul class="menu_open">
+                                                    <li>
+                                                        <a href="javascript:;">하위메뉴 추가</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">상세 보기(수정)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">삭제</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                  <li class="bgC4">
+                                        <div>
+                                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="program ico">프로그램</span>VOC 현황</div>
+
+                                            <div class="right">
+                                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                                <ul class="menu_open">
+                                                    <li>
+                                                        <a href="javascript:;">하위메뉴 추가</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">상세 보기(수정)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">삭제</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                 </ul>
+                            </li>
+                            <li class="bgC4 sortableListsClose">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>튜터 관리</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <ul class="">
+                            <li class="bgC4">
+                                <div>
+                                    <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>튜터 관리1</div>
+
+                                    <div class="right">
+                                        <a href="javascript:;" class="arrow clickable">펼침</a>
+                                        <a href="javascript:;" class="menu clickable">메뉴</a>
+                                        <ul class="menu_open">
+                                            <li>
+                                                <a href="javascript:;">하위메뉴 추가</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">상세 보기(수정)</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">삭제</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>튜터 관리2</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </li>
+                        </ul>
+                    </li>
+                       <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>권한 관리</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                       <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>코드관리 </div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                       <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>기관 관리</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                        </ul>
+                    </li>
+                    
+                       <li class="bgC4 sortableListsClose">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><input type="checkbox" id="chx" class="clickable"><label for="chx"></label><span class="group ico">그룹</span>콘텐츠 관리</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open">
+                                    <li>
+                                        <a href="javascript:;">하위메뉴 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--//tree-->
+
+
+            <div class="bt_fixed">
+                <div class="fl">
+                    <a href="javascript:;" class="btn_style03 btn_gray01">선택 삭제</a>
+                </div>
+                <div class="fr">
+                    <a href="javascript:;" class="btn_style03 btn_orange">메뉴 추가</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
