@@ -264,19 +264,25 @@ $(document).ready(function () {
     $('#sTree2').sortableLists(options);
 
 
+
+
+
+    $('.sTree .menu').click(function () {
+        var activeItem = $(this).parent().find('.menu_open');
+        activeItem.toggle();
+        $('.menu_open').not(activeItem).hide();
+    });
+
+
     var menuBtn = $(".sTree .menu"),
         menuContainer = $(".menu_open"),
-        menuChildren = $(".menu_open").find("*");
+        menuChildren = $(".menu").find("*");
     $(window).mouseup(function (e) {
         if (!menuContainer.is(e.target) && !menuChildren.is(e.target) && !menuBtn.is(e.target)) {
             menuContainer.hide();
         }
     });
 
-    $('.sTree .menu').click(function () {
-        $(this).parent().find('.menu_open').toggle();
-
-    });
 
 
 
