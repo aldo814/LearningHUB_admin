@@ -189,9 +189,9 @@ a.btn_style02{line-height: 30px;}
 #s-l-base ul{position: relative}
 .treeview > ul  li > div{position: relative;}
 .treeview > ul > li:before,
-#s-l-base > ul > li:before{content: '';display: block;width: 3px;height: calc(100% - 26px) !important;background: #c5c5c5;position: absolute;left: 15px;top: 0}
+#s-l-base > ul > li:before{content: '';display: block;width: 3px;height: calc(100% - 27px) !important;background: #c5c5c5;position: absolute;left: 15px;top: 0}
 .treeview  li ul:before,
-#s-l-base  li ul:before{content: '';display: block;width: 1px;height: calc(100% - 16px);background: #c5c5c5; position: absolute;left: 15px;top: -10px}
+#s-l-base  li ul:before{content: '';display: block;width: 1px;height: calc(100% - 17px);background: #c5c5c5; position: absolute;left: 15px;top: -10px}
 .treeview > ul  li:last-child:before,
 #s-l-base  ul  li:last-child:before{height: calc(50% + 10px)}
 .treeview > ul  li > div:before,
