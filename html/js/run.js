@@ -193,8 +193,8 @@ $(document).ready(function () {
             $fileText.attr('disabled', 'disabled').val(fileName);
         })
     });
-    
-     //date
+
+    //date
     $(".datep").datepicker({
 
         showOn: "both", // 버튼과 텍스트 필드 모두 캘린더를 보여준다.
@@ -259,35 +259,48 @@ $(document).ready(function () {
             }
         },
         ignoreClass: 'clickable',
-        
+
     };
     $('#sTree2').sortableLists(options);
 
-    
-  $('.sTree .menu').click(function(){
-     $(this).parent().find('.menu_open').toggle() 
-  });
-    
-  $('.sTree .arrow').click(function(){
-     $(this).parent().parent().parent().toggleClass('s-l-open');
-         if ($(this).parent().parent().parent().hasClass("s-l-open")) {
-             $(this).parent().parent().parent().children('ul').show();
-        } else if (!$(this).parent().parent().parent().hasClass("s-l-open")) {
-             $(this).parent().parent().parent().children('ul').hide();
+
+    var menuBtn = $(".sTree .menu"),
+        menuContainer = $(".menu_open"),
+        menuChildren = $(".menu_open").find("*");
+    $(window).mouseup(function (e) {
+        if (!menuContainer.is(e.target) && !menuChildren.is(e.target) && !menuBtn.is(e.target)) {
+            menuContainer.hide();
         }
-  });
-    
-    $('.allview').click(function(){
+    });
+
+    $('.sTree .menu').click(function () {
+        $(this).parent().find('.menu_open').toggle();
+
+    });
+
+
+
+    $('.sTree .arrow').click(function () {
+        $(this).parent().parent().parent().toggleClass('s-l-open');
+        if ($(this).parent().parent().parent().hasClass("s-l-open")) {
+            $(this).parent().parent().parent().children('ul').show();
+        } else if (!$(this).parent().parent().parent().hasClass("s-l-open")) {
+            $(this).parent().parent().parent().children('ul').hide();
+        }
+    });
+
+    $('.allview').click(function () {
         $('.sTree > li  ul:not(.menu_open)').show();
         $('.sTree  li').addClass('s-l-open');
     });
-    $('.allfold').click(function(){
+    $('.allfold').click(function () {
         $('.sTree > li  ul').hide();
         $('.sTree  li').removeClass('s-l-open');
     });
-    
-  
-    
+
+
+
+
 
 });
 
@@ -303,6 +316,3 @@ function openModalPop(modalname) {
     $("." + modalname).show();
     $('.shadow').show();
 }
-
-
-
