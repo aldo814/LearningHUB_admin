@@ -304,7 +304,16 @@ $(document).ready(function () {
         $('.sTree  li').removeClass('s-l-open');
     });
 
-
+    
+    $('.ul_select > li > a').click(function(){
+       $(this).next().toggle(); 
+    });
+    
+    $('.ul_select > li > ul a').click(function(){
+       $(this).parent().parent().hide(); 
+    });
+    
+    
 
 
 

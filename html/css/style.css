@@ -91,7 +91,7 @@ input[type="password"]{border: 1px solid #dddddd;background: #fff;font-size: 1.4
 a.btn_style01{line-height: 34px}
 .btn_style02{display: inline-block;width:98px;padding: 0 10px;height: 30px;text-align: center;border-radius: 5px;font-size: 1.4rem;box-sizing: border-box}
 a.btn_style02{line-height: 30px;}
-.btn_style03{display: inline-block;font-size: 1.4rem;padding: 8px 15px;border-radius: 5px}
+.btn_style03{display: inline-block;font-size: 1.4rem;padding: 8px 15px;border-radius: 5px;box-sizing: border-box;text-align: center;}
 .btn_black{background: #54575b;color: #fff !important;border: 0;}
 .btn_white{background: #fff;color: #888 !important;border: 1px solid #dddddd}
 .btn_gray01{background: #888888;color: #fff !important}
@@ -178,7 +178,7 @@ a.btn_style02{line-height: 30px;}
 .paging li.num.active a{background: #f49038;color: #fff}
 
 .in_bt{padding-bottom: 80px}
-.bt_fixed{position: fixed;left: 320px;bottom: 0;background: #fff;padding: 10px;border-radius: 10px 10px 0 0;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);width:calc(100% - 380px);box-sizing: border-box;transition: all 0.3s}
+.bt_fixed{position: fixed;left: 320px;bottom: 0;background: #fff;padding: 10px;border-radius: 10px 10px 0 0;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);width:calc(100% - 380px);box-sizing: border-box;transition: all 0.3s;z-index: 5}
 .bt_fixed a + a{margin-left: 5px}
 .bt_fixed .right{margin-left: auto}
 .content_wrapper.full .bt_fixed{width: calc(100% - 120px);left: 60px}
@@ -276,7 +276,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .bg_brown01{background: #b1886a;color: #fff;}
 .bg_brown02{background: #874c3e;color: #fff;}
 
-.sTree .view{margin-top: -10px;}
+.sTree .view{margin-top: -10px;margin-bottom: 10px}
 .sTree .view:before{display: none;}
 .sTree .view li{background: #fff;margin-left: 0;border: 1px solid #dddddd;border-top: 0;padding: 15px;box-sizing: border-box;position: relative;z-index: 2}
 .toggleSwitch {
@@ -289,6 +289,16 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
   cursor: pointer;
     border: 1px solid #dddddd
 }
+
+.ul_select{display: inline-block;position: relative;z-index: 999}
+.ul_select > li{position: relative;z-index: 5}
+.ul_select > li > a{border: 1px solid #dddddd;border-radius: 5px;padding: 8px 30px 8px 15px;width: 87px;text-align: center;display: block;box-sizing: border-box;background: url(../images/arrow_bt.png) no-repeat center right 15px #fff}
+.ul_select > li {font-size: 14px;text-align: center;color: #54575b;}
+.ul_select > li ul{position: absolute;left: 0;bottom: 100%;z-index: 55;display: none;}
+.ul_select > li ul li a{padding: 8px 5px;display: block;border: 1px solid #dddddd;border-radius: 5px;margin: 2px 0;width: 87px;box-sizing: border-box;background: #fff}
+.ul_select > li ul li a:hover,
+.ul_select > li ul li a:active,
+.ul_select > li ul li a:focus{background: #afafaf;border: 1px solid #afafaf;color: #fff}
 
  /* 토글 버튼 */
 .toggle .toggleSwitch .toggleButton {
