@@ -193,6 +193,18 @@ $(document).ready(function () {
             $fileText.attr('disabled', 'disabled').val(fileName);
         })
     });
+    
+    
+     var $fileBox02 = $('.filetype02');
+
+    $fileBox02.each(function () {
+        var $fileUpload02 = $(this).find('.input-file'),
+            $fileText02 = $(this).find('.file-text')
+        $fileUpload02.on('change', function () {
+            var fileName02 = $(this).val();
+            $fileText02.attr('disabled', 'disabled').val(fileName02);
+        })
+    });
 
     //date
     $(".datep").datepicker({
@@ -259,6 +271,22 @@ $(document).ready(function () {
             }
         },
         ignoreClass: 'clickable',
+        isAllowed: function( cEl, hint, target )
+		{
+			// Be carefull if you test some ul/ol elements here.
+			// Sometimes ul/ols are dynamically generated and so they have not some attributes as natural ul/ols.
+			// Be careful also if the hint is not visible. It has only display none so it is at the previous place where it was before(excluding first moves before showing).
+			if( target.data('module') === 'view' && cEl.data('module') !== 'view' )
+			{
+				hint.css('background-color', '#ff9999');
+				return false;
+			}
+			else
+			{
+				hint.css('background-color', '#ddd');
+				return true;
+			}
+		}
 
     };
     $('#sTree2').sortableLists(options);
@@ -271,6 +299,7 @@ $(document).ready(function () {
         var activeItem = $(this).parent().find('.menu_open');
         activeItem.toggle();
         $('.menu_open').not(activeItem).hide();
+        $('.bt_fixed').css('z-index','0')
     });
 
 
@@ -307,6 +336,7 @@ $(document).ready(function () {
     
     $('.ul_select > li > a').click(function(){
        $(this).next().toggle(); 
+        $('.bt_fixed').css('z-index','5')
     });
     
     $('.ul_select > li > ul a').click(function(){
