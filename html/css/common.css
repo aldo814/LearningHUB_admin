@@ -30,6 +30,7 @@ body{font-size: 1.6rem}
 .mr20{margin-right: 20px}
 
 .line{margin: 0;background: #70747b}
+.line02{margin: 0;border: 0;border-top: 2.5px solid #323437;margin-top: 15px}
 .w30{width: 30px;}
 .w50{width: 50px;}
 .w80{width: 80px;}
@@ -48,6 +49,16 @@ body{font-size: 1.6rem}
 .w80p{width: 80%}
 .w90p{width: 90%}
 .w100p{width: 100%}
+.h30{height: 30px}
+.h50{height: 50px}
+.h60{height: 60px}
+.h70{height: 70px}
+.h80{height: 80px}
+.h90{height: 90px}
+.h100{height: 100px}
+.h150{height: 150px}
+.h200{height: 200px}
+.h300{height: 300px}
 
 /* tabs */
 .tabs{display: flex;}

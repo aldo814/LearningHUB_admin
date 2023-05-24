@@ -1,3 +1,5 @@
+.bold02{font-weight: 500}
+.textarea{resize: none;width: 100%;border: 1px solid #dddddd;padding: 1rem;border-radius: 5px;box-sizing: border-box;height: 60px}
 /* 로그인 */
 .login_header{background: #323437;text-align: center;padding: 18px}
 .login_area{display: flex;flex-direction: column;justify-content: center;align-items: center;min-height: calc(100vh - 266px)}
