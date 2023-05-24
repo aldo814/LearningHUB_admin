@@ -14,7 +14,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/run.js"></script>
     <style>
-        .color > div{background: #ebebeb;margin-bottom: 10px}
+        .color>div {
+            background: #ebebeb;
+            margin-bottom: 10px
+        }
+
     </style>
 </head>
 
@@ -45,7 +49,7 @@
         </ul>
 
         <br>
-       
+
         <ul class="check_list">
             <li>
                 <div class="radio">
@@ -63,68 +67,88 @@
                 </div>
             </li>
         </ul>
-          <br>
-          
-           <div class="datep_wrap w140">
+        <br>
+
+        <div class="datep_wrap w140">
             <input type="text" class="datep w120" id="se3">
         </div>
-        
-      <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">textarea </h3>
-        <textarea class="textarea"></textarea>
-        
-        
-         <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">margin </h3>
-         
-         <span class="mr5">margin-right 5px</span>
-         <span class="mr10">margin-right 10px</span>
-         <span class="mr15">margin-right 15px</span>
-         <span class="mr15">margin-right 15px</span>
-         <span class="mr20">margin-right 20px</span>
-         
-         <br><br>
-         <p class="mt5">margin-top 5px</p>
-         <p class="mt10">margin-top 10px</p>
-         <p class="mt15">margin-top 15px</p>
-         <p class="mt20">margin-top 20px</p>
-         <p class="mt30">margin-top 30px</p>
-         
-         <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">Width </h3>
-         <div class="color">
-         <div class="w30">width : 30px</div>
-         <div class="w50">width : 50px</div>
-         <div class="w80">width : 80px</div>
-         <div class="w100">width : 100px</div>
-         <div class="w120">width : 120px</div>
-         <div class="w140">width : 140px</div>
-         <div class="w200">width : 200px</div>
-         <div class="w300">width : 300px</div>
-         <div class="w10p">width : 10%</div>
-         <div class="w20p">width : 20%</div>
-         <div class="w30p">width : 30%</div>
-         <div class="w40p">width : 40%</div>
-         <div class="w50p">width : 50%</div>
-         <div class="w60p">width : 60%</div>
-         <div class="w70p">width : 60%</div>
-         <div class="w80p">width : 80%</div>
-         <div class="w90p">width : 90%</div>
-         <div class="w100p">width : 100%</div>
-         </div>
-         
-         <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">height </h3>
-          <div class="color">
-         <div class="h30">height : 30px</div>
-         <div class="h50">height : 50px</div>
-         <div class="h60">height : 60px</div>
-         <div class="h70">height : 70px</div>
-         <div class="h80">height : 80px</div>
-         <div class="h90">height : 90px</div>
-         <div class="h100">height : 100px</div>
-         <div class="h150">height : 150px</div>
-         <div class="h200">height : 200px</div>
-         <div class="h300">height : 300px</div>
+<br>
+        <div class="toggle">
+            <input type="checkbox" id="toggle" hidden>
+            <label for="toggle" class="toggleSwitch">
+                <span class="toggleButton"></span>
+            </label>
         </div>
-        
-        
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">textarea </h3>
+        <textarea class="textarea"></textarea>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">text </h3>
+        <p class="f18">font size 18px</p>
+        <p class="f16">font size 16px</p>
+        <p class="f14">font size 14px</p>
+        <p class="f14">font size 12px</p>
+        <br>
+        <p class="red">red</p>
+        <p class="gray">gray</p>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">line </h3>
+
+        <hr class="line">
+        <hr class="line02">
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">margin </h3>
+
+        <span class="mr5">margin-right 5px</span>
+        <span class="mr10">margin-right 10px</span>
+        <span class="mr15">margin-right 15px</span>
+        <span class="mr15">margin-right 15px</span>
+        <span class="mr20">margin-right 20px</span>
+
+        <br><br>
+        <p class="mt5">margin-top 5px</p>
+        <p class="mt10">margin-top 10px</p>
+        <p class="mt15">margin-top 15px</p>
+        <p class="mt20">margin-top 20px</p>
+        <p class="mt30">margin-top 30px</p>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">Width </h3>
+        <div class="color">
+            <div class="w30">width : 30px</div>
+            <div class="w50">width : 50px</div>
+            <div class="w80">width : 80px</div>
+            <div class="w100">width : 100px</div>
+            <div class="w120">width : 120px</div>
+            <div class="w140">width : 140px</div>
+            <div class="w200">width : 200px</div>
+            <div class="w300">width : 300px</div>
+            <div class="w10p">width : 10%</div>
+            <div class="w20p">width : 20%</div>
+            <div class="w30p">width : 30%</div>
+            <div class="w40p">width : 40%</div>
+            <div class="w50p">width : 50%</div>
+            <div class="w60p">width : 60%</div>
+            <div class="w70p">width : 60%</div>
+            <div class="w80p">width : 80%</div>
+            <div class="w90p">width : 90%</div>
+            <div class="w100p">width : 100%</div>
+        </div>
+
+        <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">height </h3>
+        <div class="color">
+            <div class="h30">height : 30px</div>
+            <div class="h50">height : 50px</div>
+            <div class="h60">height : 60px</div>
+            <div class="h70">height : 70px</div>
+            <div class="h80">height : 80px</div>
+            <div class="h90">height : 90px</div>
+            <div class="h100">height : 100px</div>
+            <div class="h150">height : 150px</div>
+            <div class="h200">height : 200px</div>
+            <div class="h300">height : 300px</div>
+        </div>
+
+
         <h3 style="font-size: 2.4rem;margin-bottom: 2rem;margin-top: 3rem;font-weight: bold;">탭메뉴</h3>
         <!--tabs-->
         <ul class="tabs">

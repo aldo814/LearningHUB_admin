@@ -46,7 +46,7 @@ button{font-family: inherit;cursor: pointer}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-    min-width: 100%;
+    width: 100%;
     table-layout: fixed
 }
 table caption {position: absolute;left: -9999px;}
