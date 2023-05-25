@@ -52,7 +52,7 @@ body{font-size: 1.6rem}
 .w70p{width: 70%}
 .w80p{width: 80%}
 .w90p{width: 90%}
-.w100p{width: 100%}
+.w100p{width: 100% !important}
 .h30{height: 30px !important}
 .h50{height: 50px !important}
 .h60{height: 60px !important}

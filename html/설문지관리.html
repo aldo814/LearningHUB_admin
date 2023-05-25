@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="javascript:;" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="javascript:;">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">공통관리</a>
+                            <ul>
+                                <li><a href="javascript:;">회원 관리</a></li>
+                                <li><a href="javascript:;">튜터 관리</a></li>
+                                <li><a href="javascript:;">권한 관리</a></li>
+                                <li><a href="javascript:;">코드 관리</a></li>
+                                <li><a href="javascript:;">기관 관리</a></li>
+                                <li><a href="javascript:;">환급 신고 관리</a></li>
+                                <li><a href="javascript:;">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">과정 관리</a></li>
+                                <li><a href="javascript:;">콘텐츠 관리</a></li>
+                                <li><a href="javascript:;">교육자료 관리</a></li>
+                                <li><a href="javascript:;">시험 관리</a></li>
+                                <li><a href="javascript:;">과제 관리</a></li>
+                                <li><a href="javascript:;">토론 관리</a></li>
+                                <li><a href="javascript:;">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">교육 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">기수 관리</a></li>
+                                <li><a href="javascript:;">수강 관리</a></li>
+                                <li><a href="javascript:;">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">사이트 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">게시판 관리</a></li>
+                                <li><a href="javascript:;">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">통계 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">접속 통계</a></li>
+                                <li><a href="javascript:;">메일발송 관리</a></li>
+                                <li><a href="javascript:;">SMS발송 관리</a></li>
+                                <li><a href="javascript:;">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">부가기능 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="javascript:;" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="javascript:;" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="javascript:;" class="logout">로그아웃</a>
+                        <a href="javascript:;" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="javascript:;">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="javascript:;">회원정보 관리</a></li>
+                            <li><a href="javascript:;">개인 수강이력</a></li>
+                            <li><a href="javascript:;">조회</a></li>
+                            <li><a href="javascript:;">개인정보</a></li>
+                            <li><a href="javascript:;">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">튜터 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">튜터 정보관리</a></li>
+                            <li><a href="javascript:;">튜터 활동현황</a></li>
+                            <li><a href="javascript:;">튜터 등급관리</a></li>
+                            <li><a href="javascript:;">강사료</a></li>
+                            <li><a href="javascript:;">지급현황</a></li>
+                            <li><a href="javascript:;">튜터 공지사항</a></li>
+                            <li><a href="javascript:;">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">권한 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">프로그램 등록</a></li>
+                            <li><a href="javascript:;">시스템 권한</a></li>
+                            <li><a href="javascript:;">시스템 메뉴</a></li>
+                            <li><a href="javascript:;">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">코드 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">공통코드 관리</a></li>
+                            <li><a href="javascript:;">메일 유형코드 관리</a></li>
+                            <li><a href="javascript:;">SMS 유형코드 관리</a></li>
+                            <li><a href="javascript:;">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">기관 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">테마 관리</a></li>
+                            <li><a href="javascript:;">기관 관리</a></li>
+                            <li><a href="javascript:;">기관별 메뉴 관리</a></li>
+                            <li><a href="javascript:;">기관별 과정 관리</a></li>
+                            <li><a href="javascript:;">수강제약 관리</a></li>
+                            <li><a href="javascript:;">교육일정 관리</a></li>
+                            <li><a href="javascript:;">역량진단 관리</a></li>
+                            <li><a href="javascript:;">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>설문지 관리</h3>
+                <ul class="breadcrumb">
+                    <li>콘텐츠 관리</li>
+                    <li>설문 관리</li>
+                    <li>설문지 관리</li>
+                </ul>
+            </div>
+            <div class="clear">
+                <ul class="tabs fl">
+                    <li> <a href="javascript:;" onclick="#">설문지 정보</a>
+                    </li>
+                    <li class="active"><a href="javascript:;">문항 관리</a></li>
+                </ul>
+
+                <div class="fr flex flex_center"><a href="javascript:;" class="btn_style03 btn_gray01 allfold">문항 추가</a>
+                </div>
+            </div>
+            <hr class="line">
+            <hr class="line02">
+
+            <!--tree-->
+
+            <div class="treeview mt20">
+                <ul class="sTree bgC4 survey_tree" id="sTree2">
+                   
+                      <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_gray02 mr10 ">안내문</span>1) 본 설문은HRD 생각조사 과정에 참여한 수강생을 대상으로 …</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open clickable">
+                                    <li>
+                                        <a href="javascript:;"> 절 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="clickable">
+                            
+                            <li data-module="view">
+                                <div class="survey_cont">
+                                    <div class="cont">
+                                        <a href="javascript:;" class="drag">드래그</a>
+                                        <div>
+                                            <label for="con02">3)</label>
+                                            <div>
+                                                <div class="tit">
+                                                    <input type="text" placeholder="설문 문항 제목을 입력하세요." id="con02">
+                                                </div>
+                                                <div class="flex">
+                                                    <div>
+                                                        <input type="text" placeholder="답변을 입력하세요.
+">
+                                                        <input type="text" placeholder="답변을 입력하세요.">
+                                                        <input type="text" placeholder="답변을 입력하세요.">
+                                                        <input type="text" placeholder="기타">
+                                                        <a href="javascript:;" class="btn_style03 btn_gray01 mt10">+ 답변 문항 추가
+</a>
+                                                    </div>
+                                                    <div>
+                                                        <select>
+                                                            <option>   다음 문항으로</option>
+                                                        </select>
+                                                        <select>
+                                                            <option>   4) 문항으로
+</option>
+                                                        </select>
+                                                        <select>
+                                                            <option>   다음 문항으로</option>
+                                                        </select>
+                                                        <select>
+                                                            <option>   다음 문항으로</option>
+                                                        </select>
+                                                        <a href="javascript:;" class="btn_style03 btn_gray01 mt10">+ 보기 추가</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <p class="tit">옵션 설정</p>
+                                        <ul class="option_list">
+                                            <li>
+                                                <label for="i01">유형</label>
+                                                <select id="i01">
+                                                    <option>
+                                                       객관식 형
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="i02">필수 항목</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i02" hidden>
+                                                    <label for="i02" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <label for="i03">다중 선택</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i03" hidden>
+                                                    <label for="i03" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <label for="i04">선택 범위</label>
+                                                <div class="range">
+                                                    <input type="text" id="i04">
+                                                    <p>~</p>
+                                                    <input type="text">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label for="i05">“기타” 답변 사용</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i05" hidden>
+                                                    <label for="i05" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <label for="i06">답변별 문항 이동
+</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i06" hidden>
+                                                    <label for="i06" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="clear">
+                                            <div class="fl">
+                                                <a href="#" class="btn_style03 btn_gray01">삭제</a>
+                                            </div>
+                                            <div class="fr">
+                                                <a href="#" class="btn_style03 btn_black">저장</a>
+                                                <a href="#" class="btn_style03 btn_white">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li data-module="view">
+                                <div class="survey_cont">
+                                    <div class="cont">
+                                        <a href="javascript:;" class="drag">드래그</a>
+                                        <div>
+                                            <label for="con01">2)</label>
+                                            <div>
+                                                <div class="tit">
+                                                    <input type="text" placeholder="설문 문항 제목을 입력하세요." id="con01">
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="w100p">
+                                                        <input type="text" placeholder="답변을 입력하세요.
+
+">
+                                                        <input type="text" placeholder="설명 문구를 입력하세요.
+">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <p class="tit">옵션 설정</p>
+                                        <ul class="option_list">
+                                            <li>
+                                                <label for="i07">유형</label>
+                                                <select id="i07">
+                                                    <option>
+                                                       주관식 형
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="i08">필수 항목</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i08" hidden>
+                                                    <label for="i08" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <label for="i09">글자 수 제한</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i09" hidden>
+                                                    <label for="i09" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <label for="i10">입력 범위</label>
+                                                <div class="range">
+                                                    <input type="text" id="i10">
+                                                    <p>~</p>
+                                                    <input type="text">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label for="i11">설명문구 사용</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="i11" hidden>
+                                                    <label for="i11" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="clear">
+                                            <div class="fl">
+                                                <a href="#" class="btn_style03 btn_gray01">삭제</a>
+                                            </div>
+                                            <div class="fr">
+                                                <a href="#" class="btn_style03 btn_black">저장</a>
+                                                <a href="#" class="btn_style03 btn_white">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_gray02 mr10 ">안내문</span>1) 본 설문은HRD 생각조사 과정에 참여한 수강생을 대상으로 …</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open clickable">
+                                    <li>
+                                        <a href="javascript:;"> 절 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="clickable">
+                            <li data-module="view">
+                                <div class="survey_cont">
+                                    <div class="cont">
+                                        <a href="javascript:;" class="drag">드래그</a>
+                                        <div>
+                                            <label for="cont01">2)</label>
+                                            <div>
+                                                <textarea class="textarea h150" placeholder="설문 안내문을 입력하세요." id="cont01"></textarea>
+                                                <div class="filetype02 mt10">
+                                                    <input type="text" class="file-text" />
+                                                    <label for="file02" class="file-btn">파일찾기</label>
+                                                    <span class="file-select"><input type="file" class="input-file" size="3" id="file02"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <p class="tit">옵션 설정</p>
+                                        <ul class="option_list">
+                                            <li>
+                                                <label for="ip01">유형</label>
+                                                <select id="ip01">
+                                                    <option>
+                                                        안내문
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="ip02">이미지 첨부</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="ip02" hidden>
+                                                    <label for="ip02" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="clear">
+                                            <div class="fl">
+                                                <a href="#" class="btn_style03 btn_gray01">삭제</a>
+                                            </div>
+                                            <div class="fr">
+                                                <a href="#" class="btn_style03 btn_black">저장</a>
+                                                <a href="#" class="btn_style03 btn_white">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-module="view">
+                                <div class="survey_cont">
+                                    <div class="cont">
+                                        <a href="javascript:;" class="drag">드래그</a>
+                                        <div>
+                                            <label for="cont02">3)</label>
+                                            <div>
+                                                <div class="tit">
+                                                    <input type="text" placeholder="설문 문항 제목을 입력하세요." id="cont02">
+                                                </div>
+                                                <div class="flex">
+                                                    <div>
+                                                        <input type="text" placeholder="질문을 입력하세요.">
+                                                        <input type="text" placeholder="질문을 입력하세요.">
+                                                        <input type="text" placeholder="질문을 입력하세요.">
+                                                        <a href="javascript:;" class="btn_style03 btn_gray01 mt10">+ 질문 추가</a>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <a href="javascript:;" class="btn_style03 btn_gray01 mt10">+ 보기 추가</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <p class="tit">옵션 설정</p>
+                                        <ul class="option_list">
+                                            <li>
+                                                <label for="ip03">유형</label>
+                                                <select id="ip03">
+                                                    <option>
+                                                        매트릭스 형
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="ip04">이미지 첨부</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="ip04" hidden>
+                                                    <label for="ip04" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="clear">
+                                            <div class="fl">
+                                                <a href="#" class="btn_style03 btn_gray01">삭제</a>
+                                            </div>
+                                            <div class="fr">
+                                                <a href="#" class="btn_style03 btn_black">저장</a>
+                                                <a href="#" class="btn_style03 btn_white">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li data-module="view">
+                                <div class="survey_cont">
+                                    <div class="cont">
+                                        <a href="javascript:;" class="drag">드래그</a>
+                                        <div>
+                                            <label for="cont04">4)</label>
+                                            <div>
+                                                <div class="tit">
+                                                    <input type="text" placeholder="설문 문항 제목을 입력하세요." id="cont04">
+                                                </div>
+                                                <div class="flex">
+                                                    <div>
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <input type="text" placeholder="보기를 입력하세요.">
+                                                        <a href="javascript:;" class="btn_style03 btn_gray01 mt10">+ 보기 추가</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <p class="tit">옵션 설정</p>
+                                        <ul class="option_list">
+                                            <li>
+                                                <label for="ip05">유형</label>
+                                                <select id="ip05">
+                                                    <option>
+                                                        매트릭스 형
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="ip06">이미지 첨부</label>
+                                                <p class="toggle">
+                                                    <input type="checkbox" id="ip06" hidden>
+                                                    <label for="ip06" class="toggleSwitch">
+                                                        <span class="toggleButton"></span>
+                                                    </label>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="clear">
+                                            <div class="fl">
+                                                <a href="#" class="btn_style03 btn_gray01">삭제</a>
+                                            </div>
+                                            <div class="fr">
+                                                <a href="#" class="btn_style03 btn_black">저장</a>
+                                                <a href="#" class="btn_style03 btn_white">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!--//tree-->
+
+
+            <div class="bt_fixed">
+                <div class="fr">
+                    <a href="javascript:;" class="btn_style03 btn_orange w85">저장</a>
+                    <a href="javascript:;" class="btn_style03 btn_white w85">취소</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
