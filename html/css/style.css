@@ -373,5 +373,18 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .loading img{animation-name:spinCircle;animation-duration:2s;animation-iteration-count:infinite;display: block;margin: 0 auto 2rem auto}
 .loading p {text-align: center;font-size: 1.6rem;font-weight: 500;margin-top: 3rem}
 .loading .loading_pro{width: 240px;height: 10px;border-radius: 30px;background: #fff;border: 1px solid #dddddd;margin: 10px auto 0 auto;position: relative;overflow: hidden}
-.loading .loading_pro span{height: 100%;width: 0;display: block;position: absolute;left: 0;top: 0;background: #1b1d1f}
+.loading .loading_pro span{height: 100%;width: 0;display: block;position: absolute;left: 0;top: 0;background: #1b1d1f ;animation: bar1 3s ease-out infinite;}
 
+@keyframes spinCircle {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bar1 {
+  from {width: 0px;}
+  to {width: 100%;}
+}
