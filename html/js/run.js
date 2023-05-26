@@ -341,11 +341,11 @@ $(document).ready(function () {
 
 
     $('html').each(function () {
-        $('.survey_tree')
         if ($('.sTree').hasClass("survey_tree") === true) {
             $('#s-l-base').addClass('survey_tree')
         }
-    });
+    })
+       
     
 
 

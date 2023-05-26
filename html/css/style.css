@@ -199,13 +199,16 @@ a.btn_style02{line-height: 30px;}
 #s-l-base ul li{margin-left:  30px;position: relative;}
 .treeview  ul,
 #s-l-base ul{position: relative}
-.treeview > ul  li{position: relative;}
-.treeview > ul  li > div{position: relative;}
+.treeview > ul  li,
+#s-l-base ul li{position: relative;}
+.treeview > ul  li > div,
+#s-l-base > ul  li > div{position: relative;}
 .treeview > ul > li:before,
-#s-l-base > ul > li:before{content: '';display: block;width: 3px;height: calc(100% - 27px) !important;background: #c5c5c5;position: absolute;left: 15px;top: 0}
+#s-l-base > li:before{content: '';display: block;width: 3px;height: calc(100% - 27px) !important;background: #c5c5c5;position: absolute;left: 15px;top: 0}
 .treeview  li ul:before,
 #s-l-base  li ul:before{content: '';display: block;width: 1px;height: calc(100% - 17px);background: #c5c5c5; position: absolute;left: 15px;top: -10px;}
-.treeview  li > ul:after{content: '';display: block;width: 50%;height: 1px;background: #c5c5c5;position: absolute;left: 15px;bottom: 26px;z-index: -1}
+.treeview  li > ul:after,
+#s-l-base  li > ul:after{content: '';display: block;width: 50%;height: 1px;background: #c5c5c5;position: absolute;left: 15px;bottom: 26px;z-index: -1}
 .treeview > ul  li:last-child:before,
 #s-l-base  ul  li:last-child:before{height: calc(50% + 10px)}
 .treeview > ul  li > div:before,
@@ -228,10 +231,10 @@ a.btn_style02{line-height: 30px;}
 #s-l-base > ul > li:after{content: '';display: block;width: 50%;height: 1px;bottom: 26px;left: 15px;position: absolute;background: #c5c5c5;z-index: -1}
 .treeview > ul > li,
 #s-l-base > ul > li{margin-left: 0;}
-.treeview ul li > div:not(.range),
-#s-l-base ul li > div:not(.range){ padding:15px 10px ; background-color:#fff; border:1px solid #dddddd; border-left: 4px solid #dddddd;position: relative;font-size: 14px;display: flex;align-items: center;margin-bottom: 10px;}
+.treeview li > div:not(.range),
+#s-l-base li > div:not(.range){ padding:15px 10px ; background-color:#fff; border:1px solid #dddddd; border-left: 4px solid #dddddd;position: relative;font-size: 14px;display: flex;align-items: center;margin-bottom: 10px;}
 .treeview li .drag,
-#s-l-base li .drag{display: inline-block;background: url(../images/drag.png) no-repeat;width: 8px;height: 15px;text-indent: -9999px;vertical-align: middle;margin-right: 10px;cursor: default}
+#s-l-base li .drag{display: inline-block;background: url(../images/drag.png) no-repeat;width: 8px;height: 15px;text-indent: -9999px;vertical-align: middle;margin-right: 10px;cursor:move}
 .treeview li > div .ico,
 #s-l-base li > div .ico{margin: 0 10px}
 .treeview li > div .group,
