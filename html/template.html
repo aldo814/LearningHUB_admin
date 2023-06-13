@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>러닝허브 관리자</title>
-    <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/chosen.jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
     <script src="js/run.js"></script>
     <style>
         .color>div {
@@ -40,17 +42,11 @@
         </select>
         
         <!---->
-        <form class="read_form" method="post">
-            <select class="chosen-select" disabled>
-            <option name='name'>1</option>
+            <select class="chosen-select readonly_cs" id="cs">
             <option>1</option>
             <option>2</option>
             <option>3</option>
             </select>
-            
-            <button type="submit">버튼</button>
-        </form>
-        <!---->
         
 
 

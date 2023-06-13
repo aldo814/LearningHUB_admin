@@ -344,14 +344,10 @@ $(document).ready(function () {
         if ($('.sTree').hasClass("survey_tree") === true) {
             $('#s-l-base').addClass('survey_tree')
         }
-    })
+    });
        
+$('.readonly_cs').chosen().chosenReadonly(true);
     
-
-    $(".read_form").bind("submit", function () {
-    $(".read_form .chosen-select *").prop("disabled", false).trigger("chosen:updated");
-});
-
 
 });
 
