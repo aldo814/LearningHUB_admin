@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jquery-sortable-lists.js"></script>
     <script src="js/chosen.jquery.min.js"></script>
     <script src="js/run.js"></script>
@@ -201,7 +202,7 @@
                                 <a href="javascript:;" class="menu clickable">메뉴</a>
                                 <ul class="menu_open clickable">
                                     <li>
-                                        <a href="javascript:;">   절 추가</a>
+                                        <a href="javascript:;"> 절 추가</a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">상세 보기(수정)</a>
@@ -228,7 +229,7 @@
                                         <a href="javascript:;" class="menu clickable">메뉴</a>
                                         <ul class="menu_open clickable">
                                             <li>
-                                                <a href="javascript:;">   절 추가</a>
+                                                <a href="javascript:;"> 절 추가</a>
                                             </li>
                                             <li>
                                                 <a href="javascript:;">상세 보기(수정)</a>
@@ -240,7 +241,7 @@
                                     </div>
                                 </div>
                                 <ul>
-                                    <li class="s-l-open"  data-module="view">
+                                    <li class="s-l-open" data-module="view">
 
                                         <div>
                                             <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_green02 mr10 ">절</span>Set a Goal
@@ -258,7 +259,7 @@
                                                 <a href="javascript:;" class="menu clickable">메뉴</a>
                                                 <ul class="menu_open clickable">
                                                     <li>
-                                                        <a href="javascript:;">   절 추가</a>
+                                                        <a href="javascript:;"> 절 추가</a>
                                                     </li>
                                                     <li>
                                                         <a href="javascript:;">상세 보기(수정)</a>
@@ -270,7 +271,7 @@
                                             </div>
                                         </div>
                                         <ul class="view">
-                                            <li class="clickable"  data-module="view">
+                                            <li class="clickable" data-module="view">
                                                 <table class="table_style03">
                                                     <caption>과정목록구성</caption>
                                                     <colgroup>
@@ -356,7 +357,7 @@
                                     </li>
                                 </ul>
                             </li>
-                              <li class="s-l-open">
+                            <li class="s-l-open">
 
                                 <div>
                                     <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_green01 mr10 ">차시</span>TensoFlow 2.0 소개
@@ -368,7 +369,7 @@
                                         <a href="javascript:;" class="menu clickable">메뉴</a>
                                         <ul class="menu_open clickable">
                                             <li>
-                                                <a href="javascript:;">   절 추가</a>
+                                                <a href="javascript:;"> 절 추가</a>
                                             </li>
                                             <li>
                                                 <a href="javascript:;">상세 보기(수정)</a>
@@ -391,24 +392,322 @@
 
             <div class="bt_fixed">
                 <div class="fl">
-                   <a href="javascript:;" class="btn_style02 btn_gray01 xls_btn">엑셀 저장</a>
+                    <a href="javascript:;" class="btn_style02 btn_gray01 xls_btn">엑셀 저장</a>
                     <a href="javascript:;" class="btn_style03 btn_gray01">선택 삭제</a>
                 </div>
                 <div class="fr">
-                   <a href="javascript:;" class="btn_style03 btn_white">일괄 등록</a>
-                   <ul class="ul_select">
-                       <li>
-                          <a href="#">추가</a>
-                           <ul>
-                               <li><a href="#">단위 추가</a></li>
-                               <li><a href="#">그룹 추가</a></li>
-                           </ul>
-                       </li>
-                   </ul>
+                    <a href="javascript:openModal('modal3');" class="btn_style03 btn_white">일괄 등록</a>
+                    <ul class="ul_select">
+                        <li>
+                            <a href="#">추가</a>
+                            <ul>
+                                <li><a href="#">단위 추가</a></li>
+                                <li><a href="#">그룹 추가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                     <a href="javascript:;" class="btn_style03 btn_orange w85">저장</a>
                     <a href="javascript:;" class="btn_style03 btn_white w85">목록</a>
                 </div>
             </div>
+
+            <div class="shadow"></div>
+            <div class="modal_popUp modal1">
+                <div class="tab_container">
+                    <!--탭 메뉴 영역 -->
+                    <div class="tabs">
+                        <ul>
+                            <li class="active"><a href="#" rel="tab1">단위 추가</a></li>
+                            <li><a href="#" rel="tab2">그룹 추가</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_content" id="tab1">
+                        <table class="table_style01">
+                            <caption>단위 추가</caption>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="add">추가 차시 수량</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="add">
+                                        <a href="#" class="btn_style03 btn_black">생성</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st1">1차시명</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="w100p" id="st1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st1quantity">하위 절 수량</label>
+                                    </th>
+                                    <td><input type="text" id="st1quantity"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st2">2차시명</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="w100p" id="st2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st2quantity">하위 절 수량</label>
+                                    </th>
+                                    <td><input type="text" id="st2quantity"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt20 trt btn_wrap">
+                            <a href="#" class="btn_style03 btn_black f14">저장</a>
+                            <a href="#" class="btn_style03 btn_white f14" onClick='window.close()'>닫기</a>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab2">
+                        <table class="table_style01">
+                            <caption>그룹추가</caption>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">카테고리</th>
+                                    <td>
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">검색</th>
+                                    <td>
+                                        <select class="w30p">
+                                            <option>콘텐츠그룹명</option>
+                                        </select>
+                                        <input type="text" placeholder="콘텐츠그룹명" class="w60p">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mt20 tct btn_wrap">
+                            <a href="#" class="btn_style01 btn_black f14">검색</a>
+                            <a href="#" class="btn_style01 btn_white f14">초기화</a>
+                        </div>
+
+                        <div class="mt20 clear">
+                            <p class="fl">
+                                총 <strong class="bold">00</strong>개
+                            </p>
+                            <select class="fr">
+                                <option>10개</option>
+                            </select>
+                        </div>
+                        <div class="mt10">
+                            <table class="table_style02">
+                                <caption>그룹 추가</caption>
+                                <colgroup>
+                                    <col style="width: 30px">
+                                    <col style="width: 16%">
+                                    <col>
+                                    <col style="width: 14%">
+                                    <col style="width: 11%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <input type="checkbox" id="chx1">
+                                            <label for="chx1"></label>
+                                        </th>
+                                        <th scope="col">
+                                            그룹ID
+                                        </th>
+                                        <th scope="col">콘텐츠그룹(강좌)명</th>
+                                        <th scope="col">차시</th>
+                                        <th scope="col">절</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <input type="checkbox" id="chx2">
+                                            <label for="chx2"></label>
+                                        </td>
+                                        <td>
+                                            1055134
+
+                                        </td>
+                                        <td class="tlt">텐서플로우로 배우는 딥러닝</td>
+                                        <td>10</td>
+                                        <td>78</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--paging-->
+                            <ul class="paging">
+                                <li class="button"><a href="#">처음</a></li>
+                                <li class="button"><a href="#">이전</a></li>
+                                <li class="num active"><a href="#">1</a></li>
+                                <li class="num"><a href="#">2</a></li>
+                                <li class="num"><a href="#">3</a></li>
+                                <li class="num"><a href="#">4</a></li>
+                                <li class="num"><a href="#">5</a></li>
+                                <li class="button"><a href="#">다음</a></li>
+                                <li class="button"><a href="#">맨끝</a></li>
+                            </ul>
+                            <!--//paging-->
+
+                            <div class="mt20 trt btn_wrap">
+                                <a href="#" class="btn_style03 btn_black f14">선택</a>
+                                <a href="#" class="btn_style03 btn_white f14" onClick='window.close()'>닫기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal_popUp modal2">
+                <h3 class="popTit">콘텐츠(절) 추가</h3>
+                <table class="table_style01">
+                    <caption>콘텐츠(절) 추가</caption>
+                    <colgroup>
+                        <col style="width:150px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <label for="name">절명</label>
+                            </th>
+                            <td>
+                                <input type="text" class="w100p" id="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="infor">콘텐츠 구분</label>
+                            </th>
+                            <td>
+                                <ul class="check_list">
+                                    <li class="mr10">
+                                        <div class="radio">
+                                            <input type="radio" id="infor" name="ex_rd"><label for="infor">공통</label>
+                                        </div>
+                                    </li>
+                                    <li class="mr10">
+                                        <div class="radio">
+                                            <input type="radio" id="infor2" name="ex_rd"><label for="infor2">디바이스별 </label>
+                                        </div>
+                                    </li>
+                                    <li class="mr10">
+                                        <div class="radio">
+                                            <input type="radio" id="infor3" name="ex_rd"><label for="infor3">PC</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="radio">
+                                            <input type="radio" id="infor4" name="ex_rd"><label for="infor4">모바일</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="content_add">
+                    <div>
+                        <p class="state">PC</p>
+                        <div class="item">
+                            <div class="img">
+                                <p>동영상</p>
+                                <img src="images/thumb.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="num">101011</p>
+                                <p class="tit">[ICPI 보수교육] 1교시</p>
+                                <ul>
+                                    <li>직무</li>
+                                    <li>보수교육</li>
+                                </ul>
+                                <a href="#" class="del">삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="state">모바일</p>
+                        <a href="#" class="search_btn">콘텐츠 검색</a>
+                    </div> 
+                </div>
+                <div class="clear mt20">
+                    <a href="#" class="fl btn_style03 btn_gray02">삭제</a>
+                    <div class="fr">
+                            <a href="#" class="btn_style03 btn_black f14">저장</a>
+                            <a href="#" class="btn_style03 btn_white f14" onClick='window.close()'>닫기</a>
+                        </div>
+                </div>
+                
+            </div>
+            
+             <!--팝업-->
+            <div class="popUp modal3" title="강의계획서 일괄등록">
+                <h3 class="popTit">강의계획서 일괄등록</h3>
+                        <div class="bg_gray">
+                            <p class="bold f14">※ 엑셀 파일을 업로드 진행 단계</p>
+                            <ul class="num_list ml20 mt10">
+                                <li class="f14">엑셀파일 저장 시 엑셀 형식으로 저장하여 사용할 것(샘플파일 참조)</li>
+                                <li class="f14">엑셀파일 작성 시 <strong class="bold"> [순서, 차시, 구분, 강의계획서명, 진도체크, 학습완료기준(초), 콘텐츠접근코드, 콘텐츠종류코드, 콘텐츠URL, 
+        학습시간]</strong>의 순서로 작성</li>
+                                <li class="f14">코드데이터는 샘플파일 참조Sheet를 참고하여 작성</li>
+                            </ul>
+                            <p class="bold f14 mt20">※ 엑셀 파일 업로드 유의사항</p>
+                            <div class="tlt mt20">
+                                <a href="#" class="btn_style03 btn_gray01">샘플파일 다운로드</a>
+                            </div>
+                        </div>
+                        <table class="table_style03 mt10">
+                            <colgroup>
+                                <col style="width: 100px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">파일 첨부</th>
+                                    <td>
+                                        <div class="filetype">
+                                            <input type="text" class="file-text" />
+                                            <span class="file-btn">파일찾기</span>
+                                            <span class="file-select"><input type="file" class="input-file" size="3"></span>
+                                        </div>
+                                        <p class="f12 gray mt5">※ 파일 업로드 시 용량에 따라 작업시간이 오래 소요될 수 있습니다. </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt20 tct btn_wrap">
+                            <a href="#" class="btn_style01 btn_black f14">일괄 등록</a>
+                            <a href="#" class="btn_style01 btn_white close_pop f14" >닫기</a>
+                        </div>
+                    </div>
+
+                    
+            <!--//팝업-->
         </div>
     </div>
 </body>

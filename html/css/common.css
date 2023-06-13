@@ -28,9 +28,9 @@ body{font-size: 1.6rem}
 .flex{display: flex;}
 .flex_center{align-items: center;}
 .mr5{margin-right: 5px}
-.mr10{margin-right: 10px}
-.mr15{margin-right: 15px}
-.mr20{margin-right: 20px}
+.mr10{margin-right: 10px !important}
+.mr15{margin-right: 15px !important}
+.mr20{margin-right: 20px !important}
 
 .line{margin: 0;background: #70747b}
 .line02{margin: 0;border: 0;border-top: 2.5px solid #323437;margin-top: 15px}

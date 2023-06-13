@@ -113,15 +113,15 @@ a.btn_style02{line-height: 30px;}
 .ui-widget .ui-widget{background: none;border: 0;}
 .ui-button .ui-icon.ui-icon-minusthick{background: url(../images/mini.png) no-repeat center;position: absolute;}
 .ui-dialog .ui-dialog-titlebar-close{right: 15px}
-.ui-window-minimize{position: absolute;right: 65px;top: 50%;transform: translateY(-50%)}
-.ui-window-maximize{position: absolute;right: 35px;top: 50%;transform: translateY(-50%)}
+.ui-window-minimize{position: absolute !important;right: 65px;top: 50%;transform: translateY(-50%)}
+.ui-window-maximize{position: absolute !important;right: 35px;top: 50%;transform: translateY(-50%)}
 .ui-button .ui-icon.ui-icon-plusthick{background: url(../images/max.png) no-repeat center;}
 .ui-button .ui-icon.ui-icon-closethick{background: url(../images/close.png) no-repeat center;}
-.ui-dialog .ui-dialog-content{padding: 2rem;display: block !important}
+.ui-dialog .ui-dialog-content{padding: 2rem;display: block !important;background: #fff;max-height: calc(100vh - 200px) !important;overflow-y: auto}
 .popTit {font-weight: 500;font-size: 1.6rem;border-bottom: 1px solid #000;padding-bottom: 1rem;margin-bottom: 2rem;}
 
-.shadow{background: rgba(0, 0, 0, 0.3);width: 100%;height: 100vh;position: fixed;left: 0;top: 0;display: none}
-.modal_popUp{width: 500px;background: #fff;position: fixed;top: 50%;left:50%;transform: translate(-50%,-50%);padding: 3rem;display: none}
+.shadow{background: rgba(0, 0, 0, 0.3);width: 100%;height: 100vh;position: fixed;left: 0;top: 0;display: none;z-index: 5555}
+.modal_popUp{width: 500px;background: #fff;position: fixed;top: 50%;left:50%;transform: translate(-50%,-50%);padding: 3rem;display: none;z-index: 9999}
 
 /* 윈도우팝업 */
 .windwoPopUp_head{background: #505050;padding: 1rem 1.5rem;overflow: hidden}
@@ -391,3 +391,22 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
   from {width: 0px;}
   to {width: 100%;}
 }
+
+.content_add{display: flex;justify-content: space-between;margin-top: 15px}
+.content_add > div{width: calc(50% - 5px)}
+.content_add .state{background: #fff;width: 60px;text-align: center;font-size: 14px;padding: 5px;box-sizing: border-box;border-radius: 5px;border: 1px solid #ccc;margin-bottom: 10px}
+.content_add .item{border: 1px solid #dddddd;border-radius: 10px;overflow: hidden;}
+.content_add .img{height: 150px;position: relative;}
+.content_add .img img{width: 100%;height: 100%}
+.content_add .img p{position: absolute;z-index: 5;background: #ddd;padding: 5px;border-radius: 5px;border: 1px solid #ccc;font-size: 14px;right: 10px;top: 10px;}
+.content_add  p,
+.content_add  ul{padding: 0 10px}
+.content_add  p{margin-top: 5px}
+.content_add  .num{font-size: 14px;color: #999}
+.content_add  .tit{font-weight: 500}
+.content_add  ul{margin-top: 5px;display: flex;}
+.content_add  ul li{color: #555;font-size: 14px;position: relative;}
+.content_add  ul li:after{content: '>';display: inline-block;margin: 0 5px;}
+.content_add  ul li:last-child:after{display: none}
+.content_add .del{text-align: center;display: block;padding: 10px;border-top: 1px solid #ddd;margin-top: 10px}
+.content_add .search_btn{display: block;text-align: center;padding: 10px;border-radius: 5px;background: #888;color: #fff}
