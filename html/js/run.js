@@ -348,6 +348,10 @@ $(document).ready(function () {
        
     
 
+    $(".read_form").bind("submit", function () {
+    $(".read_form .chosen-select *").prop("disabled", false).trigger("chosen:updated");
+});
+
 
 });
 
