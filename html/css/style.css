@@ -48,6 +48,11 @@
 .table_style03 td,
 .table_style03 th{padding: 5px;font-size: 1.4rem;vertical-align: middle}
 .table_style03 tr{border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd}
+.div_table{display: table;width: 100%;border-top: 1px solid #ddd}
+.div_table .tr{display: table-row;}
+.div_table .tr > div{display: table-cell;padding: 5px;font-size: 1.4rem;border-bottom: 1px solid #dddddd;}
+.div_table .th{background: #eeeeee}
+.div_table .td{}
 
 /* select style */
 select { padding: 0.6rem 3rem 0.6rem 1rem;border: 1px solid #dddddd;
