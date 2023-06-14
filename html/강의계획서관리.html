@@ -410,9 +410,10 @@
                     <a href="javascript:;" class="btn_style03 btn_white w85">목록</a>
                 </div>
             </div>
+            
 
             <div class="shadow"></div>
-            <div class="modal_popUp modal1">
+            <div class="popUp mh394 modal1">
                 <div class="tab_container">
                     <!--탭 메뉴 영역 -->
                     <div class="tabs">
@@ -422,6 +423,7 @@
                         </ul>
                     </div>
                     <div class="tab_content" id="tab1">
+                       <div class="mh">
                         <table class="table_style01">
                             <caption>단위 추가</caption>
                             <colgroup>
@@ -466,8 +468,23 @@
                                     </th>
                                     <td><input type="text" id="st2quantity"></td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st2">2차시명</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="w100p" id="st2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="st2quantity">하위 절 수량</label>
+                                    </th>
+                                    <td><input type="text" id="st2quantity"></td>
+                                </tr>
                             </tbody>
                         </table>
+                        </div>
                         <div class="mt20 trt btn_wrap">
                             <a href="#" class="btn_style03 btn_black f14">저장</a>
                             <a href="#" class="btn_style03 btn_white f14" onClick='window.close()'>닫기</a>
@@ -666,7 +683,7 @@
             </div>
             
              <!--팝업-->
-            <div class="popUp modal3" title="강의계획서 일괄등록">
+            <div class="popUp modal3 mh394" title="강의계획서 일괄등록">
                 <h3 class="popTit">강의계획서 일괄등록</h3>
                         <div class="bg_gray">
                             <p class="bold f14">※ 엑셀 파일을 업로드 진행 단계</p>
