@@ -306,9 +306,11 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .bg_brown02{background: #874c3e;color: #fff;}
 .bg_gray02{background: #545454;color: #fff}
 
-.sTree .view{margin-top: -10px;margin-bottom: 10px}
+.sTree .view,
+#s-l-base .view{margin-top: -10px;margin-bottom: 10px}
 .sTree .view:before{display: none;}
-.sTree .view:not(.program_num) li{background: #fff;margin-left: 0;border: 1px solid #dddddd;border-top: 0;padding: 15px;box-sizing: border-box;position: relative;z-index: 2}
+.sTree .view:not(.program_num) li,
+#s-l-base .view:not(.program_num) li{background: #fff;margin-left: 0;border: 1px solid #dddddd;border-top: 0;padding: 15px;box-sizing: border-box;position: relative;z-index: 2}
 .toggleSwitch {
   width: 35px;
   height: 18px;
