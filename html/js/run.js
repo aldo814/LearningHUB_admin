@@ -275,15 +275,16 @@ $(document).ready(function () {
             // Be carefull if you test some ul/ol elements here.
             // Sometimes ul/ols are dynamically generated and so they have not some attributes as natural ul/ols.
             // Be careful also if the hint is not visible. It has only display none so it is at the previous place where it was before(excluding first moves before showing).
-            if (target.data('module') === 'view' && cEl.data('module') !== 'view') {
+            if (target.data('module') === 'view' && cEl.data('module') !== 'view' || target.data('module') === 'view02' && cEl.data('module') !== 'view02' || target.data('module') === 'view03' && cEl.data('module') !== 'view03' || target.data('module') === 'view04' && cEl.data('module') !== 'view04' || target.data('module') === 'view05' && cEl.data('module') !== 'view05' || target.data('module') === 'view06' && cEl.data('module') !== 'view06') {
                 hint.css('background-color', '#ff9999');
                 return false;
             } else {
                 hint.css('background-color', '#ddd');
                 return true;
             }
-        }
-
+        },
+        
+      
     };
     $('#sTree2').sortableLists(options);
 
