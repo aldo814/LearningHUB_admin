@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>시험지 관리</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+
+            <table class="table_style01">
+                <caption>시험지 관리</caption>
+                <colgroup>
+                    <col style="width:180px">
+                    <col>
+                    <col style="width:180px">
+                    <col>
+                </colgroup>
+                <tbody>
+                   <tr>
+                       <th scope="row">과정명(과정ID)</th>
+                       <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                   </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="name">시험지명 <span class="red">*</span></label>
+                        </th>
+                        <td colspan="3">
+                            <input type="text" class="w100p" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">시험지ID <span class="red">*</span></th>
+                        <td>1032701 (신규일 경우 : 자동 부여)</td>
+                        <th scope="row"><label for="type">시험지 종류 <span class="red">*</span></label></th>
+                        <td>
+                            <select id="type">
+                                <option>중간시험</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="division">출제 구분 <span class="red">*</span></label>
+                        </th>
+                        <td>
+                            <select id="division">
+                                <option>순차</option>
+                            </select>
+                        </td>
+                        <th scope="row">
+                            <label for="time">제한 시간 <span class="red">*</span></label>
+                        </th>
+                        <td>
+                            <div class="flex acenter">
+                                <input type="text" class="w50 mr10" id="time"> <p class="mr20">분</p>
+                                <div>
+                                    <input type="checkbox" id="no_time">
+                                    <label for="no_time">시간 제한없음</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_wrap tct">
+                <button type="submit" class="btn_style01 btn_black">저장</button>
+                <button type="button" class="btn_style01 btn_white">목록</button>
+            </div>
+            <!--tree-->
+            
+            <div class="flex acenter mt30">
+                <h3 class=" bold02">문항 매핑현황</h3>
+                <div class="mla flex flex_center">
+                    <a href="javascript:;" class="btn_style03 btn_gray01 mr5 allview">전체 펼치기</a><a href="javascript:;" class="btn_style03 btn_gray01 allfold">전체 접기</a>
+                </div>
+            </div>
+            <div class="treeview mt20">
+                <ul class="sTree bgC4 survey_tree" id="sTree2">
+                   
+                      <li class="bgC4 sortableListsClose s-l-open">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_gray02 mr10 w80">객관식단일형</span>문항명이 출력됩니다.(문항ID)</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open clickable">
+                                    <li>
+                                        <a href="javascript:;"> 절 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="clickable">
+                            
+                            <li data-module="view">
+                               <div class="block">
+                                <div class="radio">
+                                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">보기 1 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd2" name="ex_rd"><label for="ex_rd2">보기 2 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd3" name="ex_rd"><label for="ex_rd3">보기 3 항목</label>
+                                </div>
+                                <table class="table_style01 mt20">
+                                    <caption>시험지</caption>
+                                    <colgroup>
+                                        <col style="width: 150px">
+                                        <col>
+                                        <col style="width: 150px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">난이도</th>
+                                            <td>중</td>
+                                            <th scope="row">
+                                                <label for="score">배점</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" id="score" class="w50">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">정답</th>
+                                            <td colspan="3">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="bgC4 sortableListsClose">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_gray02 mr10 w80">객관식단일형</span>문항명이 출력됩니다.(문항ID)</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open clickable">
+                                    <li>
+                                        <a href="javascript:;"> 절 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="clickable">
+                            
+                            <li data-module="view">
+                               <div class="block">
+                                <div class="radio">
+                                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">보기 1 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd2" name="ex_rd"><label for="ex_rd2">보기 2 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd3" name="ex_rd"><label for="ex_rd3">보기 3 항목</label>
+                                </div>
+                                <table class="table_style01 mt20">
+                                    <caption>시험지</caption>
+                                    <colgroup>
+                                        <col style="width: 150px">
+                                        <col>
+                                        <col style="width: 150px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">난이도</th>
+                                            <td>중</td>
+                                            <th scope="row">
+                                                <label for="score">배점</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" id="score" class="w50">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">정답</th>
+                                            <td colspan="3">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="bgC4 sortableListsClose">
+                        <div>
+                            <div class="left"><a href="javascript:;" class="drag">드래그</a><span class="sortableListsOpener"> </span><input type="checkbox" id="chx" class="clickable mr10"><label for="chx"></label><span class="tbx  bg_gray02 mr10 w50">주관식형</span>문항명이 출력됩니다.(문항ID)</div>
+
+                            <div class="right">
+                                <a href="javascript:;" class="arrow clickable">펼침</a>
+                                <a href="javascript:;" class="menu clickable">메뉴</a>
+                                <ul class="menu_open clickable">
+                                    <li>
+                                        <a href="javascript:;"> 절 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">상세 보기(수정)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">삭제</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="clickable">
+                            
+                            <li data-module="view">
+                               <div class="block">
+                                <div class="radio">
+                                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">보기 1 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd2" name="ex_rd"><label for="ex_rd2">보기 2 항목</label>
+                                </div>
+                                <div class="radio mt10">
+                                    <input type="radio" id="ex_rd3" name="ex_rd"><label for="ex_rd3">보기 3 항목</label>
+                                </div>
+                                <table class="table_style01 mt20">
+                                    <caption>시험지</caption>
+                                    <colgroup>
+                                        <col style="width: 150px">
+                                        <col>
+                                        <col style="width: 150px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">난이도</th>
+                                            <td>중</td>
+                                            <th scope="row">
+                                                <label for="score">배점</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" id="score" class="w50">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">정답</th>
+                                            <td colspan="3">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!--//tree-->
+
+            <!--팝업-->
+            <div class="popUp modal1" title="교육자료(교안) 등록">
+                <h3 class="popTit">교육자료(교안) 등록</h3>
+                <div class="drop-zone">
+                    <input type="file" multiple class="drop_input">
+                    <p>업로드할 파일을 찾아보거나 드래그해주세요. </p>
+                </div>
+                <div class="board_top mt30">
+                    <p class="total">총 00개</p>
+                </div>
+
+                <table class="table_style02">
+                    <caption>교육자료(교안) 등록</caption>
+                    <colgroup>
+                        <col style="width: 50px">
+                        <col>
+                        <col style="width: 100px">
+                        <col style="width: 100px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">파일명</th>
+                            <th scope="col">파일유형</th>
+                            <th scope="col">등록 취소</th>
+                        </tr>
+                    </thead>
+                    <tbody class="file_list">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bt_fixed">
+                <div class="fl">
+                    <a href="javascript:;" class="btn_style03 btn_gray01 ">선택 삭제</a>
+                </div>
+                <div class="fr">
+                    <a href="#" class="btn_style03 btn_orange">문항 추가</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

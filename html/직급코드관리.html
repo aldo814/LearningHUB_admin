@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>직급코드 관리</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>코드 관리</li>
+                    <li>직급코드 관리</li>
+                </ul>
+            </div>
+            <table class="table_style01">
+                <caption>직급코드 관리</caption>
+                <colgroup>
+                    <col style="width:180px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">검색</th>
+                        <td colspan="3">
+                            <div class="scr_area">
+                                <select>
+                                    <option>직급명</option>
+                                    <option>직급코드</option>
+                                </select>
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_wrap tct">
+                <button type="submit" class="btn_style01 btn_black">검색</button>
+                <button type="button" class="btn_style01 btn_white">초기화</button>
+            </div>
+
+            <div class="code_table mt30">
+                <div class="table">
+                    <div class="board_top">
+                        <p class="total">총 00개</p>
+                        <select>
+                            <option>10개</option>
+                        </select>
+                    </div>
+                    <table class="table_style02">
+                        <caption>직급코드관리</caption>
+                        <colgroup>
+                            <col style="width: 50px">
+                            <col>
+                            <col>
+                            <col style="width: 15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" id="opt1"><label for="opt1"></label>
+                                </th>
+                                <th scope="col">직급코드</th>
+                                <th scope="col">직급명</th>
+                                <th scope="col">사용여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="opt2"><label for="opt2"></label></td>
+                                <td>0010100
+                                </td>
+                                <td class="tlt">
+                                    <a href="#" class="code_show">계장</a>
+                                </td>
+                                <td>Y
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--paging-->
+                    <ul class="paging">
+                        <li class="button"><a href="#">처음</a></li>
+                        <li class="button"><a href="#">이전</a></li>
+                        <li class="num active"><a href="#">1</a></li>
+                        <li class="num"><a href="#">2</a></li>
+                        <li class="num"><a href="#">3</a></li>
+                        <li class="num"><a href="#">4</a></li>
+                        <li class="num"><a href="#">5</a></li>
+                        <li class="button"><a href="#">다음</a></li>
+                        <li class="button"><a href="#">맨끝</a></li>
+                    </ul>
+                    <!--//paging-->
+                </div>
+
+                <div class="code_view">
+                    <div class="item">
+                        <p class="top">직급코드 상세</p>
+                        <table class="table_style03">
+                            <caption>직급코드 상세</caption>
+                            <colgroup>
+                                <col style="width: 100px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="code">
+                                            직급코드 <span class="red">*</span>
+                                        </label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="code">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="name">
+                                            직급명 <span class="red">*</span>
+                                        </label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="remark">비고</label>
+                                    </th>
+                                    <td>
+                                        <inpug id="remark"></inpug>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="useY">
+                                            사용여부 <span class="red">*</span>
+                                        </label>
+                                    </th>
+                                    <td>
+                                        <ul class="check_list">
+                                            <li>
+                                                <div class="radio">
+                                                    <input type="radio" id="useY" name="use"><label for="useY">Y</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radio">
+                                                    <input type="radio" id="useN" name="use"><label for="useN">N</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mt30 clear">
+                            <div class="fl">
+                                <a href="javascript:;" class="btn_style03 btn_gray01 ">삭제</a>
+                            </div>
+                            <div class="fr">
+                                <a href="javascript:;" class="btn_style03 btn_orange">저장</a>
+                                <a href="javascript:;" class="btn_style03 btn_white code_hide">취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <p class="top">직급코드 상세</p>
+                        <p class="bold02 tct mt20">
+                            선택된 직급이 없습니다.
+                        </p>
+                        <p class="gray mt10 tct f14">
+                            직급을 선택하시면 직급의 상세정보 확인 및 수정을 할 수 있습니다. 
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bt_fixed">
+                <div class="fl">
+                    <a href="javascript:;" class="btn_style03 btn_gray01 ">선택 삭제</a>
+                </div>
+                <div class="fr">
+                    <a href="javascript:;" class="btn_style03 btn_orange  w85">신규</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

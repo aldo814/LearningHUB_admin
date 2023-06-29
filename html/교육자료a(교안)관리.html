@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>교육자료a(교안) 관리</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+
+            <table class="table_style01">
+                <caption>교육자료a(교안) 관리</caption>
+                <colgroup>
+                    <col style="width:180px">
+                    <col>
+                    <col style="width:180px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <label for="all">파일 유형</label>
+                        </th>
+                        <td>
+                            <ul class="check_list">
+                                <li><input type="checkbox" id="all"><label for="all">전체</label></li>
+                                <li><input type="checkbox" id="hwp"><label for="hwp">HWP</label></li>
+                                <li><input type="checkbox" id="pdf"><label for="pdf">PDF</label></li>
+                                <li><input type="checkbox" id="ppt"><label for="ppt">PPT</label></li>
+                                <li><input type="checkbox" id="zip"><label for="zip">ZIP</label></li>
+                            </ul>
+                        </td>
+                        <th scope="row">
+                            <label for="all2">매핑과정 여부</label>
+                        </th>
+                        <td>
+                            <ul class="check_list">
+                                <li><input type="checkbox" id="all2"><label for="all">전체</label></li>
+                                <li><input type="checkbox" id="y"><label for="hwp">Y</label></li>
+                                <li><input type="checkbox" id="n"><label for="pdf">N</label></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">검색</th>
+                        <td colspan="3">
+                            <div class="scr_area">
+                                <select>
+                                    <option>성명</option>
+                                    <option>아이디</option>
+                                    <option>이메일</option>
+                                    <option>휴대전화번호</option>
+                                </select>
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_wrap tct">
+                <button type="submit" class="btn_style01 btn_black">검색</button>
+                <button type="button" class="btn_style01 btn_white">초기화</button>
+            </div>
+            <div class="board_top mt30">
+                <p class="total">총 00개</p>
+                <select>
+                    <option>10개</option>
+                </select>
+            </div>
+
+            <table class="table_style02">
+                <caption>교육자료a(교안) 관리</caption>
+                <colgroup>
+                    <col style="width: 50px">
+                    <col style="width: 100px">
+                    <col>
+                    <col style="width: 100px">
+                    <col style="width: 100px">
+                    <col style="width: 140px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox" id="chk"><label for="chk"></label></th>
+                        <th scope="col">교안ID</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">파일유형</th>
+                        <th scope="col">다운로드</th>
+                        <th scope="col">과정매핑여부(수)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="chk2"><label for="chk2"></label></td>
+                        <td>1055134</td>
+                        <td class="tlt">
+                            <a href="#">텐서플로우_개념.pdf</a>
+                        </td>
+                        <td>PDF</td>
+                        <td>
+                            <img src="images/file.png" alt="">
+                        </td>
+                        <td>Y (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--paging-->
+            <ul class="paging">
+                <li class="button"><a href="#">처음</a></li>
+                <li class="button"><a href="#">이전</a></li>
+                <li class="num active"><a href="#">1</a></li>
+                <li class="num"><a href="#">2</a></li>
+                <li class="num"><a href="#">3</a></li>
+                <li class="num"><a href="#">4</a></li>
+                <li class="num"><a href="#">5</a></li>
+                <li class="button"><a href="#">다음</a></li>
+                <li class="button"><a href="#">맨끝</a></li>
+            </ul>
+            <!--//paging-->
+
+            <!--팝업-->
+            <div class="popUp modal1" title="교육자료(교안) 등록">
+                <h3 class="popTit">교육자료(교안) 등록</h3>
+                <div class="drop-zone">
+                    <input type="file" multiple class="drop_input">
+                    <p>업로드할 파일을 찾아보거나 드래그해주세요. </p>
+                </div>
+                <div class="board_top mt30">
+                    <p class="total">총 00개</p>
+                </div>
+
+                <table class="table_style02">
+                    <caption>교육자료(교안) 등록</caption>
+                    <colgroup>
+                        <col style="width: 50px">
+                        <col>
+                        <col style="width: 100px">
+                        <col style="width: 100px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">파일명</th>
+                            <th scope="col">파일유형</th>
+                            <th scope="col">등록 취소</th>
+                        </tr>
+                    </thead>
+                    <tbody class="file_list">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bt_fixed">
+                <div class="fl">
+                    <a href="javascript:;" class="btn_style03 btn_gray01 ">선택 삭제</a>
+                </div>
+                <div class="fr">
+                    <a href="#" class="btn_style03 btn_orange">엑셀 저장</a>
+                    <a href="javascript:openModal('modal1');" class="btn_style03 btn_white w85">신규</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

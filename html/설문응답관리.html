@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>설문응답 관리</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+
+            <table class="table_style01">
+                <caption>설문응답 관리</caption>
+                <colgroup>
+                    <col style="width:180px">
+                    <col>
+                    <col style="width:180px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">설문지명</th>
+                        <td colspan="3">설문지 제목이 출력됩니다. </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">설문 종류</th>
+                        <td>과정 만족도 설문</td>
+                        <th scope="row">설문 기간</th>
+                        <td>2023-04-01~2023-04-30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">설문지URL</th>
+                        <td colspan="3">
+                            <div class="url_wrap">
+                                <p>https://</p>
+                                <a href="javascript:;" class="btn_style03 btn_gray01 ">미리 보기</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">과정명(과정ID)</th>
+                        <td colspan="3">텐서플로로 배우는 딥러닝(1055134)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기관</th>
+                        <td>KH건설</td>
+                        <th scope="row">연도-기수 </th>
+                        <td>2023-23412</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">대상자 </th>
+                        <td>30명</td>
+                        <th scope="row">응답자(응답률) </th>
+                        <td>20명 (66.6%)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="board_top mt30">
+                <p class="total">총 00명</p>
+                <select>
+                    <option>10개</option>
+                </select>
+            </div>
+            <table class="table_style02">
+                <caption>설문응답 관리</caption>
+                <colgroup>
+                    <col style="width: 100px">
+                    <col>
+                    <col style="width: 200px">
+                    <col style="width: 200px">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">성명(아이디)</th>
+                        <th scope="col">제출여부</th>
+                        <th scope="col">제출일자</th>
+                        <th scope="col">관리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>홍길동(kildong.hong)</td>
+                        <td>Y</td>
+                        <td>2023-04-12</td>
+                        <td><a href="javascript:openModal('modal1');" class="btn_style01 btn_gray01">개별 결과 보기</a>
+                            <a href="#" class="btn_style01 btn_white">초기화</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--paging-->
+            <ul class="paging">
+                <li class="button"><a href="#">처음</a></li>
+                <li class="button"><a href="#">이전</a></li>
+                <li class="num active"><a href="#">1</a></li>
+                <li class="num"><a href="#">2</a></li>
+                <li class="num"><a href="#">3</a></li>
+                <li class="num"><a href="#">4</a></li>
+                <li class="num"><a href="#">5</a></li>
+                <li class="button"><a href="#">다음</a></li>
+                <li class="button"><a href="#">맨끝</a></li>
+            </ul>
+            <!--//paging-->
+
+
+            <!--팝업-->
+            <div class="popUp modal1" title="설문결과 보기">
+                <h3 class="popTit">설문명이 출력됩니다.</h3>
+                <table class="table_style03">
+                    <caption>설문 결과보기</caption>
+                    <colgroup>
+                        <col style="width: 100px">
+                        <col>
+                        <col style="width: 100px">
+                        <col>
+                    </colgroup>
+                   <tbody>
+                       <tr>
+                           <th scope="row">과정명(과정ID)</th>
+                           <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                       </tr>
+                       <tr>
+                           <th scope="row">설문기간</th>
+                           <td>2023-04-10~2023-04-20</td>
+                           <th scope="row">설문종류</th>
+                           <td>과정만족도 설문</td>
+                       </tr>
+                       <tr>
+                           <th scope="row">대상</th>
+                           <td>30명</td>
+                           <th scope="row">제출(참여율)</th>
+                           <td>20명 (66.66%)</td>
+                       </tr>
+                   </tbody>
+                </table>
+            </div>
+
+            <div class="bt_fixed">
+                <div class="fl">
+                    <a href="javascript:;" class="btn_style03 btn_gray01 ">개인별 설문결과 엑셀 저장</a>
+                    <a href="javascript:;" class="btn_style03 btn_gray01 ">문항별 설문결과 엑셀 저장</a>
+                </div>
+                <div class="fr">
+                    <a href="#" class="btn_style03 btn_white w85">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

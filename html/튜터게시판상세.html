@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+   <div class="body_wrap">
+    <!--header-->
+    <div id="header">
+        <!--header_nav-->
+        <div class="header_nav">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="LearningHUB">
+            </a>
+            <div class="gnb_wrap">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">메인</a>
+                    </li>
+                    <li>
+                        <a href="#">공통관리</a>
+                        <ul>
+                            <li><a href="#">회원 관리</a></li>
+                            <li><a href="#">튜터 관리</a></li>
+                            <li><a href="#">권한 관리</a></li>
+                            <li><a href="#">코드 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">환급 신고 관리</a></li>
+                            <li><a href="#">수요조사 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">콘텐츠 관리</a>
+                        <ul>
+                            <li><a href="#">과정 관리</a></li>
+                            <li><a href="#">콘텐츠 관리</a></li>
+                            <li><a href="#">교육자료 관리</a></li>
+                            <li><a href="#">시험 관리</a></li>
+                            <li><a href="#">과제 관리</a></li>
+                            <li><a href="#">토론 관리</a></li>
+                            <li><a href="#">설문 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">교육 관리</a>
+                        <ul>
+                            <li><a href="#">기수 관리</a></li>
+                            <li><a href="#">수강 관리</a></li>
+                            <li><a href="#">학습 준비 과정 운영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">사이트 관리</a>
+                        <ul>
+                            <li><a href="#">게시판 관리</a></li>
+                            <li><a href="#">사이트 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">통계 관리</a>
+                        <ul>
+                            <li><a href="#">접속 통계</a></li>
+                            <li><a href="#">메일발송 관리</a></li>
+                            <li><a href="#">SMS발송 관리</a></li>
+                            <li><a href="#">교육 통계</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">부가기능 관리</a>
+                        <ul>
+                            <li><a href="#">연통 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="gnbBg"></div>
+            </div>
+            <a href="#" class="menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <!--//header_nav-->
+        <!--sidebar_menu-->
+        <div class="sidebar_menu">
+            <a href="#" class="hide_btn"><span></span></a>
+            <div class="account">
+                <h3>홍길동님(총괄관리자)</h3>
+                <div class="btn_wrap">
+                    <a href="#" class="logout">로그아웃</a>
+                    <a href="#" class="homepage">홈페이지</a>
+                </div>
+            </div>
+            <ul class="side_menu">
+                <li class="active"><a href="#">회원관리</a>
+                    <ul>
+                        <li class="active"><a href="#">회원정보 관리</a></li>
+                        <li><a href="#">개인 수강이력</a></li>
+                        <li><a href="#">조회</a></li>
+                        <li><a href="#">개인정보</a></li>
+                        <li><a href="#">접근관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">VOC 현황</a>
+                </li>
+                <li>
+                    <a href="#">튜터 관리</a>
+                    <ul>
+                        <li><a href="#">튜터 정보관리</a></li>
+                        <li><a href="#">튜터 활동현황</a></li>
+                        <li><a href="#">튜터 등급관리</a></li>
+                        <li><a href="#">강사료</a></li>
+                        <li><a href="#">지급현황</a></li>
+                        <li><a href="#">튜터 공지사항</a></li>
+                        <li><a href="#">튜터 게시판</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">권한 관리</a>
+                    <ul>
+                        <li><a href="#">프로그램 등록</a></li>
+                        <li><a href="#">시스템 권한</a></li>
+                        <li><a href="#">시스템 메뉴</a></li>
+                        <li><a href="#">사용자 권한</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">코드 관리</a>
+                    <ul>
+                        <li><a href="#">공통코드 관리</a></li>
+                        <li><a href="#">메일 유형코드 관리</a></li>
+                        <li><a href="#">SMS 유형코드 관리</a></li>
+                        <li><a href="#">직급코드 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기관 관리</a>
+                    <ul>
+                        <li><a href="#">테마 관리</a></li>
+                        <li><a href="#">기관 관리</a></li>
+                        <li><a href="#">기관별 메뉴 관리</a></li>
+                        <li><a href="#">기관별 과정 관리</a></li>
+                        <li><a href="#">수강제약 관리</a></li>
+                        <li><a href="#">교육일정 관리</a></li>
+                        <li><a href="#">역량진단 관리</a></li>
+                        <li><a href="#">과정 이벤트 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">환급신고 관리</a>
+                </li>
+                <li>
+                    <a href="#">수요조사 관리</a>
+                </li>
+            </ul>
+        </div>
+        <!--//sidebar_menu-->
+    </div>
+    <!--//header-->
+    <div class="content_wrapper">
+        <div class="page-title">
+            <h3>튜터 게시판</h3>
+            <ul class="breadcrumb">
+                <li>공통 관리</li>
+                <li>튜터 관리</li>
+                <li>튜터 게시판</li>
+            </ul>
+        </div>
+        <table class="table_style01">
+            <caption>튜터 게시판</caption>
+            <colgroup>
+                <col style="width:180px">
+                <col>
+                <col style="width:180px">
+                <col>
+                 <col style="width:180px">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">노출 기관</th>
+                    <td colspan="5">공통</td>
+                </tr>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td colspan="5">게시물 제목이 노출되는 공간입니다 </td>
+                </tr>
+                <tr>
+                    <th scope="row">작성자</th>
+                    <td>관리자</td>
+                    <th scope="row">작성일</th>
+                    <td>2022-01-17 </td>
+                    <th scope="row">조회 수</th>
+                    <td>324 </td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일</th>
+                    <td colspan="5">첨부파일명.hwpx (132회)
+</td>
+                </tr>
+                <tr>
+                    <td colspan="6">게시물 내용이 표시됩니다. <br>
+작성 시 에디터를 활용한 작성으로 폰트 색상, 크기, 폰트 종류 등이 반영되며, <br>
+이미지 등의 멀티미디어 요소, 테이블 등의 다양한 요소로 구성된 형태의 게시물 내용이 표시됩니다. 
+</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="table_style02 mt20">
+           <colgroup>
+               <col style="width: 5%">
+               <col>
+               <col style="width:10%">
+               <col style="width:13%">
+               <col style="width:10%">
+               <col style="width:10%">
+           </colgroup>
+            <thead>
+                <th scope="col">No.
+                </th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+                <th scope="col">조회 수</th>
+                <th scope="col">첨부 파일</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="tlt">게시물 제목이 표시됩니다. </td>
+                    <td>관리자</td>
+                    <td>2020-01-17</td>
+                    <td>1,413</td>
+                    <td><img src="images/file.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="tlt">└ RE : 게시물 제목이 표시됩니다. </td>
+                    <td>관리자13</td>
+                    <td>2020-01-20</td>
+                    <td>320</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="comment">
+           <p class="mt30 bold02">
+            댓글 (2)
+        </p>
+            <div class="comment_write">
+                <textarea></textarea>
+                <a href="#">댓글<br>작성</a>
+            </div>
+            <div class="comment_list">
+                <div class="item">
+                    <div class="cont">
+                        <p>작성된 댓글의 내용이 보입니다. 
+댓글 작성 창은 textarea 로 구성합니다. 
+</p>
+                        <ul>
+                            <li>작성자 </li>
+                            <li>2022-01-20</li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#" class="btn_style03 btn_gray02">수정</a>
+                        <a href="#" class="btn_style03 btn_white">삭제</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cont">
+                        <p>작성된 댓글의 내용이 보입니다. 
+댓글 작성 창은 textarea 로 구성합니다. 
+</p>
+                        <ul>
+                            <li>작성자 </li>
+                            <li>2022-01-20</li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="#" class="btn_style03 btn_gray02">수정</a>
+                        <a href="#" class="btn_style03 btn_white">삭제</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bt_fixed">
+            <div class="fl">
+                <a href="javascript:;" class="btn_style03 btn_gray01 w85"> 삭제</a>
+            </div>
+            <div class="fr">
+                <a href="javascript:;" class="btn_style03 btn_orange w85">수정</a>
+                <a href="javascript:;" class="btn_style03 btn_white w85">목록</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

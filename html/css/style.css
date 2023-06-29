@@ -1,7 +1,8 @@
 .bold02{font-weight: 500}
 .textarea{resize: none;width: 100%;border: 1px solid #dddddd;padding: 1rem;border-radius: 5px;box-sizing: border-box;height: 60px;font-family: 'Noto Sans Kr'}
 .textarea::placeholder{color: #888888}
-/* 로그인 */
+.block{display: block !important}
+/* ??? */
 .login_header{background: #323437;text-align: center;padding: 18px}
 .login_area{display: flex;flex-direction: column;justify-content: center;align-items: center;min-height: calc(100vh - 266px)}
 .login_area  .inner{display: flex;flex-direction: column;align-items: center;justify-content: center;}
@@ -31,6 +32,8 @@
 #footer p .bold{font-weight: 500;color: #454c53;}
 #footer p:last-child{margin-top: 3rem}
 
+.tit{font-size: 16px;font-weight: 500;margin-bottom: 10px}
+
 /* table style*/
 .table_style01{border-top: 2px solid #323437;}
 .table_style01 th,
@@ -38,8 +41,7 @@
 .table_style01 th{background: #eeeeee;text-align: left;padding: 1rem 2rem}
 .table_style01 td{background: #fff;padding: 1rem}
 .table_style01 tr{border-bottom: 1px solid #dddddd;}
-.table_style02 thead{background: #70747b;}
-.table_style02 thead th {color: #fff;padding: 2rem;vertical-align: middle;font-size: 14px}
+.table_style02 thead th {color: #fff;padding: 2rem;vertical-align: middle;font-size: 14px;background: #70747b}
 .table_style02 tbody td{padding: 1.5rem 2rem;vertical-align: middle;text-align: center;font-size: 14px}
 .table_style02 tbody tr{border-bottom: 1px solid #dddddd;}
 .table_style02 tbody tr:nth-child(odd){background: #fff}
@@ -55,10 +57,10 @@
 .div_table .td{}
 .div_table02{display: table;width: 100%;table-layout: fixed;border-collapse: collapse}
 .div_table02 .thead{background: #70747b;color: #fff;}
-.div_table02  .tr{display: table;border-bottom: 1px solid #ddd;}
+.div_table02  .tr{display: table;border-bottom: 1px solid #ddd;width: 100%}
 
 .div_table02  .th,
-.div_table02  .td{display: table-cell;padding: 10px;font-size: 14px;text-align: center;vertical-align: middle}
+.div_table02  .td{display: table-cell;padding: 10px;font-size: 14px;text-align: center;vertical-align: middle;box-sizing: border-box}
 .div_table02 .tbody{width: 100%}
 .div_table02 .tbody .tr{display: table;width: 100%;table-layout: fixed;}
 .div_table02  .tbody .tr:nth-child(odd){background: #fff}
@@ -119,7 +121,7 @@ a.btn_style02{line-height: 30px;}
 .sms_btn{background: url(../images/sms_ico.png) no-repeat left 10px center #888;padding-left: 30px}
 .xls_btn{background: url(../images/xls_ico.png) no-repeat left 10px center #888;padding-left: 30px}
 
-/* 팝업 */
+/* ?? */
 .ui-widget-overlay{background: #000}
 .ui-dialog{padding: 0 !important;border: 0 !important;min-width: 650px ;position: fixed !important;z-index: 99999999999999 !important; left: 50% !important;transform: translateX(-50%);font-family: 'Noto Sans KR' !important;}
 .ui-widget-header{border: 0 !important}
@@ -132,13 +134,13 @@ a.btn_style02{line-height: 30px;}
 .ui-window-maximize{position: absolute !important;right: 35px;top: 50%;transform: translateY(-50%)}
 .ui-button .ui-icon.ui-icon-plusthick{background: url(../images/max.png) no-repeat center;}
 .ui-button .ui-icon.ui-icon-closethick{background: url(../images/close.png) no-repeat center;}
-.ui-dialog .ui-dialog-content{padding: 2rem;display: block !important;background: #fff;max-height: calc(100vh - 200px) !important;overflow-y: auto}
+.ui-dialog .ui-dialog-content{padding: 2rem;display: block !important;background: #fff !important;max-height: calc(100vh - 200px) !important;overflow-y: auto}
 .popTit {font-weight: 500;font-size: 1.6rem;border-bottom: 1px solid #000;padding-bottom: 1rem;margin-bottom: 2rem;}
 
 .shadow{background: rgba(0, 0, 0, 0.3);width: 100%;height: 100vh;position: fixed;left: 0;top: 0;display: none;z-index: 5555}
 .modal_popUp{width: 500px;background: #fff;position: fixed;top: 50%;left:50%;transform: translate(-50%,-50%);padding: 3rem;display: none;z-index: 9999}
 
-/* 윈도우팝업 */
+/* ????? */
 .windwoPopUp_head{background: #505050;padding: 1rem 1.5rem;overflow: hidden}
 .windwoPopUp_head p{font-size: 1.6rem !important;font-family: 'Noto Sans KR';color: #fff;font-weight: 400;float: left}
 .windwoPopUp_head .top_close{background: url(../images/close.png) no-repeat center;float: right;display: block;width: 14px;height: 14px;text-indent: -9999px;}
@@ -159,7 +161,7 @@ a.btn_style02{line-height: 30px;}
 .filetype02 .file-select .input-file {width: 60px;filter: alpha(opacity=0);opacity: 0;height: 20px;}
 .filetype02 .file-text + .file-btn {display: inline-block;background-color: #888888 ;height: 34px;line-height: 34px; padding: 0 15px;color: #fff !important;cursor: pointer;margin-left: 7px;border-radius:5px;font-size: 1.4rem}
 
-/* 탭메뉴 */
+/* ??? */
 .tabs ul{display: flex;position: relative;}
 .tabs ul:after{content: '';display: block;width: calc(100% - 2px);height: 1px;background: #888888;position: absolute;bottom: 0;left: 2px}
 .tabs ul li a{font-size: 1.4rem;background: #fff;border: 1px solid #dddddd;width: 85px;display: block;text-align: center;padding: 10px;border-radius: 10px 10px 0 0;box-sizing: border-box;color: #888888;margin-left: -1px;background: #fff;border-bottom: 0;outline: none;}
@@ -178,14 +180,14 @@ a.btn_style02{line-height: 30px;}
 .num_list li:nth-child(5):before{content: '5.';position: absolute;left: 0;top: 0}
 .num_list li:last-child{margin-bottom: 0}
 
-/* 게시판 */
+/* ??? */
 .board_top{display: flex;justify-content: space-between;align-items: center;margin-bottom: 1.7rem}
 .board_top .total{font-size: 1.8rem}
 .scr_area{display: flex;}
 .scr_area select{width: 130px;margin-right: 10px}
 .scr_area input{width: calc(100% - 140px)} 
 
-/* 툴팁 */
+/* ?? */
 .tooltip_wrap{position: relative;display: inline-block;}
 .css-tooltip {height: 12px;position: relative;display: inline-block;}
 .tp-icon {display: inline-block;background:url(../images/tooltip_ico.png) no-repeat;width: 12px;height: 12px;text-align: center;line-height: 1;font-style: normal;text-indent: -9999px;margin-left: .7rem;}
@@ -209,7 +211,7 @@ a.btn_style02{line-height: 30px;}
 .content_wrapper.full .bt_fixed{width: calc(100% - 120px);left: 60px}
 
 
-/* tree 메뉴 */
+/* tree ?? */
 .treeview ul li,
 #s-l-base ul li{margin-left:  30px;position: relative;}
 .treeview  ul,
@@ -229,7 +231,7 @@ a.btn_style02{line-height: 30px;}
 .treeview > ul  li > div:not(.div_table02):before,
 #s-l-base > ul  li > div:not(.div_table02):before{content: '';display: block;width: 18px;height: 1px;background: #c5c5c5;position: absolute;left: -18px;top: 50%;}
 .treeview > ul > li > div:before,
-#s-l-base > ul > li > div:before{display: none}
+#s-l-base > ul > li > div:before{display: none !important}
 
 .s-l-open > div  .arrow{transform: rotate(90deg)}
 .treeview .s-l-open > ul{z-index: 1;position: relative}
@@ -246,8 +248,8 @@ a.btn_style02{line-height: 30px;}
 #s-l-base > ul > li:after{content: '';display: block;width: 50%;height: 1px;bottom: 26px;left: 15px;position: absolute;background: #c5c5c5;z-index: -1}
 .treeview > ul > li,
 #s-l-base > ul > li{margin-left: 0;}
-.treeview li > div:not(.range,.div_table02),
-#s-l-base li > div:not(.range,.div_table02){ padding:15px 10px ; background-color:#fff; border:1px solid #dddddd; border-left: 4px solid #dddddd;position: relative;font-size: 14px;display: flex;align-items: center;margin-bottom: 10px;}
+.treeview li > div:not(.range,.div_table02,.radio),
+#s-l-base li > div:not(.range,.div_table02,.radio){ padding:15px 10px ; background-color:#fff; border:1px solid #dddddd; border-left: 4px solid #dddddd;position: relative;font-size: 14px;display: flex;align-items: center;margin-bottom: 10px;}
 .treeview li .drag,
 #s-l-base li .drag{display: inline-block;background: url(../images/drag.png) no-repeat;width: 8px;height: 15px;text-indent: -9999px;vertical-align: middle;margin-right: 10px;cursor:move}
 .treeview li > div .ico,
@@ -276,7 +278,7 @@ a.btn_style02{line-height: 30px;}
 .treeview .menu_open li:before{display: none}
 .treeview .menu_open.active{display: block}
 
-/* 캘린더 */
+/* ??? */
 .datep_wrap{border: 1px solid #ddd;font-size: 1.4rem;padding: 0.1rem 0;display: flex;justify-content: space-between;border-radius: 5px;box-sizing: border-box;}
 .datep_wrap input{outline: none}
 .datep_wrap .ui-datepicker-trigger{background: none;border: 0}
@@ -287,6 +289,7 @@ a.btn_style02{line-height: 30px;}
 .ui-widget-header{background: none !important;border: 0 !important}
 .ui-datepicker th{color: #9ea4aa;font-weight: 500 !important}
 .ui-widget-content{border: 1px solid #c9cdd2 !important;}
+.ui-dialog:not(.min,.max){top: 50% !important;left: 50% !important;transform: translate(-50%,-50%);height: auto !important}
 .ui-datepicker .ui-datepicker-buttonpane{border: none !important}
 .ui-datepicker .ui-datepicker-prev span{background: url(../images/c_arrow.svg) no-repeat center;transform: rotate(180deg)}
 .ui-datepicker .ui-datepicker-next span{background: url(../images/c_arrow.svg) no-repeat center;}
@@ -305,6 +308,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .bg_brown01{background: #b1886a;color: #fff;}
 .bg_brown02{background: #874c3e;color: #fff;}
 .bg_gray02{background: #545454;color: #fff}
+.bg_gray03{background: #f5f5f5;border: 1px solid #ddd;padding: 10px;border-radius: 5px;}
 
 .sTree .view,
 #s-l-base .view{margin-top: -10px;margin-bottom: 10px}
@@ -332,7 +336,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .ul_select > li ul li a:active,
 .ul_select > li ul li a:focus{background: #afafaf;border: 1px solid #afafaf;color: #fff}
 
- /* 토글 버튼 */
+ /* ?? ?? */
 .toggle .toggleSwitch .toggleButton {
   width: 15px;
   height: 15px;
@@ -387,7 +391,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .survey_tree .range p {margin: 0 10px}
 .survey_tree .option .fr a + a{margin-left: 5px}
 
-/* 로딩 */
+/* ?? */
 .loading{position: fixed;left: 0;top: 0;background: #e5e5e5;width: 100%;height: 100%;z-index: 99999}
 .loading > div{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%)}
 .loading img{animation-name:spinCircle;animation-duration:2s;animation-iteration-count:infinite;display: block;margin: 0 auto 2rem auto}
@@ -395,7 +399,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .loading .loading_pro{width: 240px;height: 10px;border-radius: 30px;background: #fff;border: 1px solid #dddddd;margin: 10px auto 0 auto;position: relative;overflow: hidden}
 .loading .loading_pro span{height: 100%;width: 0;display: block;position: absolute;left: 0;top: 0;background: #1b1d1f ;animation: bar1 3s ease-out infinite;}
 
-/* 테마관리 */
+/* ???? */
 .theme_list{display: flex;flex-wrap: wrap;}
 .theme_list > .item{width: calc(25% - 15px);margin-right: 20px;margin-top: 20px;}
 .theme_list > .item:nth-child(-n + 4){margin-top: 10px}
@@ -440,7 +444,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .content_add .del{text-align: center;display: block;padding: 10px;border-top: 1px solid #ddd;margin-top: 10px}
 .content_add .search_btn{display: block;text-align: center;padding: 10px;border-radius: 5px;background: #888;color: #fff}
 
-/* 기관별 과정 관리 */
+/* ??? ?? ?? */
 .agency_tree.treeview > ul li > div:before{margin-top: 8px !important;z-index: -1}
 .program_num {display: flex;background: #f5f5f5;padding: 10px;border: 1px solid #dcdcdc;border-radius: 5px;margin-right: 15px}
 .program_num:before{display: none !important}
@@ -461,3 +465,110 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .view .div_table02 .td:nth-child(7){width: 100px}
 .view .div_table02 .tbody{max-height: 258px;overflow-y: auto}
 .agency_tree .bgC4.view{margin-top: 0}
+
+.agency_list{display: flex;}
+.agency_list li{margin-top: 10px;display: flex;font-size: 13px;border: 1px solid #ddd;padding: 5px 10px;border-radius: 30px;margin-right: 10px;align-items: center}
+.agency_list li .del{margin-left: 10px;background: url(../images/close_btn.png) no-repeat;width: 11px;height: 10px;text-indent: -9999px;}
+
+/* ????? */
+.comment_write{margin-top: 15px;display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px}
+.comment_write textarea{resize: none;border: 1px solid #ddd;width: calc(100% - 90px);height: 80px;box-sizing: border-box;border-radius: 5px}
+.comment_write a{background: #888888;color: #fff;text-align: center;font-size:14px;width: 80px;height: 80px;display: flex;align-items: center;justify-content: center;border-radius: 5px;box-sizing: border-box; } 
+.comment_list .item{padding: 20px;border-top: 1px solid #ddd;font-size: 14px;display: flex;justify-content: space-between}
+.comment_list .item:last-child{border-bottom: 1px solid #ddd}
+.comment_list .item p{margin-bottom: 10px}
+.comment_list .item ul {display: flex;font-size: 13px}
+.comment_list .item ul li{position: relative;margin-right: 10px;padding-right: 10px;color: #888;}
+.comment_list .item ul li:after{content: '';display: block;background: #888;width: 1px;height: 10px;position: absolute;right: 0;top: 50%;transform: translateY(-50%)}
+.comment_list .item ul li:last-child{margin-right: 0;padding-right: 0}
+.comment_list .item ul li:last-child:after{display: none}
+.comment_list .item .btn a{padding: 5px 10px;font-size: 13px}
+.comment_list .item .btn a + a{margin-left: 5px}
+
+/* ???? ?? ?? */
+.layer_view{position: relative}
+.layer_view .layv{position: absolute;right: 0;background: #fff;border: 1px solid #ddd;padding: 15px;right: 0;top: 0;width: calc(100% - 150px);display: none}
+.layer_view .layv .top{display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;padding-bottom: 10px;border-bottom: 1px solid #ddd;}
+.layer_view .layv .top a{background: url(../images/close_btn.png) no-repeat center;width: 11px;height: 10px;text-indent: -9999px}
+
+/* ?????? */
+.code_view {display: none}
+.code_view .item{background: #fff;padding: 15px;box-sizing: border-box;border: 1px solid #ddd}
+.code_view .item + .item{margin-top: 15px}
+.code_view .item .top{border-bottom: 1px solid #000;padding-bottom: 10px;margin-bottom: 10px}
+
+.code_table.active{display: flex;justify-content: space-between}
+.code_table.active .code_view{display: block;}
+.code_table.active > div{width: calc(50% - 10px);}
+
+/* ???? */
+.scr_area02{display: flex;justify-content: space-between;align-items: center;justify-content: space-between}
+.scr_area02 input{width: calc(100% - 150px)}
+.scr_area03 {display: flex;justify-content: space-between}
+.scr_area03 input{width: calc(100% - 65px)}
+.depart_wrap{display: flex;justify-content:space-between}
+.depart_wrap > .item{width: calc(50% - 10px)}
+.depart_wrap .item:nth-child(1) .div_table02 .tbody{max-height: 492px;overflow-y: auto}
+.depart_wrap .item:nth-child(1) .div_table02 .th:nth-child(1),
+.depart_wrap .item:nth-child(1) .div_table02 .td:nth-child(1){width: 80px}
+.depart_wrap .item:nth-child(1) .div_table02 .th:nth-child(2),
+.depart_wrap .item:nth-child(1) .div_table02 .td:nth-child(2){width: 100px}
+.depart_wrap .item:nth-child(1) .div_table02 .th:nth-child(3),
+.depart_wrap .item:nth-child(1) .div_table02 .td:nth-child(3){width: calc(100% - 340px)}
+.depart_wrap .item:nth-child(1) .div_table02 .th:nth-child(4),
+.depart_wrap .item:nth-child(1) .div_table02 .td:nth-child(4){width: 80px}
+.depart_wrap .item:nth-child(1) .div_table02 .th:nth-child(5),
+.depart_wrap .item:nth-child(1) .div_table02 .td:nth-child(5){width: 80px}
+.depart_wrap .item:nth-child(2) .clear{margin-top: 20px;}
+.depart_wrap .item .treeview{max-height: 540px;overflow-y: auto}
+
+.preview_wrap{margin-top: 20px;border: 1px solid #ddd;padding: 20px;border-radius: 5px;text-align: center;width: 300px;display: none}
+
+/* ????? */
+.content_mng{display: flex;flex-wrap: wrap}
+.content_mng .item{width: calc(25% - 17px);margin-right: 20px;border: 1px solid #ddd;border-radius: 5px;overflow: hidden;background: #fff;margin-top: 20px}
+.content_mng .item:nth-child(-n + 4){margin-top: 0}
+.content_mng .item:nth-child(4n){margin-right: 0}
+.content_mng .item .img{position: relative;height: 180px}
+.content_mng .item.not_used .img:after{content: '';display: block;background: rgba(0, 0, 0, 0.19);width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.content_mng .item .img img{display: block;width: 100%;height: 100%}
+.content_mng .item .img input{position: absolute;left: 10px;top: 10px;z-index: 5}
+.content_mng .item .img div{position: absolute;right: 10px;top: 10px;display: flex}
+.content_mng .item .img p {background: #888;font-size: 12px;padding: 5px;border-radius: 5px;color: #ffff}
+.content_mng .item .img p + p{margin-left: 5px}
+.content_mng .item .text{padding: 15px}
+.content_mng .item .text .num{color: #888;font-size: 14px;margin-bottom: 5px}
+.content_mng .item .text .tit{font-weight: 500;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;margin-bottom: 5px}
+.content_mng .item .text ul{display: flex;}
+.content_mng .item .text ul li{font-size: 14px;color: #777;}
+.content_mng .item .text ul li:after{content: '>';margin: 0 3px}
+.content_mng .item .text ul li:last-child:after{display: none}
+.content_mng .item .btn{display: flex;border-top: 1px solid #ddd;}
+.content_mng .item .btn a + a{border-left: 1px solid #ddd;}
+.content_mng .item .btn a{text-align: center;padding: 10px;width: 50%;box-sizing: border-box;font-size: 14px;}
+
+/* ????? */
+.cont_cs{display: flex;justify-content: space-between}
+.cont_cs > .item{width: calc(50% - 10px)}
+.cont_cs > .item:nth-child(2) .div_table02{margin-top: 12px}
+.cont_cs > .item:nth-child(1) .th:nth-child(1),
+.cont_cs > .item:nth-child(1) .td:nth-child(1){width: 50px}
+.cont_cs > .item:nth-child(1) .th:nth-child(2),
+.cont_cs > .item:nth-child(1) .td:nth-child(2){width: 100px}
+.cont_cs > .item:nth-child(1) .th:nth-child(3),
+.cont_cs > .item:nth-child(1) .td:nth-child(3){width: calc(100% - 250px)}
+.cont_cs > .item:nth-child(1) .th:nth-child(4),
+.cont_cs > .item:nth-child(1) .td:nth-child(4){width: 100px}
+.cont_cs > .item .tbody{max-height: 189px;overflow-x: auto}
+.cont_cs > .item:nth-child(2) .th:nth-child(1),
+.cont_cs > .item:nth-child(2) .td:nth-child(1){width: 50px}
+.cont_cs > .item:nth-child(2) .th:nth-child(2),
+.cont_cs > .item:nth-child(2) .td:nth-child(2){width:calc(100% - 150px)}
+.cont_cs > .item:nth-child(2) .th:nth-child(3),
+.cont_cs > .item:nth-child(2) .td:nth-child(3){width: 100px}
+
+.drop-zone{width: 100%;height: 200px;display: flex;justify-content: center;align-items: center;background: #f5f5f5;position: relative}
+.drop-zone input{position: absolute;width: 100%;height: 100%;outline: none;opacity: 0}
+
+.url_wrap{display: flex;justify-content: space-between;align-items: center;}
+.url_wrap p{max-width: calc(100% - 100px);word-break: break-all}

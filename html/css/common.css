@@ -3,6 +3,7 @@ body,html{font-family: 'Noto Sans KR',sans-serif;}
 html{font-size: 10px}
 body{font-size: 1.6rem}
 .body_wrap{min-width: 1080px}
+.vm{vertical-align: middle}
 .tct{text-align: center !important}
 .tlt{text-align: left !important}
 .trt{text-align: right !important}
@@ -32,18 +33,22 @@ body{font-size: 1.6rem}
 .mr15{margin-right: 15px !important}
 .mr20{margin-right: 20px !important}
 .mh {max-height: 229px;overflow: auto}
+.acenter{align-items: center}
 
 .line{margin: 0;background: #70747b}
 .line02{margin: 0;border: 0;border-top: 2.5px solid #323437;margin-top: 15px}
 .w30{width: 30px;}
-.w50{width: 50px;}
-.w80{width: 80px;}
-.w85{width: 85px;}
-.w100{width: 100px;}
+.w50{width: 50px !important;;}
+.w80{width: 80px !important;}
+.w85{width: 85px !important;}
+.w100{width: 100px !important;}
 .w120{width: 120px;}
 .w140{width: 140px}
 .w200{width: 200px}
 .w300{width: 300px}
+.w400{width: 400px}
+.w500{width: 500px}
+.w600{width: 600px}
 .w10p{width: 10%}
 .w20p{width: 20%}
 .w30p{width: 30%}

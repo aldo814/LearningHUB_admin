@@ -95,6 +95,8 @@ $(document).ready(function () {
                 }, 200);
                 dlg.find(".ui-dialog-content").hide();
                 $('body').find(".ui-widget-overlay").hide();
+                dlg.addClass('min');
+                
             } else {
                 console.log("Restore Window");
                 $min.data("isMin", false);
@@ -104,6 +106,7 @@ $(document).ready(function () {
                     height: $min.data("original-size").height + "px",
                     top: $min.data("original-pos").top + "px"
                 }, 200);
+                dlg.removeClass('min');
             }
         });
         $max.click(function (e) {
@@ -122,6 +125,7 @@ $(document).ready(function () {
                     left: 0
                 }, 200);
                 $('body').find(".ui-widget-overlay").show();
+                dlg.addClass('max');
             } else {
                 console.log("Restore Window");
                 $max.data("isMax", false);
@@ -131,6 +135,7 @@ $(document).ready(function () {
                     top: $max.data("original-pos").top + "px",
                     left: $max.data("original-pos").top + "px"
                 }, 200);
+                dlg.removeClass('max');
             }
         });
     }
@@ -184,6 +189,9 @@ $(document).ready(function () {
     });
 
     var $fileBox = $('.filetype');
+    document.querySelector(".preview");
+    const para = document.querySelector(".no-pic");
+    const image = document.querySelector(".profile-img");
 
     $fileBox.each(function () {
         var $fileUpload = $(this).find('.input-file'),
@@ -283,8 +291,8 @@ $(document).ready(function () {
                 return true;
             }
         },
-        
-      
+
+
     };
     $('#sTree2').sortableLists(options);
 
@@ -346,9 +354,46 @@ $(document).ready(function () {
             $('#s-l-base').addClass('survey_tree')
         }
     });
-       
-$('.readonly_cs').chosen().chosenReadonly(true);
+
+    $('.code_show').click(function () {
+        $('.code_table').toggleClass('active');
+    });
+
+    $('.code_hide').click(function () {
+        $('.code_table').removeClass('active')
+    });
+
+    $('.readonly_cs').chosen().chosenReadonly(true);
+
+
+    //drag 파일
+    $('.drop-zone input').change(function () {
+        var files = $(this)[0].files;    
+        var fileName03 = $(this).val();
+        var _fileLen = fileName03.length;
+        var _lastDot = fileName03.lastIndexOf('.');
+        var _fileExt = fileName03.substring(_lastDot, _fileLen).toLowerCase();
+        var _fileExtt = _fileExt.replace('.', '')
+        var nrOrder=1;
+        for (var i = 0; i < files.length; i++) {
+        $('.file_list').append('<tr><td>' + nrOrder + '</td>' + '<td>' + files[i].name + '</td><td>' + _fileExtt + '</td><td><a href="javascript:;" class="btn_style03 btn_black file_del ">취소</a></td></tr>');
+        nrOrder++;
+        }
+        
+    });
     
+    $(document).on('click', '.file_del', function () {
+        if (confirm('삭제 하시겠습니까?')) {
+            $(this).parent().parent().remove();
+             $('.file_list tr').each(function() {
+                var idx = $(this).index();
+                $(this).find('td:first-child').html(idx + 1);
+            });
+        } else {}
+
+
+
+    });
 
 });
 
@@ -366,15 +411,35 @@ function openModalPop(modalname) {
     $('.shadow').show();
 }
 
+function openModalPop02(modalname) {
+    document.get
+    $("." + modalname).show();
+}
 
-function onLoading(){
+
+function closeModal() {
+    $('.layv').hide();
+}
+
+
+function onLoading() {
     $('.loading').show();
 }
 
 
-function offLoading (){
+function offLoading() {
     $('.loading').hide();
 }
 
-
-
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('preview').src = e.target.result;
+            document.querySelector('.preview_wrap').style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        document.getElementById('preview').src = "";
+    }
+}
