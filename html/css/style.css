@@ -657,6 +657,10 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
         margin: 0;
     }
     .certi{width: 21cm;background-size: 21cm}
+    .certi h3{margin-top: 60px;margin-bottom: 100px}
+    .certi .btxt{margin-top: 80px}
+    .certi .date{margin-top: 60px;margin-left: 50px}
+    .certi ul li + li{margin-top: 20px}
 
 
 }
