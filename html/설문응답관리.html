@@ -261,7 +261,7 @@
                         <td>Y</td>
                         <td>2023-04-12</td>
                         <td><a href="javascript:openModal('modal1');" class="btn_style01 btn_gray01">개별 결과 보기</a>
-                            <a href="#" class="btn_style01 btn_white">초기화</a>
+                            <a href="javascript:openModal('modal2');" class="btn_style01 btn_white">초기화</a>
                         </td>
                     </tr>
                 </tbody>
@@ -283,34 +283,440 @@
 
             <!--팝업-->
             <div class="popUp modal1" title="설문결과 보기">
-                <h3 class="popTit">설문명이 출력됩니다.</h3>
-                <table class="table_style03">
-                    <caption>설문 결과보기</caption>
-                    <colgroup>
-                        <col style="width: 100px">
-                        <col>
-                        <col style="width: 100px">
-                        <col>
-                    </colgroup>
-                   <tbody>
-                       <tr>
-                           <th scope="row">과정명(과정ID)</th>
-                           <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">설문기간</th>
-                           <td>2023-04-10~2023-04-20</td>
-                           <th scope="row">설문종류</th>
-                           <td>과정만족도 설문</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">대상</th>
-                           <td>30명</td>
-                           <th scope="row">제출(참여율)</th>
-                           <td>20명 (66.66%)</td>
-                       </tr>
-                   </tbody>
-                </table>
+                <div class="inbtn">
+                    <h3 class="popTit">설문명이 출력됩니다.</h3>
+                    <table class="table_style03">
+                        <caption>설문 결과보기</caption>
+                        <colgroup>
+                            <col style="width: 100px">
+                            <col>
+                            <col style="width: 100px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">과정명(과정ID)</th>
+                                <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설문기간</th>
+                                <td>2023-04-10~2023-04-20</td>
+                                <th scope="row">설문종류</th>
+                                <td>과정만족도 설문</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대상</th>
+                                <td>30명</td>
+                                <th scope="row">제출(참여율)</th>
+                                <td>20명 (66.66%)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="survey mt20">
+                        <div class="item">
+                            <div class="q">01. 수강하신 교육과정에 대해 전반적으로 만족하십니까?</div>
+                            <div class="a">
+                                <div class="mult_choice">
+                                    <ul class="num">
+                                        <li>1. 매우 만족</li>
+                                        <li>2. 만족</li>
+                                        <li>3. 보통</li>
+                                        <li>4. 불만족</li>
+                                        <li>5. 매우 불만족</li>
+                                    </ul>
+                                    <div class="chart_area">
+                                        <ul class="bg">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <ul class="chart">
+                                            <li>
+                                                <p style="width: 75%"><span>(75%)</span></p>
+                                            </li>
+                                            <li>
+                                                <p style="width: 15%"><span>(15%)</span></p>
+                                            </li>
+                                            <li>
+                                                <p style="width: 10%"><span>(10%)</span></p>
+                                            </li>
+                                            <li>
+                                                <p style="width: 75%"><span>(75%)</span></p>
+                                            </li>
+                                            <li>
+                                                <p style="width: 75%"><span>(75%)</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="q">02. 교육에 추가되었으면 하는 과정이나 분야 또는 개선 점을 자유롭게 작성하여 주십시오.
+                            </div>
+                            <div class="a">
+                                <div class="short_aq">
+                                    <div class="btn_area">
+                                        <a href="#" class="btn_style03 btn_black">결과 펼쳐보기</a>
+                                    </div>
+                                    <div class="aq">
+                                        <p>20명 </p>
+                                    </div>
+                                    <div class="result">
+                                        감사합니다
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="q">03. 아래 질문에 해당하는 수준을 선택해주세요</div>
+                            <div class="a">
+                                <table class="table_style02">
+                                    <caption>03. 아래 질문에 해당하는 수준을 선택해주세요</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">매우<br> 그렇다</th>
+                                            <th scope="col">그렇다</th>
+                                            <th scope="col">보통이다</th>
+                                            <th scope="col">아니다</th>
+                                            <th scope="col">매우<br> 아니다</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tlt">본 강의의 운영시간은 적절하였나요?</td>
+                                            <td>14</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tlt">강사는 강의에 성실히 임하였나요?</td>
+                                            <td>16</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tlt">교재는 강의를 이해하는데 도움이 되었나요?</td>
+                                            <td>10</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tlt">교육내용은 직무능력강화를 위한 내용으로 구성되어 있었나요?</td>
+                                            <td>14</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="q">04. 수강하신 교육과정에 대해 전반적으로 만족하십니까?</div>
+                            <div class="a">
+                                <table class="table_style02">
+                                    <caption>04. 수강하신 교육과정에 대해 전반적으로 만족하십니까?</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                        <col style="width: 80px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">1순위</th>
+                                            <th scope="col">2순위</th>
+                                            <th scope="col">3순위</th>
+                                            <th scope="col">4순위</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>교강사의 강의 스킬</td>
+                                            <td>7</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>교육 교재의 내용구성</td>
+                                            <td>3</td>
+                                            <td>9</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>강의시간</td>
+                                            <td>5</td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>교육 내용 직무 활용도</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>5</td>
+                                            <td>9</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style03 btn_black">액셀 저장</a>
+                    <a href="#" class="btn_style03 btn_white w85 close_pop">닫기</a>
+                </div>
+            </div>
+
+            <div class="popUp modal2" title="응답자별 설문결과 보기">
+                <div class="inbtn">
+                    <h3 class="popTit">설문명이 출력됩니다.</h3>
+                    <table class="table_style03">
+                        <caption>설문 결과보기</caption>
+                        <colgroup>
+                            <col style="width: 100px">
+                            <col>
+                            <col style="width: 100px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">과정명(과정ID)</th>
+                                <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설문기간</th>
+                                <td>2023-04-10~2023-04-20</td>
+                                <th scope="row">설문종류</th>
+                                <td>과정만족도 설문</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">응답자(아이디)</th>
+                                <td>홍길동(kildong.hong)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="survey mt20">
+                        <div class="item">
+                            <div class="q">01. 수강하신 교육과정에 대해 전반적으로 만족하십니까?</div>
+                            <div class="a pd0">
+                                <ul class="mult_choice02">
+                                    <li class="radio">
+                                        <input type="radio" id="ex_rd1" name="ex_rd"><label for="ex_rd1">1. 매우만족</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input type="radio" id="ex_rd2" name="ex_rd"><label for="ex_rd2">2. 만족</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input type="radio" id="ex_rd3" name="ex_rd"><label for="ex_rd3">3. 보통</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input type="radio" id="ex_rd4" name="ex_rd"><label for="ex_rd4">4. 불만족</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input type="radio" id="ex_rd5" name="ex_rd"><label for="ex_rd5">5. 매우 불만족</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="q">02. 교육에 추가되었으면 하는 과정이나 분야 또는 개선 점을 자유롭게 작성하여 주십시오.</div>
+                            <div class="a">감사합니다.</div>
+                        </div>
+                        <div class="item">
+                            <div class="q">03. 아래 질문에 해당하는 수준을 선택해주세요</div>
+                            <div class="a">
+                                <table class="table_style04">
+                                    <caption>03. 아래 질문에 해당하는 수준을 선택해주세요</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 60px">
+                                        <col style="width: 60px">
+                                        <col style="width: 60px">
+                                        <col style="width: 60px">
+                                        <col style="width: 60px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="vm"></th>
+                                            <th scope="col" class="vm">매우<br>아니다.</th>
+                                            <th scope="col" class="vm">아니다.</th>
+                                            <th scope="col" class="vm">보통이다.</th>
+                                            <th scope="col" class="vm">그렇다.</th>
+                                            <th scope="col" class="vm">매우<br>그렇다.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tlt vm">본 강의의 운영시간은 적절하였나요?</td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex1" name="ex">
+                                                    <label for="ex1"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex2" name="ex">
+                                                    <label for="ex2"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex3" name="ex">
+                                            <label for="ex3"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex4" name="ex">
+                                            <label for="ex4"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex5" name="ex">
+                                            <label for="ex5"></label></div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="tlt vm">강사는 강의에 성실히 임하였나요?</td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex6" name="ex_2">
+                                                    <label for="ex6"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex7" name="ex_2">
+                                                    <label for="ex7"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex8" name="ex_2">
+                                            <label for="ex8"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex9" name="ex_2">
+                                            <label for="ex9"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex10" name="ex_2">
+                                            <label for="ex10"></label></div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="tlt vm">교재는 강의를 이해하는데 도움이 되었나요?</td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex11" name="ex_3">
+                                                    <label for="ex11"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex12" name="ex_3">
+                                                    <label for="ex12"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex13" name="ex_3">
+                                            <label for="ex13"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex14" name="ex_3">
+                                            <label for="ex14"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex15" name="ex_3">
+                                            <label for="ex15"></label></div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="tlt vm">교육내용은 직무능력강화를 위한 내용으로 구성되어 있었나요?
+</td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex16" name="ex_4">
+                                                    <label for="ex16"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex17" name="ex_4">
+                                                    <label for="ex17"></label>
+                                                </div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex18" name="ex_4">
+                                            <label for="ex18"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex19" name="ex_4">
+                                            <label for="ex19"></label></div>
+                                            </td>
+                                            <td class="vm">
+                                                <div class="radio ma"><input type="radio" id="ex20" name="ex_4">
+                                            <label for="ex20"></label></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="q">04. 교육 수강 시 본인이 가장 중요하게 생각하는 것에 대한 순서를 매겨 주십시오</div>
+                            <div class="a">
+                                <ul class="rank">
+                                    <li>
+                                        <p class="name">교강사의 강의 스킬</p>
+                                        <p class="rk">3순위</p>
+                                    </li>
+                                    <li>
+                                        <p class="name">교육 교재의 내용구성</p>
+                                        <p class="rk">2순위</p>
+                                    </li>
+                                    <li>
+                                        <p class="name">강의 시간</p>
+                                        <p class="rk">1순위</p>
+                                    </li>
+                                    <li>
+                                        <p class="name">교육 내용 직무 활용도</p>
+                                        <p class="rk">4순위</p>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    <div class="btn_wrap tct">
+                        <a href="#" class="btn_style03 btn_black">액셀 저장</a>
+                        <a href="#" class="btn_style03 btn_white w85 close_pop">닫기</a>
+                    </div>
             </div>
 
             <div class="bt_fixed">

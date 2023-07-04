@@ -572,3 +572,49 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 
 .url_wrap{display: flex;justify-content: space-between;align-items: center;}
 .url_wrap p{max-width: calc(100% - 100px);word-break: break-all}
+
+.survey .item{margin-top: 15px;border: 1px solid #ddd;}
+.survey .item:nth-child(1){margin-top: 0}
+.survey .item .q{padding: 10px;font-size: 14px;background: #eee;font-weight: 500}
+.survey .item .a{border-top: 1px solid #ddd;padding: 10px;}
+
+.mult_choice{display: flex;}
+.mult_choice .num {width: 30%;}
+.mult_choice .num li{font-size: 14px;margin-bottom: 10px}
+.mult_choice .num li:last-child{margin-bottom: 0}
+.mult_choice .chart_area{width: 70%;position: relative}
+.mult_choice .chart_area .bg{height: 100%;position: absolute;width: 100%;display: flex;}
+.mult_choice .chart_area .bg li{width: 11.111%;position: relative;height: 100%;}
+.mult_choice .chart_area .bg li:before{content: '';display: block;width: 1px;height: 100%;background: #ddd;position: absolute;left: 0;top: 0;}
+.mult_choice .chart_area .chart{height: 100%;}
+.mult_choice .chart_area .chart li{position: relative;margin-bottom: 10px;height:15px }
+.mult_choice .chart_area .chart li:last-child{margin-bottom: 0}
+.mult_choice .chart_area .chart li p{background: #eee;height: 10px;position: absolute;left: 0;top: 5px}
+.mult_choice .chart_area .chart li span{font-size: 13px;position: absolute;top: -2px;right: -40px}
+.mult_choice .chart_area .chart li .red{background: #f34e28}
+.mult_choice .chart_area .chart li .red span{color: #333;}
+.mult_choice .chart_area .chart li .blue{background: #2e7bf7}
+.mult_choice .chart_area .chart li .green{background: #00cc99}
+.mult_choice .chart_area .chart li .inner span{right: 0}
+.short_aq{display: flex;align-items: center;flex-wrap: wrap}
+.short_aq .btn_area{width: 30%}
+.short_aq .aq{width: 70%;padding-left:10px;box-sizing: border-box}
+.short_aq .result{width: 100%;margin-top: 10px;padding-top: 10px;border-top:1px solid #ddd;display: none}
+
+.inbtn{max-height: calc(100vh - 250px);overflow-y: auto}
+.flex_np{display: flex;justify-content:space-between}
+.flex_np > div{width: calc(50% - 10px)}
+.flex_np > div:nth-child(1) .tbody{max-height: 430px;overflow-y: auto}
+.flex_np > div .th:nth-child(1),
+.flex_np > div .td:nth-child(1){width: 50px}
+.flex_np > div .th:nth-child(2),
+.flex_np > div .td:nth-child(2){width: calc(100% - 450px)}
+.flex_np > div .th:nth-child(3),
+.flex_np > div .td:nth-child(3){width: 100px}
+.flex_np > div .th:nth-child(4),
+.flex_np > div .td:nth-child(4){width: 120px}
+.flex_np > div .th:nth-child(5),
+.flex_np > div .td:nth-child(5){width: 100px}
+.flex_np > div .th:nth-child(6),
+.flex_np > div .td:nth-child(6){width: 80px}
+.flex_np > div:nth-child(2) .tbody{max-height: 216px;overflow-y: auto}

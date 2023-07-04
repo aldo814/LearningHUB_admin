@@ -96,7 +96,7 @@ $(document).ready(function () {
                 dlg.find(".ui-dialog-content").hide();
                 $('body').find(".ui-widget-overlay").hide();
                 dlg.addClass('min');
-                
+
             } else {
                 console.log("Restore Window");
                 $min.data("isMin", false);
@@ -368,32 +368,51 @@ $(document).ready(function () {
 
     //drag 파일
     $('.drop-zone input').change(function () {
-        var files = $(this)[0].files;    
+        var files = $(this)[0].files;
         var fileName03 = $(this).val();
         var _fileLen = fileName03.length;
         var _lastDot = fileName03.lastIndexOf('.');
         var _fileExt = fileName03.substring(_lastDot, _fileLen).toLowerCase();
         var _fileExtt = _fileExt.replace('.', '')
-        var nrOrder=1;
+        var nrOrder = 1;
         for (var i = 0; i < files.length; i++) {
-        $('.file_list').append('<tr><td>' + nrOrder + '</td>' + '<td>' + files[i].name + '</td><td>' + _fileExtt + '</td><td><a href="javascript:;" class="btn_style03 btn_black file_del ">취소</a></td></tr>');
-        nrOrder++;
+            $('.file_list').append('<tr><td>' + nrOrder + '</td>' + '<td>' + files[i].name + '</td><td>' + _fileExtt + '</td><td><a href="javascript:;" class="btn_style03 btn_black file_del ">취소</a></td></tr>');
+            nrOrder++;
         }
-        
+
     });
-    
+
     $(document).on('click', '.file_del', function () {
         if (confirm('삭제 하시겠습니까?')) {
             $(this).parent().parent().remove();
-             $('.file_list tr').each(function() {
+            $('.file_list tr').each(function () {
                 var idx = $(this).index();
                 $(this).find('td:first-child').html(idx + 1);
             });
         } else {}
-
-
-
     });
+
+    
+    $('.chart p').each(function() {
+        var widthPercent = $(this).width() / $(this).parent().width() * 100;
+
+        if (widthPercent < 11) {
+          $(this).addClass('blue');
+        } else if (widthPercent >= 11 && widthPercent < 16) {
+          $(this).addClass('green');
+        } else {
+          $(this).addClass('red');
+        }
+        
+        if (widthPercent > 89) {
+            $(this).addClass('inner');
+        }
+      });
+    
+    $('.short_aq .btn_black').click(function(){
+        $(this).parent().parent().find('.result').slideToggle();
+        $(this).text( $(this).text() == '결과 펼쳐보기' ? '결과 닫기' : '결과 펼쳐보기');
+    })
 
 });
 

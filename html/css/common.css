@@ -136,3 +136,19 @@ body{font-size: 1.6rem}
 .content_wrapper .page-title .breadcrumb li:first-child:before{display: none}
 .content_wrapper .page-title .breadcrumb li:last-child{font-weight: bold}
 
+.ma.radio{position: relative}
+.ma.radio input[type="radio"] + label:before{left: 50% !important;transform: translate(-50%,-50%)}
+.ma.radio input[type="radio"] + label{display: block}
+.ma.radio input[type="radio"] + label:after{left: 50% !important;top:50% !important;transform: translate(-50%,-50%)}
+
+.table_style04 th,
+.table_style04 td{font-size: 14px;padding: 5px;}
+
+.mult_choice02 li + li{margin-top: 10px}
+
+.rank li + li {margin-top: 10px;}
+.rank li {font-size: 14px;display: flex;justify-content: space-between;position: relative}
+.rank li:after{content: '';display: block;width: 100%;height: 2px;background: #ddd;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)}
+.rank li p{background: #fff;position: relative;z-index: 5}
+.rank li .name{padding-right: 10px}
+.rank li .rk{padding-left: 10px}
