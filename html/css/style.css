@@ -646,27 +646,17 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .certi ul li .two{margin-right: 10px}
 .certi ul li .two span:nth-child(1){margin-right: 55px}
 .certi ul li .two span:nth-child(2){margin-right: 10px}
-.certi ul li p{width: calc(100% - 118px)}
+.certi ul li p{width: calc(100% - 118px);word-break: keep-all}
 .certi .btxt{text-align: center;margin-top: 50px;line-height: 2;font-size: 20px;font-weight: bold}
 .certi .date{text-align: center;margin-top: 30px;font-size: 18px;margin-bottom: 30px}
 .certi .sign{text-align: center}
 
 @media print{
-    .certi{background: url(../images/ct_bg.png) no-repeat;width: 562px;margin: auto;padding: 70px;box-sizing: border-box;font-family: 'Nanum Myeongjo', serif;}
-.certi .top{display: flex;justify-content: space-between;align-items: center;margin-bottom: 23px}
-.certi .top p{font-size: 14px;padding-top: 5px}
-.certi .top img{width: 120px}
-.certi h3{font-weight: bold;font-size: 50px;letter-spacing: 25px;text-align: center;margin-bottom: 50px}
-.certi ul{width: 330px;margin: auto;}
-.certi ul li{display: flex;}
-.certi ul li + li{margin-top: 15px}
-.certi ul li .four{letter-spacing: 10px}
-.certi ul li .two{margin-right: 10px}
-.certi ul li .two span:nth-child(1){margin-right: 55px}
-.certi ul li .two span:nth-child(2){margin-right: 10px}
-.certi ul li p{width: calc(100% - 118px)}
-.certi .btxt{text-align: center;margin-top: 50px;line-height: 2;font-size: 20px;font-weight: bold}
-.certi .date{text-align: center;margin-top: 30px;font-size: 18px;margin-bottom: 30px}
-.certi .sign{text-align: center}
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    .certi{display: none !important}
+
 
 }

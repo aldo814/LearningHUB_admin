@@ -416,12 +416,12 @@ $(document).ready(function () {
     
     
     $('#prt_btn').on("click", function () {
-		$('#print-layer').printThis({
+		$('.certi').printThis({
 			importCSS: true,
 			base: "https://mark2.job-cloud.kr/html/%EC%88%98%EB%A3%8C%EC%B2%98%EB%A6%AC.html", //출력안되면 주소변경,
 			importStyle: true,
 			printContainer: true,
-			debug: false
+			debug: false,
 		});
 	});
 
