@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/printThis.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>종합 수료관리</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+            <table class="table_style01">
+                <caption>종합수료관리</caption>
+                <colgroup>
+                    <col style="width: 150px">
+                    <col>
+                    <col style="width: 150px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">기관명(기관ID)</th>
+                        <td>KH건설(21454)</td>
+                        <th scope="row">계열사</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">과정명(과정ID)</th>
+                        <td colspan="3">텐서플로로 배우는 딥러닝(1055134)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">연도-기수</th>
+                        <td>2023-12334</td>
+                        <th scope="row">수료 여부</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">검색</th>
+                    <td colspan="3">
+                        <div class="scr_area">
+                            <select>
+                                <option>성명</option>
+                                <option>아이디</option>
+                                <option>이메일</option>
+                                <option>휴대전화번호</option>
+                            </select>
+                            <input type="text">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            
+            <div class="btn_wrap tct">
+            <button type="submit" class="btn_style01 btn_black">검색</button>
+            <button type="button" class="btn_style01 btn_white">초기화</button>
+        </div>
+
+
+
+            <div class="board_top mt30">
+                <p class="total">총 00개</p>
+                <select>
+                    <option>10개</option>
+                </select>
+            </div>
+            <table class="table_style02">
+                <caption>종합수료관리</caption>
+                <colgroup>
+                    <col style="width: 80px">
+                    <col>
+                    <col>
+                    <col style="width: 100px">
+                    <col style="width: 100px">
+                    <col style="width: 70px">
+                    <col style="width: 80px">
+                    <col style="width: 80px">
+                    <col style="width: 80px">
+                    <col style="width: 80px">
+                    <col style="width: 80px">
+                    <col style="width: 80px">
+                    <col style="width: 150px">
+                    <col style="width: 150px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox" id="chx"><label for="chx"></label></th>
+                        <th scope="col">부서(직급)</th>
+                        <th scope="col">성명<br>(아이디)</th>
+                        <th scope="col">총 학습<br>
+인정시간
+</th>
+                        <th scope="col">사회복지<br>
+인정시간
+</th>
+                        <th scope="col">진도</th>
+                        <th scope="col">중간<br>
+시험
+</th>
+                        <th scope="col">최종<br>
+시험
+</th>
+                        <th scope="col">과제</th>
+                        <th scope="col">토론</th>
+                        <th scope="col">합계</th>
+                        <th scope="col">수료<br>
+여부
+</th>
+                        <th scope="col">수료<br>
+처리일자
+</th>
+                        <th scope="col">수료<br>
+번호
+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="chx"><label for="chx"></label></td>
+                        <td>경영지원팀<br>
+(과장)
+</td>
+                        <td>홍길동<br>
+(kildong.hong)
+</td>
+                        <td>
+                            <input type="text" class="w50">
+                        </td>
+                        <td>
+                            
+                            <input type="text" class="w50">
+                        </td>
+                        <td>
+                            80
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            95
+                        </td>
+                        <td>
+                            수료
+                        </td>
+                        <td>2023-04-28</td>
+                        <td><a href="javascript:openModal('modal1')">2312334-013</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--paging-->
+            <ul class="paging">
+                <li class="button"><a href="#">처음</a></li>
+                <li class="button"><a href="#">이전</a></li>
+                <li class="num active"><a href="#">1</a></li>
+                <li class="num"><a href="#">2</a></li>
+                <li class="num"><a href="#">3</a></li>
+                <li class="num"><a href="#">4</a></li>
+                <li class="num"><a href="#">5</a></li>
+                <li class="button"><a href="#">다음</a></li>
+                <li class="button"><a href="#">맨끝</a></li>
+            </ul>
+            <!--//paging-->
+
+            <!--팝업-->
+            <div class="popUp modal1" title="수료증">
+               <div class="inbtn">
+               <div class="certi" id="content">
+                   <div class="top">
+                       <p>제 1054878-2022-92960-000001호</p>
+                       <img src="images/foot_logo.png" alt="러닝허브">
+                   </div>
+                   <h3>수료증</h3>
+                   <ul>
+                       <li><strong class="two"><span>성</span><span>명</span>:</strong><p>방준현</p></li>
+                       <li><strong class="four">사업장명:</strong><p>서울교통공사</p></li>
+                       <li><strong class="four">교육과정:</strong><p>금융의 정석-금융시장을 알면<br> 대한민국 경제가 보인다!</p></li>
+                       <li><strong class="four">학습기간:</strong><p>2022.09.01 ~ 2022.09.30</p></li>
+                       <li><strong class="four">학습시간:</strong><p>16시간</p></li>
+                   </ul>
+                   <p class="btxt">
+                       위 사람은 상기 교육과정을 성실히 이수하였기에<br>
+                       이 증서를 수여합니다.
+                   </p>
+                   <p class="date">
+                       2023년 05월 03일
+                   </p>
+                   <div class="sign">
+                       <img src="images/sign.PNG" alt="">
+                   </div>
+               </div>
+                </div>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style03 btn_black" id="prt_btn">인쇄</a>
+                    <a href="#" class="btn_style03 btn_white close_pop">닫기</a>
+                </div>
+            </div>
+
+
+
+            <div class="bt_fixed">
+                <div class="fr">
+                    <a href="javascript:openModal('modal1')" class="btn_style03 btn_orange">토론내용 보기</a>
+                    <a href="#" class="btn_style03 btn_white w85">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

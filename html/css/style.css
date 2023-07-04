@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap');
 .bold02{font-weight: 500}
 .textarea{resize: none;width: 100%;border: 1px solid #dddddd;padding: 1rem;border-radius: 5px;box-sizing: border-box;height: 60px;font-family: 'Noto Sans Kr'}
 .textarea::placeholder{color: #888888}
@@ -618,3 +619,54 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .flex_np > div .th:nth-child(6),
 .flex_np > div .td:nth-child(6){width: 80px}
 .flex_np > div:nth-child(2) .tbody{max-height: 216px;overflow-y: auto}
+
+
+.gray_line{border: 0;border-top: 1px solid #ddd;margin: 20px 0}
+
+.rating{display: table;border-collapse: collapse;width: 99%;}
+.rating > div {width: 9.0909%;display: table-cell;border: 1px solid #ddd;box-sizing: border-box}
+.rating > div > div{}
+
+.form_radio_btn {height : 30px;}
+.form_radio_btn input[type=radio] {display: none;}
+.form_radio_btn label {display: block;margin: 0 auto;text-align: center;height: -webkit-fill-available;line-height: 30px;cursor: pointer}
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {background: #888;color: #fff;}
+
+
+.certi{background: url(../images/ct_bg.png) no-repeat;width: 562px;margin: auto;padding: 70px;box-sizing: border-box;font-family: 'Nanum Myeongjo', serif;}
+.certi .top{display: flex;justify-content: space-between;align-items: center;margin-bottom: 23px}
+.certi .top p{font-size: 14px;padding-top: 5px}
+.certi .top img{width: 120px}
+.certi h3{font-weight: bold;font-size: 50px;letter-spacing: 25px;text-align: center;margin-bottom: 50px}
+.certi ul{width: 330px;margin: auto;}
+.certi ul li{display: flex;}
+.certi ul li + li{margin-top: 15px}
+.certi ul li .four{letter-spacing: 10px}
+.certi ul li .two{margin-right: 10px}
+.certi ul li .two span:nth-child(1){margin-right: 55px}
+.certi ul li .two span:nth-child(2){margin-right: 10px}
+.certi ul li p{width: calc(100% - 118px)}
+.certi .btxt{text-align: center;margin-top: 50px;line-height: 2;font-size: 20px;font-weight: bold}
+.certi .date{text-align: center;margin-top: 30px;font-size: 18px;margin-bottom: 30px}
+.certi .sign{text-align: center}
+
+@media print{
+    .certi{background: url(../images/ct_bg.png) no-repeat;width: 562px;margin: auto;padding: 70px;box-sizing: border-box;font-family: 'Nanum Myeongjo', serif;}
+.certi .top{display: flex;justify-content: space-between;align-items: center;margin-bottom: 23px}
+.certi .top p{font-size: 14px;padding-top: 5px}
+.certi .top img{width: 120px}
+.certi h3{font-weight: bold;font-size: 50px;letter-spacing: 25px;text-align: center;margin-bottom: 50px}
+.certi ul{width: 330px;margin: auto;}
+.certi ul li{display: flex;}
+.certi ul li + li{margin-top: 15px}
+.certi ul li .four{letter-spacing: 10px}
+.certi ul li .two{margin-right: 10px}
+.certi ul li .two span:nth-child(1){margin-right: 55px}
+.certi ul li .two span:nth-child(2){margin-right: 10px}
+.certi ul li p{width: calc(100% - 118px)}
+.certi .btxt{text-align: center;margin-top: 50px;line-height: 2;font-size: 20px;font-weight: bold}
+.certi .date{text-align: center;margin-top: 30px;font-size: 18px;margin-bottom: 30px}
+.certi .sign{text-align: center}
+
+}
