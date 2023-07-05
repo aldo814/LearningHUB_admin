@@ -664,3 +664,12 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 
 
 }
+
+.view{padding: 2rem;border-bottom: 1px solid #ddd}
+
+.video{border-radius: 10px;overflow: hidden;margin-bottom: 2rem}
+.video video,
+.video iframe{width: 100%;}
+
+.img_pc img{display: block;border: 1px solid #ddd;max-width: 900px}
+.img_m img{display: block;border: 1px solid #ddd;max-width: 400px}
