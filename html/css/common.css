@@ -79,10 +79,10 @@ body{font-size: 1.6rem}
 
 /* header */
 #header .header_nav{background: #323437;padding:  0 40px;display: flex;align-items: center;position: fixed;top: 0;left: 0;width: 100%;z-index: 999}
-#header .header_nav .gnb_wrap{margin-left: 170px}
-#header .header_nav .gnb{display: flex;}
+#header .header_nav .gnb_wrap{margin-left: 170px;padding-right: 50px;box-sizing: border-box}
+#header .header_nav .gnb{display: table;table-layout: fixed;width: 100%}
 #header .header_nav .gnb li a{color: #fff;}
-#header .header_nav .gnb > li {width: 170px;margin-right: 10px;position: relative;}
+#header .header_nav .gnb > li {margin-right: 10px;position: relative;display: table-cell}
 #header .header_nav .gnb > li:last-child{margin-right: 0}
 #header .header_nav .gnb > li > a{font-size: 1.8rem;padding: 34px 0;display: block;}
 #header .header_nav .gnb > li > a:hover,
