@@ -152,3 +152,8 @@ body{font-size: 1.6rem}
 .rank li p{background: #fff;position: relative;z-index: 5}
 .rank li .name{padding-right: 10px}
 .rank li .rk{padding-left: 10px}
+.test_list > .item{margin-top: 20px;}
+.test_list > .item .q{border-bottom: 1px solid #000;padding-bottom: 10px;margin-bottom: 10px;font-weight: 500}
+.test_list > .item .mulit_cce li + li{margin-top: 15px}
+.test_list > .item .a{margin-top: 20px;padding: 10px;background: #fefefe;border-radius: 10px;border: 1px solid #ddd;}
+.test_list > .item .box{border: 1px solid #ddd;padding: 15px;border-radius: 10px;min-height: 100px;box-sizing: border-box;font-size: 14px}
