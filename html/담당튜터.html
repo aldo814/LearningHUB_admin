@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chosen.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/jquery-sortable-lists.js"></script>
-    <script src="js/chosen-readonly.js"></script>
     <script src="js/chosen.jquery.min.js"></script>
     <script src="js/run.js"></script>
 </head>
@@ -174,7 +172,7 @@
         <!--//header-->
         <div class="content_wrapper">
             <div class="page-title">
-                <h3>시험응시 관리</h3>
+                <h3>기수정보 관리</h3>
                 <ul class="breadcrumb">
                     <li>콘텐츠 관리</li>
                     <li>설문 관리</li>
@@ -182,148 +180,140 @@
                 </ul>
             </div>
             
-            <table class="table_style01">
-            <caption>시험응시관리</caption>
-            <colgroup>
-                <col style="width:180px">
-                <col>
-                <col style="width:180px">
-                <col>
-            </colgroup>
-            <tbody>
-               <tr>
-                   <th scope="row">과정명(과정ID) </th>
-                   <td colspan="3">텐서플로로 배우는 딥러닝(1055134)</td>
-               </tr>
-               <tr>
-                   <th scope="row">기관 </th>
-                   <td>KH건설</td>
-                   <th scope="row">연도-기수 </th>
-                   <td>2023-23412</td>
-               </tr>
-                </tbody>
-            </table>
+            
+            <div class="clear mt30">
+                <ul class="tabs fl">
+                    <li> <a href="javascript:;" onclick="#">기수 정보</a>
+                    </li>
+                    <li> <a href="javascript:;" onclick="#">고용보험</a>
+                    </li>
+                    <li> <a href="javascript:;" onclick="#">평가계획</a>
+                    </li>
+                    <li class="active"><a href="javascript:;">담당 튜터</a></li>
+                </ul>
+            </div>
+            <hr class="line">
             
             
-            <h3 class="tit mt30">시험지별 현황</h3>
-            <table class="table_style02">
-            <caption>시험지별 현황</caption>
+            <div class="flex acenter mt30">
+            <h3 class="tit" >기수 튜터</h3>
+            <a href="javascript:;" class="btn_style01 btn_gray01 mla">튜터 추가</a>
+            </div>
+            <table class="table_style02 mt20">
+            <caption>수 튜터</caption>
             <colgroup>
                 <col style="width:100px">
                 <col style="width: 150px">
                 <col>
-                <col style="width: 250px">
-                <col style="width: 100px">
-                <col style="width: 100px">
-                <col style="width: 100px">
-                <col style="width: 100px">
-                <col style="width: 100px">
+                <col>
+                <col style="width: 150px">
                 </colgroup>
                 <thead>
                     <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">시험지 구분</th>
-                        <th scope="col">시험지 제목</th>
-                        <th scope="col">응시 기간</th>
-                        <th scope="col">대상</th>
-                        <th scope="col">제출</th>
-                        <th scope="col">미제출</th>
-                        <th scope="col">채점</th>
-                        <th scope="col">미채점</th>
+                        <th scope="col">강사 구분</th>
+                        <th scope="col">강사명</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">삭제</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1
-</td>
-                        <td>중간시험
-</td>
-                        <td class="tlt">중간시험 제목이 출력됩니다.
-</td>
-                        <td>2023-04-10~2023-04-14
-</td>
-                        <td>12</td>
-                        <td>4</td>
-                        <td>8</td>
-                        <td>3</td>
                         <td>1</td>
+                        <td>내부</td>
+                        <td>이선아</td>
+                        <td>0001_sme89</td>
+                        <td><a href="javascript:;" class="btn_style01 btn_gray01 mla">삭제</a></td>
                     </tr>
                 </tbody>
             </table>
             
-            <div class="clear mt30">
-                <ul class="tabs fl">
-                    <li> <a href="javascript:;" onclick="#">중간 시험</a>
-                    </li>
-                    <li class="active"><a href="javascript:;">최종 시험</a></li>
-                </ul>
-
+              <div class="flex acenter mt30">
+            <h3 class="tit" >콘텐츠 내용전문가</h3>
+            <a href="javascript:;" class="btn_style01 btn_gray01 mla">SME 추가</a>
             </div>
-            <hr class="line">
-              <div class="board_top mt30">
-                <p class="total">총 00명</p>
-                
-                <div class="mla flex acenter">
-                <div class="mr10"><input type="checkbox" id="chx"><label for="chx">미채점 시험만 보기
-</label></div>
-                <select>
-                    <option>10개</option>
-                </select>
-                </div>
-            </div>
-            <table class="table_style02">
-                <caption>시험응답 관리</caption>
+            <table class="table_style02 mt20">
+                <caption>콘텐츠 내용전문가</caption>
                 <colgroup>
-                    <col style="width: 100px">
+                    <col style="width: 150px">
+                    <col style="width: 150px">
                     <col>
-                    <col style="width: 100px">
-                    <col style="width: 150px">
-                    <col style="width: 100px">
-                    <col style="width: 150px">
-                    <col style="width: 100px">
-                    <col style="width: 150px">
                 </colgroup>
-                <thead>
-                    <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">성명(아이디)</th>
-                        <th scope="col">제출여부</th>
-                        <th scope="col">제출일자</th>
-                        <th scope="col">채점여부</th>
-                        <th scope="col">채점일자</th>
-                        <th scope="col">점수</th>
-                        <th scope="col">시험지 보기</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td> 홍길동(kildong.hong)
-</td>
-                        <td>Y</td>
-                        <td>2023-04-12</td>
-                        <td>Y</td>
-                        <td>2023-04-20</td>
-                        <td>92.0</td>
-                        <td><a href="javascript:openModal('modal1');" class="btn_style01 btn_gray01">시험지보기</a></td>
+                        <th rowspan="4" colspan="row">내용전문가 1<br>
+                        <a href="javascript:;" class="btn_style03 btn_gray02 mt10 ">삭제</a>
+                        </th>
+                        <td class="bg_gray">
+                          <label for="name1">이름 <span class="red">*</span></label>
+                        </td>
+                        <td class="tlt">
+                            <input type="text" id="name1"> <span class="ml10"><input type="checkbox" id="opt1">
+                                <label for="opt1">대표 전문가</label></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for="team1">소속 <span class="red">*</span></label></td>
+                        <td class="tlt">
+                            <input type="text" class="w50p" id="team1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="career1">경력</label>
+                        </td>
+                           <td>
+                            <textarea class="textarea" id="career1"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>대표 이미지</td>
+                        <td class="tlt"><div class="filetype">
+                                        <input type="text" class="file-text" />
+                                        <span class="file-btn">파일찾기</span>
+                                        <span class="file-select"><input type="file" class="input-file" size="3"></span>
+                                    </div></td>
+                    </tr>
+                    
+                    <tr>
+                        <th rowspan="4" colspan="row">내용전문가 2<br>
+                        <a href="javascript:;" class="btn_style03 btn_gray02 mt10 ">삭제</a>
+                        </th>
+                        <td class="bg_gray">
+                          <label for="name2">이름 <span class="red">*</span></label>
+                        </td>
+                        <td class="tlt">
+                            <input type="text" id="name2"> <span class="ml10"><input type="checkbox" id="opt2">
+                                <label for="opt2">대표 전문가</label></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for="team2">소속 <span class="red">*</span></label></td>
+                        <td class="tlt">
+                            <input type="text" class="w50p" id="team2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="career2">경력</label>
+                        </td>
+                           <td>
+                            <textarea class="textarea" id="career2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>대표 이미지</td>
+                        <td class="tlt"><div class="filetype">
+                                        <input type="text" class="file-text" />
+                                        <span class="file-btn">파일찾기</span>
+                                        <span class="file-select"><input type="file" class="input-file" size="3"></span>
+                                    </div></td>
                     </tr>
                 </tbody>
             </table>
             
-            <!--paging-->
-        <ul class="paging">
-            <li class="button"><a href="#">처음</a></li>
-            <li class="button"><a href="#">이전</a></li>
-            <li class="num active"><a href="#">1</a></li>
-            <li class="num"><a href="#">2</a></li>
-            <li class="num"><a href="#">3</a></li>
-            <li class="num"><a href="#">4</a></li>
-            <li class="num"><a href="#">5</a></li>
-            <li class="button"><a href="#">다음</a></li>
-            <li class="button"><a href="#">맨끝</a></li>
-        </ul>
-        <!--//paging-->
-
            
            <!--팝업-->
             <div class="popUp modal1" title="시험지 미리보기">
@@ -492,6 +482,7 @@
            
             <div class="bt_fixed">
                 <div class="fr">
+                    <a href="javascript:;" class="btn_style03 btn_orange w85">저장</a>
                     <a href="#" class="btn_style03 btn_white w85">목록</a>
                 </div>
             </div>

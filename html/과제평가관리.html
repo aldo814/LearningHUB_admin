@@ -174,7 +174,7 @@
         <!--//header-->
         <div class="content_wrapper">
             <div class="page-title">
-                <h3>시험응시 관리</h3>
+                <h3>과제평가 관리</h3>
                 <ul class="breadcrumb">
                     <li>콘텐츠 관리</li>
                     <li>설문 관리</li>
@@ -205,12 +205,11 @@
             </table>
             
             
-            <h3 class="tit mt30">시험지별 현황</h3>
+            <h3 class="tit mt30">과제 현황</h3>
             <table class="table_style02">
-            <caption>시험지별 현황</caption>
+            <caption>과제 현황</caption>
             <colgroup>
                 <col style="width:100px">
-                <col style="width: 150px">
                 <col>
                 <col style="width: 250px">
                 <col style="width: 100px">
@@ -222,8 +221,7 @@
                 <thead>
                     <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">시험지 구분</th>
-                        <th scope="col">시험지 제목</th>
+                        <th scope="col">과제명</th>
                         <th scope="col">응시 기간</th>
                         <th scope="col">대상</th>
                         <th scope="col">제출</th>
@@ -236,9 +234,7 @@
                     <tr>
                         <td>1
 </td>
-                        <td>중간시험
-</td>
-                        <td class="tlt">중간시험 제목이 출력됩니다.
+                        <td class="tlt">과제 제목이 출력됩니다.
 </td>
                         <td>2023-04-10~2023-04-14
 </td>
@@ -251,15 +247,6 @@
                 </tbody>
             </table>
             
-            <div class="clear mt30">
-                <ul class="tabs fl">
-                    <li> <a href="javascript:;" onclick="#">중간 시험</a>
-                    </li>
-                    <li class="active"><a href="javascript:;">최종 시험</a></li>
-                </ul>
-
-            </div>
-            <hr class="line">
               <div class="board_top mt30">
                 <p class="total">총 00명</p>
                 
@@ -292,7 +279,7 @@
                         <th scope="col">채점여부</th>
                         <th scope="col">채점일자</th>
                         <th scope="col">점수</th>
-                        <th scope="col">시험지 보기</th>
+                        <th scope="col">과제 보기</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -305,7 +292,7 @@
                         <td>Y</td>
                         <td>2023-04-20</td>
                         <td>92.0</td>
-                        <td><a href="javascript:openModal('modal1');" class="btn_style01 btn_gray01">시험지보기</a></td>
+                        <td><a href="javascript:openModal('modal1');" class="btn_style01 btn_gray01">과제 보기</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -326,19 +313,17 @@
 
            
            <!--팝업-->
-            <div class="popUp modal1" title="시험지 미리보기">
+            <div class="popUp modal1" title="과제 보기">
                 <div class="inbtn">
                     <h3 class="popTit flex acenter">
-                        <p>시험지명이 출력됩니다.</p>
+                        <p>과제명이 출력됩니다.</p>
                         <div class="mla">
                             <a href="#" class="btn_style03 btn_black">자동채점하기</a>
                         </div>
                     </h3>
                     <table class="table_style03">
-                        <caption>시험지 미리보기</caption>
+                        <caption>과제보기</caption>
                         <colgroup>
-                            <col style="width: 100px">
-                            <col>
                             <col style="width: 100px">
                             <col>
                         </colgroup>
@@ -348,132 +333,83 @@
                                 <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
                             </tr>
                             <tr>
-                                <th scope="row">시험 구분</th>
-                                <td>중간시험</td>
-                                <th scope="row">문항 수</th>
-                                <td>5</td>
+                                <th scope="row">제출기한</th>
+                                <td>2023-04-10~2023-04-20
+</td>
                             </tr>
                         </tbody>
                     </table>
                     
                     <div class="test_list">
                         <div class="item">
-                            <div class="q">Q1. 문항명이 출력됩니다.</div>
-                            <div class="cont mulit_cce">
-                                <ul>
-                                    <li class="radio">
-                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">보기1 항목</label>
-                                    </li>
-                                    <li><li class="radio">
-                    <input type="radio" id="ex_rd02" name="ex_rd"><label for="ex_rd02">보기2 항목</label></li>
-                                    <li>
-                                        <li class="radio">
-                    <input type="radio" id="ex_rd03" name="ex_rd"><label for="ex_rd03">보기3 항목</label>
-                                    </li>
-                                </ul>
+                            <div class="q">과제 내용 </div>
+                            <div class="cont">
+                                <p class="f14">첨부된 과제 내용을 숙지하여 내부직원들의 IT 이해를 향상 시킬 수 있는 방안 3가지를 제시하고,<br>
+그 근거를 뒷받침할 수 있는 의견을 제시하시오.  <br>
+과제 응답 내용으로 작성하거나 첨부파일로 첨부하여 제출해도 무방합니다. </p>
                             </div>
-                            <div class="a">
-                                <table class="table_style01">
-                                    <caption>정답</caption>
+                                <table class="table_style01 mt20">
+                                    <caption>첨부파일</caption>
                                     <colgroup>
-                                        <col style="width: 100px">
-                                        <col>
                                         <col style="width: 100px">
                                         <col>
                                     </colgroup>
                                     <tbody>
+                                       
                                         <tr>
-                                            <th scope="row">정답</th>
-                                            <td colspan="3">2</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">채점</th>
-                                            <td>
-                                                <ul class="check_list">
-            <li>
-                <div class="radio">
-                    <input type="radio" id="ex_rdd" name="ex_rdd"><label for="ex_rdd">정답</label>
-                </div>
-            </li>
-            <li>
-                <div class="radio">
-                    <input type="radio" id="ex_rdd2" name="ex_rdd"><label for="ex_rdd2">오답</label>
-                </div>
-            </li>
-                                           
-                                                </ul>
-                                            </td>
-                                            <th scope="row">배점</th>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">점수</th>
-                                            <td colspan="3">
-                                                <div class="flex acenter">
-                                                    <input type="text" class="w50 mr10">
-                                                    <p class="mr10">점</p>
-                                                    <p class="red">※ 점수는 배점 이상으로 부여할 수 없으며, 소수점 한자리까지 부여할 수 있습니다.
-</p>
-                                                </div>
-                                            </td>
+                                            <th scope="row">첨부파일</th>
+                                            <td><a href="#">내부직원 IT이해 향상을 위한 방안 마련 대책.hwpx (1,024kb)</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+
                         </div>
-                        
                         <div class="item">
-                            <div class="q">Q2. 문항명이 출력됩니다.</div>
-                            <div class="cont sf">
-                               <div class="box">
-                                   <p>  응시자가 작성한 주관식의 내용입니다.   
-</p>
-                               </div>
+                            <div class="q">과제 제출 내용 
+ </div>
+                            <div class="cont">
+                                <p class="f14">첨부된 과제 내용을 숙지하여 내부직원들의 IT 이해를 향상 시킬 수 있는 방안 3가지를 제시하고,<br>
+그 근거를 뒷받침할 수 있는 의견을 제시하시오.  <br>
+과제 응답 내용으로 작성하거나 첨부파일로 첨부하여 제출해도 무방합니다. </p>
                             </div>
-                            <div class="a">
-                                <table class="table_style01">
-                                    <caption>정답</caption>
+                                <table class="table_style01 mt20">
+                                    <caption>과제 제출 내용</caption>
                                     <colgroup>
-                                        <col style="width: 100px">
-                                        <col>
                                         <col style="width: 100px">
                                         <col>
                                     </colgroup>
                                     <tbody>
+                                       
                                         <tr>
-                                            <th scope="row">정답</th>
-                                            <td colspan="3">주관식 문항의 정답이 표시됩니다. 내용은 문항등록 시 입력한 내용입니다. 
+                                            <th scope="row">첨부파일</th>
+                                            <td><a href="#">내부직원 IT이해 향상을 위한 방안 마련 대책.hwpx (1,024kb)</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                            <div class="a">
+                                <table class="table_style01 mt20">
+                                    <caption>정답</caption>
+                                    <colgroup>
+                                        <col style="width: 150px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                       
+                                        <tr>
+                                            <th scope="row" class="vm">정답 (채점가이드)</th>
+                                            <td>기수의 과제 등록 시 입력한 정답 내용이 표시됩니다. 미리 작성된 정답과 비교하여 채점 시 활용합니다. 
+첨부팔일이 있을 경우 함께 노출됩니다. 
+내부직원 IT 정답 가이드.hwpx (1,024kb)  
 </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">채점</th>
+                                            <th scope="row">
+                                                <label for="score">점수</label>
+                                            </th>
                                             <td>
-                                                <ul class="check_list">
-            <li>
-                <div class="radio">
-                    <input type="radio" id="ex_rdd" name="ex_rdd"><label for="ex_rdd">정답</label>
-                </div>
-            </li>
-            <li>
-                <div class="radio">
-                    <input type="radio" id="ex_rdd2" name="ex_rdd"><label for="ex_rdd2">오답</label>
-                </div>
-            </li>
-                                           
-                                                </ul>
-                                            </td>
-                                            <th scope="row">배점</th>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">점수</th>
-                                            <td colspan="3">
-                                                <div class="flex acenter">
-                                                    <input type="text" class="w50 mr10">
-                                                    <p class="mr10">점</p>
-                                                    <p class="red">※ 점수는 배점 이상으로 부여할 수 없으며, 소수점 한자리까지 부여할 수 있습니다.
-</p>
-                                                </div>
+                                                <input type="text" class="w50" id="score">
+                                                <span class="ml10">점</span>    
                                             </td>
                                         </tr>
                                     </tbody>

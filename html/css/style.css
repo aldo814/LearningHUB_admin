@@ -42,7 +42,8 @@
 .table_style01 th{background: #eeeeee;text-align: left;padding: 1rem 2rem}
 .table_style01 td{background: #fff;padding: 1rem}
 .table_style01 tr{border-bottom: 1px solid #dddddd;}
-.table_style02 thead th {color: #fff;padding: 2rem;vertical-align: middle;font-size: 14px;background: #70747b}
+.table_style02  th {color: #fff;padding: 2rem;vertical-align: middle;font-size: 14px;background: #70747b}
+.table_style02 tbody{border-top: 1px solid #dddddd;}
 .table_style02 tbody td{padding: 1.5rem 2rem;vertical-align: middle;text-align: center;font-size: 14px}
 .table_style02 tbody tr{border-bottom: 1px solid #dddddd;}
 .table_style02 tbody tr:nth-child(odd){background: #fff}
