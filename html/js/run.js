@@ -428,7 +428,7 @@ $(document).ready(function () {
     $('.print_contract').on("click", function () {
 		$('.contract').printThis({
 			importCSS: true,
-			base: "https://mark2.job-cloud.kr/html/%EC%88%98%EB%A3%8C%EC%B2%98%EB%A6%AC.html", //출력안되면 주소변경,
+			base: "https://mark2.job-cloud.kr/html/%EC%9C%84%ED%83%81%ED%9B%88%EB%A0%A8%EA%B3%84%EC%95%BD%EC%84%9C.html", //출력안되면 주소변경,
 			importStyle: true,
 			printContainer: true,
 			debug: false,
