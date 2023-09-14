@@ -700,7 +700,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 @media print {
 @page { 
     size: 100%;
-    margin: 20mm 0 10mm 0;
+    margin: 10mm 10mm ;
 }
 body {
     margin: 0;
