@@ -698,14 +698,9 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .img_m img{display: block;border: 1px solid #ddd;max-width: 400px}
 
 @media print {
-@page { 
-    size: 100%;
-    margin: 10mm 10mm ;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
+ @page { margin: 0; }
+  body { margin: 1cm; }
+
  
 	header, footer, .no-print { display:none }
     .contract h3{text-align: center;font-size: 20px;font-weight: bold}
