@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/printThis.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="#">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>위탁훈련 계약서</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+            <table class="table_style01">
+                <caption>토론참여 관리</caption>
+                <colgroup>
+                    <col style="width: 150px">
+                    <col>
+                    <col style="width: 150px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">기관명(기관ID)</th>
+                        <td>KH건설(132321)</td>
+                        <th scope="row">계열사</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사업자등록번호  </th>
+                        <td>123-45-67890</td>
+                        <th scope="row">대표이사 </th>
+                        <td>홍길동</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <p class="mt30 tit">과정별 훈련 현황</p>
+            <table class="table_style02">
+                <caption>토론 현황</caption>
+                <colgroup>
+                    <col style="width: 80px">
+                    <col>
+                    <col style="width: 200px">
+                    <col style="width: 200px">
+                    <col style="width: 200px">
+                    <col style="width: 100px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>기관명</th>
+                        <th>교육기간</th>
+                        <th>인당 훈련비(원)</th>
+                        <th>훈련
+ 인원
+</th>
+                        <th>훈련비 합계(원)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="tlt">[HD] 왕초보를 위한 Phython(파이썬) 기초</td>
+                        <td>2023-04-10~2023-04-14</td>
+                        <td class="trt">5,400</td>
+                        <td class="trt">1</td>
+                        <td class="trt">5,400</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">총 3건</td>
+                        <td class="trt">1</td>
+                        <td class="trt">5,400</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <!--팝업-->
+            <div class="popUp modal1" title="훈련위탁 계약서">
+               <div class="inbtn">
+               <div class="contract">
+                <h3>훈련위탁계약서</h3>
+                <ul class="tax">
+                    <li>TEL 02-2081-1000</li>
+                    <li>FAX 02-2081-1090</li>
+                </ul>
+                <p class="f14">"주식회사 베어링아트"(이하 '위탁자'라 한다)와 "(주)인키움"(이하 "수락자"라 한다)는 다음과 같이 교육훈련 위탁계약을 체결한다</p>
+                <p class="f14 bold mt10">제 1조 위탁훈련내역</p>
+                <ul class="bar_list mt10">
+                    <li>위 탁 사 업 주 : 주식회사 베어링아트(훈련실시사업자번호 : 505-81-64231)</li>
+                    <li>훈 련 기 간 : 2022.09.01 - 2022.09.30</li>
+                </ul>
+                
+                <table class="table_style03 mt10">
+                   <caption>위탁훈련내역</caption>
+                   <colgroup>
+                       <col>
+                       <col style="width: 70px">
+                       <col style="width: 50px">
+                       <col style="width: 50px">
+                       <col style="width: 70px">
+                       <col style="width: 70px">
+                       <col style="width: 70px">
+                       <col style="width: 70px">
+                   </colgroup>
+                   <thead>
+                       <tr>
+                           <th scope="col" rowspan="2">과정명</th>
+                           <th scope="col" rowspan="2">환급여부</th>
+                           <th scope="col" rowspan="2">인원</th>
+                           <th scope="col" rowspan="2">인당 교육비</th>
+                           <th scope="col" colspan="3">인당 환급비</th>
+                           <th scope="col" rowspan="2">총교육비</th>
+                       </tr>
+                       <tr>
+                           <th>대기업</th>
+                           <th>중견기업</th>
+                           <th>우선지원</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>왕초보를 위한 파이썬</td>
+                           <td class="tct">N</td>
+                           <td class="tct">1</td>
+                           <td class="trt">5,400</td>
+                           <td class="trt">0</td>
+                           <td class="trt">0</td>
+                           <td class="trt">0</td>
+                           <td class="trt">5,400</td>
+                       </tr>
+                       <tr>
+                           <td colspan="2" class="tct">소 계</td>
+                           <td>3</td>
+                           <td class="trt">113,400</td>
+                           <td class="trt">0</td>
+                           <td class="trt">0</td>
+                           <td class="trt">0</td>
+                           <td class="trt">113,400</td>
+                       </tr>
+                   </tbody>
+                </table>
+                <p class="bold f14 mt20">제2조 교육평가 및 수료</p>
+                <p class="f14 mt5">1. 본 계약에 따른 각 교육과정의 평가 및 수료기준은 교육과정별 내부규정에 따른다.</p>
+                <p class="f14 mt5">2.수탁자는 훈련과정 인정(또는 지정)상의 훈련수료기준을 통과한 훈련생에 대해서는 수료처리하고 수료증을 발급한다.</p>
+                <p class="bold f14 mt20">제3조 성실의무</p>
+                   <p class="f14 mt5">1. "위탁자"와 "수탁자"는 본 계약서에 의거 훈련의 효율적인 진행과 훈련목표가 이루어 질 수 있도록 상호 협력하여 제반 사항을 성실히 이행하여야 한다.</p>
+                   <p class="f14 mt5">2. "위탁자"는 "수탁자"의 중대한 과실로 인해 훈련이 이행될 수 없을 경우 훈련의 중단을 요구할 수 있으며, 위탁자는 잔여 대금에 대한 지불의 의무를 갖지 않고 "수탁자"는 기지급된 훈련비를 "위탁자"에게 환불한다.</p>
+                   <p class="f14 mt5">3. 고용보험 환급과정의 경우 "수탁자"는 훈련을 실시함에 있어 한국산업인력공단으로부터 인정(지정)받은 내용과 인정(지정) 신청시 관할 산업인력공단 지사의 장에게 제출한 훈련실시계획서에 따라 훈련을 성실히 실시하여야 하며, 허위/부정한 방법으로 훈련을 실시하는 등 "수탁자"의 귀책사유로 훈련장소 관할 고용노동관서의 장에 의하여 당해 훈련과정이 취소되어 "위탁자"가 고용보험법 및 근로자 직업능력개발법에 의하여 훈련비용을 지원받을 수 없는 경우에 "수탁자"가 책임을 진다.</p>
+                   <p class="f14 mt5">4. "위탁자"는 "위탁자"의 위탁훈련생이 성실히 훈련에 참여하도록 하여야 한다. "위탁자"의 위탁훈련생이 허위/부정한 방법으로 훈련에 참여하여 고용보험법 및 근로자 직업능력개발법에 위배되어 훈련비용을 지원받을 수 없거나, "수탁자"의 훈련과정이 취소되는 경우에 "위탁자"가 책임을 진다.</p>
+                   <p class="f14 mt5">5. "위탁자"는 "수탁자"의 교육시작 전 "위탁자"의 임직원이 개인정보를 수집/이용/위탁함에 동의하도록 고지 및 필요한 조치를 취해야 한다. 이와 관련하여 "위탁자"의 임직원이 개인정보 수집/이용/위탁을 동의하지 아니하여 발생하는 모든 문제에 대하여 "수탁자"는 책임지지 않는다.</p>
+                
+                <p class="bold f14 mt20">제4조 훈련비의 지급</p>
+                   <p class="f14 mt5">"위탁자"와 "수탁자"는 아래와 같이 사업주훈련 비용지급 규정에 따라 훈련비를 지급한다.</p>
+                   <p class="f14 mt5">- "수탁자"는 계약 체결 후 훈련비를 청구하고 "위탁자"는 청구일로부터 30일 이내에 훈련비 전액을 지급한다.</p>
+                   <p class="f14 mt5">- "위탁자"의 훈련생이 환급과정을 수료하는 경우, "수탁자"는 한국산업인력관리공단에 정부지원금을 신청 및 수령하여 "위탁자"가 지정한 계좌 에 입금한다. 단, 환급과정 수료기준 미달, 허위/부정한 방법으로 훈련 참여, 고용보험료 체납, 지원금 초과사용, 훈련실시사업장번호 오류 등 "위탁자"의 책임으로 "수탁자"가 정부지원금을 수령할 수 없는 경우 수탁자는 그 사유를 "위탁자"에게 통지하여 정부지원금 입금 책임을 면한다.</p>
+                   
+                <p class="bold f14 mt20">제 5 조 손해배상</p>
+                   <p class="f14 mt5">"위탁자"와 "수탁자" 중 어느 일방이 본 계약에 규정된 의무를 이행하지 않거나 본 계약을 위반하여 상대방에게 손해가 발생한 경우 그 행위를 야 기한 당사자는 그러한 불이행에 대해 전적으로 책임을 지며, 그에 따른 손해를 배상함과 동시에 상대방의 손해를 최소화하기 위하여 합리적으로 요구되는 적절한 조치를 취해야 한다.</p>
+                <p class="bold f14 mt20">제 6조 계약해지</p>
+                   <p class="f14 mt5">1. "수탁자"가 교육과정 운영 시작 이전 (고용보험 환급과정 실시신고시) "위탁자"의 고용보험료 체납이 확인되는 경우, "수탁자"는 "위탁자"에게 고용보험 환급과정 운영 불가를 통보하여 본 계약을 해지할 수 있다.</p>
+                   <p class="f14 mt5">2. "위탁자"는 교육과정 운영 시작 이전 (고용보험 환급과정 실시신고 이전) 과정 입과를 취소하여 본 계약을 해지할 수 있다.</p>
+                <p class="bold f14 mt20">제7조 해석 및 함의</p>
+                   <p class="f14 mt5">본 계약서 상의 조문 해석과 관련하여 쌍방간에 이견이 있을 경우에는 상호 협의하여 결정하며, 본 계약서 상에 명시되지 아니한 사항은 쌍방이 협의한 바에 따른다. 이 계약을 증명하기 위하여 계약서를 2부 작성하고, 기명날인 후 "위탁자"와 "수탁자"가 각각 1부씩 보관한다.</p>
+                   <p class="mt30 f14 tct">2023년 05월 02일</p>
+                   <div class="bottom">
+                       <ul>
+                           <li>위탁자</li>
+                           <li>회사명 : 주식회사 베어링아트</li>
+                           <li>대표자 직인 : 송영수 (인)</li>
+                       </ul>
+                       <ul>
+                           <li>수탁자</li>
+                           <li>회사명 : (주)인키움</li>
+                           <li>대표자 직인 : 박지현 외</li>
+                       </ul>
+                       <div class="sign">
+                           <img src="images/sing.png" alt="직인">
+                       </div>
+                   </div>
+                </div>
+                </div>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style03 btn_black print_contract">인쇄</a>
+                    <a href="#" class="btn_style03 btn_white close_pop">닫기</a>
+                </div>
+            </div>
+
+
+
+            <div class="bt_fixed">
+               <div class="fl">
+                   <a href="javascript:openModal('modal1');" class="btn_style03 btn_orange ">계약서 출력</a>
+               </div>
+                <div class="fr">
+                      <a href="#" class="btn_style02 btn_gray01 xls_btn">엑셀 저장</a>
+                    <a href="#" class="btn_style03 btn_white w85">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
