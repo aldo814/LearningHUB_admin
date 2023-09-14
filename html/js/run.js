@@ -432,9 +432,7 @@ $(document).ready(function () {
 			importStyle: true,
 			printContainer: true,
 			debug: false,
-            header: null,               // prefix to html
-    footer: null,
-            base: false
+           
 		});
 	});
 
