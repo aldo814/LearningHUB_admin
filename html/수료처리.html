@@ -326,7 +326,28 @@
                             수료
                         </td>
                         <td>2023-04-28</td>
-                        <td><a href="javascript:openModal('modal1')">2312334-013</a></td>
+                        <td><a href="#" onclick="popOpen01()">2312334-013</a>
+                         
+                    <script>
+                        //팝업
+                        function popOpen01()
+
+                        {
+                            var nWidth = "650";
+
+                            var nHeight = "697";
+
+                            var xPos = (document.body.clientWidth / 2) - (nWidth / 2);
+
+                            xPos += window.screenLeft; //듀얼 모니터
+
+                            var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+                            window.open("/html/수료처리_팝업.html", "popOpen", "width=" + nWidth + ",height=" + nHeight + ", left=" + xPos + ", top=" + yPos + ", toolbars=no, resizable=no, scrollbars=no");
+                        }
+
+                    </script>
+                        </td>
                     </tr>
                 </tbody>
             </table>
