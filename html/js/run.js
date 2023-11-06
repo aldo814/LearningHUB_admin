@@ -437,6 +437,16 @@ $(document).ready(function () {
 	});
 
      $(".timep").timepicker();
+    
+     $("tbody.question td").each(function() {
+        // 현재 td 엘리먼트의 텍스트 값을 가져와서 숫자로 변환
+        var cellValue = parseFloat($(this).text());
+
+        // 숫자가 0이 아닌 경우 "orange" 클래스 추가
+        if (cellValue !== 0) {
+            $(this).addClass("orange");
+        }
+    });
 });
 
 

@@ -74,6 +74,12 @@
 .table_style03 td,
 .table_style03 th{padding: 5px;font-size: 1.4rem;vertical-align: middle}
 .table_style03 tr{border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd}
+.table_style04 th{background: #eeeeee;font-weight: 500}
+.table_style04 td,
+.table_style04 th{padding: 10px;font-size: 1.4rem;vertical-align: middle}
+.table_style04 td{background: #fff}
+.table_style04 tr{border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd}
+.table_style04 thead tr{border-bottom: 0} 
 .div_table{display: table;width: 100%;border-top: 1px solid #ddd}
 .div_table .tr{display: table-row;}
 .div_table .tr > div{display: table-cell;padding: 5px;font-size: 1.4rem;border-bottom: 1px solid #dddddd;}
@@ -673,6 +679,8 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .certi .btxt{text-align: center;margin-top: 50px;line-height: 2;font-size: 20px;font-weight: bold}
 .certi .date{text-align: center;margin-top: 30px;font-size: 18px;margin-bottom: 30px}
 .certi .sign{text-align: center}
+
+.orange a{color: #f49038;font-weight: 500;border-bottom: 1px solid #f49038;padding: 0 5px}
 
 @media print{
     @page {

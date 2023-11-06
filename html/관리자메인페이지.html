@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="css/timepicker.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">메인</a>
+                        </li>
+                        <li>
+                            <a href="#">공통관리</a>
+                            <ul>
+                                <li><a href="#">회원 관리</a></li>
+                                <li><a href="#">튜터 관리</a></li>
+                                <li><a href="#">권한 관리</a></li>
+                                <li><a href="#">코드 관리</a></li>
+                                <li><a href="#">기관 관리</a></li>
+                                <li><a href="#">환급 신고 관리</a></li>
+                                <li><a href="#">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="#">과정 관리</a></li>
+                                <li><a href="#">콘텐츠 관리</a></li>
+                                <li><a href="#">교육자료 관리</a></li>
+                                <li><a href="#">시험 관리</a></li>
+                                <li><a href="#">과제 관리</a></li>
+                                <li><a href="#">토론 관리</a></li>
+                                <li><a href="#">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육 관리</a>
+                            <ul>
+                                <li><a href="#">기수 관리</a></li>
+                                <li><a href="#">수강 관리</a></li>
+                                <li><a href="#">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사이트 관리</a>
+                            <ul>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계 관리</a>
+                            <ul>
+                                <li><a href="#">접속 통계</a></li>
+                                <li><a href="#">메일발송 관리</a></li>
+                                <li><a href="#">SMS발송 관리</a></li>
+                                <li><a href="#">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">부가기능 관리</a>
+                            <ul>
+                                <li><a href="#">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="#" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="#" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="#" class="logout">로그아웃</a>
+                        <a href="#" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class=""><a href="#">회원관리</a>
+                        <ul>
+                            <li class=""><a href="#">회원정보 관리</a></li>
+                            <li><a href="#">개인 수강이력</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="#">튜터 관리</a>
+                        <ul>
+                            <li><a href="#">튜터 정보관리</a></li>
+                            <li><a href="#">튜터 활동현황</a></li>
+                            <li><a href="#">튜터 등급관리</a></li>
+                            <li><a href="#">강사료</a></li>
+                            <li><a href="#">지급현황</a></li>
+                            <li><a href="#">튜터 공지사항</a></li>
+                            <li><a href="#">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">권한 관리</a>
+                        <ul>
+                            <li><a href="#">프로그램 등록</a></li>
+                            <li><a href="#">시스템 권한</a></li>
+                            <li><a href="#">시스템 메뉴</a></li>
+                            <li><a href="#">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">코드 관리</a>
+                        <ul>
+                            <li><a href="#">공통코드 관리</a></li>
+                            <li><a href="#">메일 유형코드 관리</a></li>
+                            <li><a href="#">SMS 유형코드 관리</a></li>
+                            <li><a href="#">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기관 관리</a>
+                        <ul>
+                            <li><a href="#">테마 관리</a></li>
+                            <li><a href="#">기관 관리</a></li>
+                            <li><a href="#">기관별 메뉴 관리</a></li>
+                            <li><a href="#">기관별 과정 관리</a></li>
+                            <li><a href="#">수강제약 관리</a></li>
+                            <li><a href="#">교육일정 관리</a></li>
+                            <li><a href="#">역량진단 관리</a></li>
+                            <li><a href="#">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>관리자 메인페이지</h3>
+                <ul class="breadcrumb">
+                    <li>공통 관리</li>
+                    <li>기관 관리</li>
+                    <li>테마관리</li>
+                </ul>
+            </div>
+
+            <p class="mt30 tit">미답변 게시글</p>
+            <table class="table_style04 mt10">
+                <caption>미답변 게시글</caption>
+                <colgroup>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">묻고답하기</th>
+                        <th scope="col">사이버 과정 질문방</th>
+                        <th scope="col">사이버 과제/시험 질문방</th>
+                        <th scope="col">사이버 과제/시험 질문방</th>
+                    </tr>
+                </thead>
+                <tbody class="question">
+                    <tr>
+                        <td class="tct">미답변 질문수</td>
+                        <td class="tct">0</td>
+                        <td class="tct">0</td>
+                        <td class="tct"><a href="#">1</a></td>
+                        <td class="tct">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <!--paging-->
+            <ul class="paging">
+                <li class="button"><a href="#">처음</a></li>
+                <li class="button"><a href="#">이전</a></li>
+                <li class="num active"><a href="#">1</a></li>
+                <li class="num"><a href="#">2</a></li>
+                <li class="num"><a href="#">3</a></li>
+                <li class="num"><a href="#">4</a></li>
+                <li class="num"><a href="#">5</a></li>
+                <li class="button"><a href="#">다음</a></li>
+                <li class="button"><a href="#">맨끝</a></li>
+            </ul>
+            <!--//paging-->
+
+            <!--팝업-->
+            <div class="popUp modal1" title="토론내용 보기">
+               <div class="inbtn">
+                <h3 class="popTit">토론명이 출력됩니다.</h3>
+                <table class="table_style03">
+                    <caption>토론내용보기</caption>
+                    <colgroup>
+                        <col style="width: 150px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과정명(과정ID)</th>
+                            <td>KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">토론기간</th>
+                            <td>2023-04-10~2023-04-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="popTit mt20">토론 내용 </p>
+                <p class="f14">첨부된 과제 내용을 숙지하여 내부직원들의 IT 이해를 향상 시킬 수 있는 방안 3가지를 제시하고,
+                    그 근거를 뒷받침할 수 있는 의견을 제시하며 토론을 진행하세요.
+                    토론은 자유롭게 진행하되, 상대방을 비방하거나, 욕설 등으로 토론방을 문란하게할 경우 감점 등의 불이익을 받을 수 있습니다. </p>
+                <table class="table_style03 mt20">
+                    <caption>첨부파일</caption>
+                    <colgroup>
+                        <col style="width: 150px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td><a href="#">내부직원 IT이해 향상을 위한 방안 마련 대책.hwpx (1,024kb)</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="popTit mt20">토론 현황</p>
+                <p class="f14">응시자(참여자)가 작성한 토론 내용이 표시됩니다.
+                    토론의 주제와 관련된 내용의 의사를 자유롭게 작성하여 본인의 생각이나 근거를 게재할 수 있으며, 해당 내용에 대한 반박 내용 등을
+                    작성하여 토론을 진행합니다. </p>
+                <p class="f14 mt10 gray"><span>홍길동(kildong.hong)</span> / <span>2023-04-10 14:42:39</span></p>
+                <div class="rating mt20">
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt01" type="radio" name="rt_01">
+                            <label for="rt01">- 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt02" type="radio" name="rt_01">
+                            <label for="rt02">- 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt03" type="radio" name="rt_01">
+                            <label for="rt03">- 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt04" type="radio" name="rt_01">
+                            <label for="rt04">- 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt05" type="radio" name="rt_01">
+                            <label for="rt05">- 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt06" type="radio" name="rt_01">
+                            <label for="rt06">0</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt07" type="radio" name="rt_01">
+                            <label for="rt07">+ 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt08" type="radio" name="rt_01">
+                            <label for="rt08">+ 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt09" type="radio" name="rt_01">
+                            <label for="rt09">+ 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt10" type="radio" name="rt_01">
+                            <label for="rt10">+ 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt11" type="radio" name="rt_01">
+                            <label for="rt11">+ 5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="gray_line">
+
+                <p class="f14">응시자(참여자)가 작성한 토론 내용이 표시됩니다.
+                    토론의 주제와 관련된 내용의 의사를 자유롭게 작성하여 본인의 생각이나 근거를 게재할 수 있으며, 해당 내용에 대한 반박 내용 등을
+                    작성하여 토론을 진행합니다. </p>
+                <p class="f14 mt10 gray"><span>홍길동(kildong.hong)</span> / <span>2023-04-10 14:42:39</span></p>
+
+                <div class="rating mt20">
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt12" type="radio" name="rt_02">
+                            <label for="rt12">- 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt13" type="radio" name="rt_02">
+                            <label for="rt13">- 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt14" type="radio" name="rt_02">
+                            <label for="rt14">- 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt15" type="radio" name="rt_02">
+                            <label for="rt15">- 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt16" type="radio" name="rt_02">
+                            <label for="rt16">- 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt17" type="radio" name="rt_02">
+                            <label for="rt17">0</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt18" type="radio" name="rt_02">
+                            <label for="rt18">+ 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt19" type="radio" name="rt_02">
+                            <label for="rt19">+ 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt20" type="radio" name="rt_02">
+                            <label for="rt20">+ 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt21" type="radio" name="rt_02">
+                            <label for="rt21">+ 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt22" type="radio" name="rt_02">
+                            <label for="rt22">+ 5</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="gray_line">
+
+                <p class="f14">응시자(참여자)가 작성한 토론 내용이 표시됩니다.
+                    토론의 주제와 관련된 내용의 의사를 자유롭게 작성하여 본인의 생각이나 근거를 게재할 수 있으며, 해당 내용에 대한 반박 내용 등을
+                    작성하여 토론을 진행합니다. </p>
+                <p class="f14 mt10 gray"><span>홍길동(kildong.hong)</span> / <span>2023-04-10 14:42:39</span></p>
+
+                <div class="rating mt20">
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt23" type="radio" name="rt_03">
+                            <label for="rt23">- 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt24" type="radio" name="rt_03">
+                            <label for="rt24">- 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt25" type="radio" name="rt_03">
+                            <label for="rt25">- 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt26" type="radio" name="rt_03">
+                            <label for="rt26">- 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt27" type="radio" name="rt_03">
+                            <label for="rt27">- 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt28" type="radio" name="rt_03">
+                            <label for="rt28">0</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt29" type="radio" name="rt_03">
+                            <label for="rt29">+ 1</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt30" type="radio" name="rt_03">
+                            <label for="rt30">+ 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt31" type="radio" name="rt_03">
+                            <label for="rt31">+ 3</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt32" type="radio" name="rt_03">
+                            <label for="rt32">+ 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_radio_btn radio_male">
+                            <input id="rt33" type="radio" name="rt_03">
+                            <label for="rt33">+ 5</label>
+                        </div>
+                    </div>
+                </div>
+                       <hr class="gray_line">
+                </div>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style03 btn_black">저장</a>
+                    <a href="#" class="btn_style03 btn_white close_pop">닫기</a>
+                </div>
+            </div>
+
+
+
+            <div class="bt_fixed">
+                <div class="fr">
+                    <a href="javascript:openModal('modal1')" class="btn_style03 btn_orange">토론내용 보기</a>
+                    <a href="#" class="btn_style03 btn_white w85">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
